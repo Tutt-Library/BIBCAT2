@@ -17,4 +17,9 @@ bc:bf-Organization a kds:PropertyLinker;
     kds:destPropUri [ bf:heldBy <https://www.coloradocollege.edu/> ] ;
     kds:destClassUri bf:Item .
 
-
+bc:mods-abstract a kds:PropertyLinker;
+    kds:srcPropXpath "mods:abstract" ;
+    kds:destPropUri rdf:value ;
+    kds:destClassUri bf:Summary ;
+    kds:linkedRange bf:summary ;
+    kds:linkedClass bf:Instance .
