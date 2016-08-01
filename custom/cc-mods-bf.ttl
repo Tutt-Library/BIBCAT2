@@ -23,3 +23,11 @@ bc:mods-abstract a kds:PropertyLinker;
     kds:destClassUri bf:Summary ;
     kds:linkedRange bf:summary ;
     kds:linkedClass bf:Instance .
+
+bc:mods-dateCreated a kds:PropertyLinker;
+    kds:srcPropXpath "mods:originInfo/mods:dateCreated" ;
+    kds:destPropUri bf:originDate ;
+    kds:destClassUri bf:Work ;
+    kds:linkedRange bf:instanceOf ;
+    kds:linkedClass bf:Instance .
+
