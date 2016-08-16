@@ -4,4 +4,5 @@
 instance/
 config.py
 raw
+tmp*
 *_checkpoints
