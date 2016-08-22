@@ -35,6 +35,6 @@ bc:mods-Sponsor a kds:PropertyLinker;
     kds:srcPropXpath "mods:name/mods:role[mods:roleTerm='sponsor']/../mods:namePart";
     kds:destPropUri rdfs:label ;
     kds:destClassUri bf:Organization ;
-    kds:destAdditionalPropUris [ bf:partOf <http://www.coloradocollege.edu/> ] ;
+    kds:destAdditionalPropUris [ bf:partOf <https://www.coloradocollege.edu/> ] ;
     kds:linkedRange relators:spn ;
     kds:linkedClass bf:Instance .

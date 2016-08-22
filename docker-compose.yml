@@ -9,6 +9,7 @@ semanticServer:
     image: jermnelson/semantic-server-core:dev
     ports:
      - "8080:8080"
+     - "9999:9999"
     volumes:
      - /opt/bibcat_repository/fedora-data:/usr/share/fedora-data
-     - /opt/bibcat_triplestore:/usr/share/blazegraph
+     - /opt/bibcat_triplestore:/opt/triplestore/data
