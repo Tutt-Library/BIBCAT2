@@ -1,0 +1,62 @@
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kds: <http://knowledgelinks.io/ns/data-structures/> .
+@prefix kdr: <http://knowledgelinks.io/ns/data-resources/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pcdm: <http://pcdm.org/models#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix dcr: <http://knowledgelinks.io/ns/dc/> .
+@prefix loc: <http://id.loc.gov/> .
+@prefix schema: <http://schema.org/> .
+
+<https://www.coloradocollege.edu/> schema:event <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> a schema:EducationalEvent;
+    rdfs:label "Academic Year 2016-2017"@en ;
+    schema:endDate "2017-05-22T07:00:00" ;
+    schema:startDate "2016-08-29T06:00:00" .
+   
+<http://catalog.coloradocollege.edu/62292a8c-7085-11e6-b00f-005056c00008> a schema:EducationalEvent;
+    rdfs:label "Block One"@en ;
+    schema:endDate "2016-09-21T06:00:00" ;
+    schema:startDate "2016-08-29T06:00:00" ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/34f089c2-7082-11e6-a872-005056c00008> a schema:EducationalEvent;
+    rdfs:label "Economics and Business Academic Year 2016-2017"@en ;
+    schema:faculty <http://orcid.org/0000-0002-8157-8837>,
+    <http://catalog.coloradocollege.edu/a885e9c6-7083-11e6-b7f6-005056c00008>,
+    <http://orcid.org/0000-0002-0674-7995>,
+    <http://orcid.org/0000-0003-3203-0928> ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/economics/> ;
+    schema:staff <http://catalog.coloradocollege.edu/b38ec026-7084-11e6-917d-005056c00008> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+   
+<http://catalog.coloradocollege.edu/b38ec026-7084-11e6-917d-005056c00008> a bf:Person ;
+    rdfs:label "Nancy Heinecke"@en ;
+    schema:givenName "Nancy"@en ;
+    schema:familyName "Heinecke"@en ;
+    schema:email "NHeinecke@ColoradoCollege.edu" .
+ 
+<http://catalog.coloradocollege.edu/a885e9c6-7083-11e6-b7f6-005056c00008> a bf:Person ;
+    rdfs:label "William Craighead"@en ;
+    schema:givenName "William"@en;
+    schema:familyName "Craighead"@en .
+    
+<http://orcid.org/0000-0002-8157-8837> a bf:Person ;
+    rdfs:label "Pedro de Arajuo"@en; 
+    schema:givenName "Pedro"@en;
+    schema:familyName "de Arajuo"@en .
+
+<http://orcid.org/0000-0002-0674-7995> a bf:Person ;
+    rdfs:label "Aju Fenn"@en;
+    schema:familyName "Fenn"@en;
+    schema:givenName "Aju"@en .
+
+<http://orcid.org/0000-0003-3203-0928> a bf:Person ;
+    rdfs:label "Jessica Hoel"@en ;
+    schema:familyName "Hoel"@en ;
+    schema:givenName "Jessica"@en .

@@ -16,26 +16,32 @@
     bf:Organization;
     rdfs:label "Colorado College"@en;
     schema:address [ a schema:PostalAddress;
-        addressCountry "US";
-        addressLocality "Colorado Springs"@en;
-        addressRegion "Colorado"@en;
-        postalCode 80903;
-        streetAddress "14 East Cache La Poudre Street" ];
+        schema:addressCountry "US";
+        schema:addressLocality "Colorado Springs"@en;
+        schema:addressRegion "Colorado"@en;
+        schema:postalCode 80903;
+        schema:streetAddress "14 East Cache La Poudre Street" ];
     schema:foundingDate [ a schema:Date;
                           rdf:value 1874 ];
-    schema:subOrganization <https://www.coloradocollege.edu/academics/dept/anthropology/>,
+    schema:subOrganization <https://www.coloradocollege.edu/admission/>,
+        <https://www.coloradocollege.edu/academics/dept/anthropology/>,
         <https://www.coloradocollege.edu/academics/dept/molecularbiology/>,
         <https://www.coloradocollege.edu/academics/dept/obe/>,
         <https://www.coloradocollege.edu/academics/dept/economics/>,
         <https://www.coloradocollege.edu/library/>,
         <https://www.coloradocollege.edu/academics/dept/mathematics/>;
     schema:sameAs <http://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/economics/> a bf:Organization,
+    schema:CollegeDepartment;
+    rdfs:label "Economics and Business"@en;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
     
 <https://www.coloradocollege.edu/library/> a schema:Library,
     bf:Organization;
     bf:identifiedBy [ a bf:Oclc;
         rdf:value "COCA" ] ;
-    bf:parentOrganization <https://www.coloradocollege.edu/> ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> ;
     schema:subOrganization <https://www.coloradocollege.edu/library/seay/>,
         <https://libraryweb.coloradocollege.edu/library/index.php/press> ;
     rdfs:label "Tutt Library"@en .
