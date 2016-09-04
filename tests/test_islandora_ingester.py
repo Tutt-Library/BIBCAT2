@@ -26,5 +26,17 @@ class TestIslandoraIngesterDefault(unittest.TestCase):
         pass
 
 
+class TestIngestCompound(unittest.TestCase):
+
+    def setUp(self):
+        self.ingester = IslandoraIngester(
+            repository_url="http://localhost:8080/fedora",
+            user="FedoraAdmin",
+            password="FedoraAdmin")
+
+    def test_ingest_compound_exceptions(self):
+        self.assertTrue(hasattr(self.ingester, "ingest_compound"))
+
+
 if __name__ == '__main__':
     unittest.main()

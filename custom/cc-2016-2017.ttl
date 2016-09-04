@@ -1,4 +1,5 @@
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix cc_fac: <https://www.coloradocollege.edu/ns/faculty/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kds: <http://knowledgelinks.io/ns/data-structures/> .
 @prefix kdr: <http://knowledgelinks.io/ns/data-resources/> .
@@ -27,7 +28,7 @@
 
 <http://catalog.coloradocollege.edu/34f089c2-7082-11e6-a872-005056c00008> a schema:EducationalEvent;
     rdfs:label "Economics and Business Academic Year 2016-2017"@en ;
-    schema:faculty <http://orcid.org/0000-0002-8157-8837>,
+    cc_fac:faculty <http://orcid.org/0000-0002-8157-8837>,
     <http://catalog.coloradocollege.edu/a885e9c6-7083-11e6-b7f6-005056c00008>,
     <http://orcid.org/0000-0002-0674-7995>,
     <http://orcid.org/0000-0003-3203-0928> ;
@@ -35,28 +36,25 @@
     schema:staff <http://catalog.coloradocollege.edu/b38ec026-7084-11e6-917d-005056c00008> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
    
-<http://catalog.coloradocollege.edu/b38ec026-7084-11e6-917d-005056c00008> a bf:Person ;
-    rdfs:label "Nancy Heinecke"@en ;
-    schema:givenName "Nancy"@en ;
-    schema:familyName "Heinecke"@en ;
-    schema:email "NHeinecke@ColoradoCollege.edu" .
- 
-<http://catalog.coloradocollege.edu/a885e9c6-7083-11e6-b7f6-005056c00008> a bf:Person ;
-    rdfs:label "William Craighead"@en ;
-    schema:givenName "William"@en;
-    schema:familyName "Craighead"@en .
-    
-<http://orcid.org/0000-0002-8157-8837> a bf:Person ;
-    rdfs:label "Pedro de Arajuo"@en; 
-    schema:givenName "Pedro"@en;
-    schema:familyName "de Arajuo"@en .
 
-<http://orcid.org/0000-0002-0674-7995> a bf:Person ;
-    rdfs:label "Aju Fenn"@en;
-    schema:familyName "Fenn"@en;
-    schema:givenName "Aju"@en .
-
-<http://orcid.org/0000-0003-3203-0928> a bf:Person ;
-    rdfs:label "Jessica Hoel"@en ;
-    schema:familyName "Hoel"@en ;
-    schema:givenName "Jessica"@en .
+<http://catalog.coloradocollege.edu/d0e7610a-72ba-11e6-b6dc-005056c00008> a schema:EducationalEvent;
+    rdfs:label "Mathematics and Computer Science Academic Year 2016-2017"@en;
+    cc_fac:professor <http://id.loc.gov/authorities/names/n87939410>, 
+    <http://catalog.coloradocollege.edu/012ccc6e-72be-11e6-9c71-005056c00008>,
+    <http://catalog.coloradocollege.edu/959f1e2e-72be-11e6-b83d-005056c00008>;
+    cc_fac:associate-professor <http://catalog.coloradocollege.edu/716ae934-72bc-11e6-99f5-005056c00008>,
+    <http://catalog.coloradocollege.edu/3583f264-72bf-11e6-b97c-005056c00008>,
+    <http://catalog.coloradocollege.edu/2ed5cbf4-72c0-11e6-a32d-005056c00008>;
+    cc_fac:assistant-professor <http://catalog.coloradocollege.edu/d49aee34-72c0-11e6-bfeb-005056c00008>,
+    <http://catalog.coloradocollege.edu/25cee3de-72c1-11e6-93c0-005056c00008>,
+    <http://catalog.coloradocollege.edu/4e3dedae-72c1-11e6-9913-005056c00008>,
+    <http://catalog.coloradocollege.edu/d1121fd4-72c1-11e6-81fa-005056c00008> ; 
+    cc_fac:visiting-assistant-professor <http://catalog.coloradocollege.edu/ac1a487e-72c2-11e6-b54e-005056c00008>,
+    <http://catalog.coloradocollege.edu/ce89220c-72c2-11e6-bb68-005056c00008>,
+    <http://catalog.coloradocollege.edu/381d2dbe-72c3-11e6-a471-005056c00008>,
+    <http://catalog.coloradocollege.edu/774da448-72c3-11e6-8b86-005056c00008>;
+    cc_fac:chair <http://catalog.coloradocollege.edu/3583f264-72bf-11e6-b97c-005056c00008> ;
+    cc_fac:associate-chair <http://catalog.coloradocollege.edu/2ed5cbf4-72c0-11e6-a32d-005056c00008>;
+    cc_fac:sabbatical <http://catalog.coloradocollege.edu/d49aee34-72c0-11e6-bfeb-005056c00008> ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/mathematics/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .

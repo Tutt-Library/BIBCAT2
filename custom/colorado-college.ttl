@@ -1,4 +1,5 @@
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix cc_fac: <https://www.coloradocollege.edu/ns/faculty/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix kds: <http://knowledgelinks.io/ns/data-structures/> .
 @prefix kdr: <http://knowledgelinks.io/ns/data-resources/> .
@@ -36,6 +37,12 @@
     schema:CollegeDepartment;
     rdfs:label "Economics and Business"@en;
     schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/mathematics/> a bf:Organization,
+    schema:CollegeDepartment;
+    rdfs:label "Mathematics and Computer Science"@en;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+ 
     
 <https://www.coloradocollege.edu/library/> a schema:Library,
     bf:Organization;
@@ -46,3 +53,23 @@
         <https://libraryweb.coloradocollege.edu/library/index.php/press> ;
     rdfs:label "Tutt Library"@en .
 
+cc_fac:professor a <https://www.loc.gov/marc/relators/tch>;
+    rdfs:label "Professor"@en .
+
+cc_fac:associate-professor a relators:tch;
+    rdfs:label "Associate Professor"@en .
+
+cc_fac:assistant-professor a relators:tch ;
+    rdfs:label "Assistant Professor"@en .
+
+cc_fac:visiting-assistant-professor a relators:tch;
+    rdfs:label "Visiting Assistant Professor"@en .
+
+cc_fac:chair a schema:title;
+    rdfs:label "Chair"@en .
+
+cc_fac:associate-chair a schema:title;
+    rdfs:label "Associate Chair"@en .
+
+cc_fac:sabbatical a schema:EducationalEvent ;
+    rdfs:label "Sabbatical"@en .

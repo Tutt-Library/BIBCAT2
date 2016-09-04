@@ -33,6 +33,7 @@ class IslandoraIngester(mods_ingester.MODSIngester):
             kwargs['rules'] = ['cc-mods-bf.ttl']
         kwargs["base_url"] = "https://catalog.coloradocollege.edu/"
         self.fedora_base = kwargs.pop("repository_url")
+        self.ingested_pids = []
         self.ri_search = "{}/risearch".format(self.fedora_base)
         self.rest_url = "{}/objects/".format(self.fedora_base)
         self.auth = (kwargs.pop("user"), kwargs.pop("password"))
@@ -71,14 +72,19 @@ class IslandoraIngester(mods_ingester.MODSIngester):
         has_models = rels_ext.findall(
             "rdf:Description/fedora_model:hasModel", 
             FEDORA_NS)
-        if len(has_model) < 1:
+        if len(has_models) < 1:
             raise ValueError("{} missing content model in RELS-EXT".format(
                 pid))
-        has_models.pop("info:fedora/fedora-system:FedoraObject-3.0")
-        if len(has_models) == 1:
-            content_model = has_models[0].get(
+        for i, row in enumerate(has_models):
+            content_model = row.get(
                 "{{{0}}}resource".format(NS_MGR.rdf))
-            return content_model
+            if content_model.startswith(
+                "info:fedora/fedora-system:FedoraObject-3.0"):
+                has_models.pop(i)
+        if len(has_models) == 1:
+            return has_models[0].get(
+                "{{{0}}}resource".format(NS_MGR.rdf))
+
 
     def __get_label__(self, pid):
         """Retrieves label for a PID using the REST API"""
@@ -93,6 +99,37 @@ class IslandoraIngester(mods_ingester.MODSIngester):
             if label is not None:
                 return rdflib.Literal(label.text)
 
+    def __get_instance_iri__(self, pid):
+        """Attempts to retrieve instance IRI based on the PID
+
+        Args:
+            pid: Fedora Object PID
+
+        Returns:
+            rdflib.URIRef: IRI of Instance or None if PID not found
+        """
+        sparql = NS_MGR.prefix() + """
+        SELECT ?instance
+        WHERE {{
+            ?instance bf:identifiedBy ?pid .
+            ?pid a bf:Local .
+            ?pid rdf:value "{0}" .
+        }}""".format(pid)
+        instance_result = requests.post(
+            self.triplestore,
+            data={"query": sparql,
+                  "format": "json"})
+        if instance_result.status_code > 399:
+            raise ValueError(
+                "Could not retrieve instance IRI w/PID {}".format(pid))
+        bindings = instance_result.json().get('results').get('bindings')
+        if len(bindings) < 0:
+            return
+        elif len(bindings) == 1:
+            return rdflib.URIRef(bindings[0]['instance']['value'])
+            
+            
+
     def __guess_instance_class__(self, work_classes):
         """Attempts to guess additional instanc classes for the Fedora Object
 
@@ -102,18 +139,28 @@ class IslandoraIngester(mods_ingester.MODSIngester):
         instance_classes = []
         return instance_classes
        
-    def __guess_work_class__(self, content_model, mods_xml):
+    def __guess_work_class__(self, instance_iri, content_model):
         """Attempts to guess additional work classes for the Fedora Object
         
         Args:
             content_model(str): Islandora Content Model
-            mods_xml(etree.XML): MODS XML
         Returns:
             List of BF Classes
         """
         bf_work_classes = []
         if content_model.startswith("info:fedora/islandora:sp_pdf"):
             bf_work_classes.append(NS_MGR.bf.Text)
+        genre_query = NS_MGR.prefix() +"""
+        SELECT ?value
+        WHERE {{
+            <{0}> bf:genreForm ?genre .
+            ?genre rdf:value ?value .
+        }}""".format(instance_iri)
+        for row in self.graph.query(genre_query):
+            genre = str(row[0])
+            #! Move to RDF rule?
+            if genre.startswith("interview"):
+                bf_work_classes.append(NS_MGR.bf.Audio)
         return bf_work_classes 
 
     def ingest_collection(self, pid):
@@ -163,12 +210,34 @@ class IslandoraIngester(mods_ingester.MODSIngester):
             headers={"Content-Type": "text/turtle"})
         return collection_iri
 
-    def ingest_compound(self, pid, content_models):
+    def ingest_compound(self, pid, instance_iri):
         """Handles Complex Compound Objects
 
         Args:
             instance_uri(rdflib.URIRef): IRI of base instance
         """
+        sparql = """SELECT DISTINCT ?s
+WHERE {{
+   ?s <fedora-rels-ext:isConstituentOf> <info:fedora/{0}> .
+}}""".format(pid)
+        constituents_response = requests.post(
+            self.ri_search,
+            data={"type": "tuples",
+                  "lang": "sparql",
+                  "format": "json",
+                  "query": sparql},
+            auth=self.auth)
+        if constituents_response.status_code > 399:
+            raise ValueError("Ingesting Compound {} Failed".format(
+                pid))
+        constituents = constituents_response.json().get('results')
+        for row in constituents:
+            child_pid = row.get('s').split("/")[-1]
+            child_iri = self.process_pid(child_pid)
+            self.ingested_pids.append(child_pid)
+            self.graph.add((child_iri, NS_MGR.bf.partOf, instance_iri))
+        self.add_to_triplestore()
+        return instance_iri
       
 
     def process_pid(self, pid):
@@ -180,6 +249,8 @@ class IslandoraIngester(mods_ingester.MODSIngester):
         Returns:
             rdflib.URIRef of PID Instance
         """ 
+        if pid in self.ingested_pids:
+            return self.__get_instance_iri__(pid)
         # Retrieves RELS-EXT XML
         rels_ext_url = "{0}{1}/datastreams/RELS-EXT/content".format(
             self.rest_url,
@@ -203,9 +274,12 @@ class IslandoraIngester(mods_ingester.MODSIngester):
         local_bnode = self.__add_pid_identifier__(pid)
         self.graph.add((instance_uri, NS_MGR.bf.identifiedBy, local_bnode)) 
         # Matches best BIBFRAME Work Class 
-        add_work_classes = self.__guess_work_class__(content_model, mods_xml)
+        addl_work_classes = self.__guess_work_class__(instance_uri, content_model)
         work_bnode = self.graph.value(subject=instance_uri,
             predicate=NS_MGR.bf.instanceOf)
+        if work_bnode is None:
+            work_bnode = rdflib.BNode()
+            self.graph.add((instance_uri, NS_MGR.bf.instanceOf, work_bnode))
         for work_class in addl_work_classes:
             self.graph.add(
                 (work_bnode,
@@ -220,7 +294,8 @@ class IslandoraIngester(mods_ingester.MODSIngester):
                  addl_instance_class))
         # Builds supporting Instances and Works if a compound object
         if content_model.startswith("info:fedora/islandora:compoundCModel"):
-            return self.ingest_compound(instance_uri)
+            return self.ingest_compound(pid, instance_uri)
+        self.add_to_triplestore()
         return instance_uri
 
         
