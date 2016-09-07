@@ -38,3 +38,10 @@ bc:mods-Sponsor a kds:PropertyLinker;
     kds:destAdditionalPropUris [ bf:partOf <https://www.coloradocollege.edu/> ] ;
     kds:linkedRange relators:spn ;
     kds:linkedClass bf:Instance .
+
+bc:mods-AudioWork a kds:PropertyLinker;
+    kds:srcPropXpath "mods:subject[mods:genre='Audio recording']";
+    kds:destPropUri rdf:type;
+    kds:destClassUri  bf:Audio ;
+    kds:linkedRange bf:instanceOf ;
+    kds:linkedClass bf:Instance .
