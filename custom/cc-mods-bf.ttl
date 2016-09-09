@@ -14,7 +14,7 @@
 @prefix schema: <http://schema.org/> .
 
 bc:bf-Organization a kds:PropertyLinker;
-    kds:destPropUri [ bf:heldBy <https://www.coloradocollege.edu/> ] ;
+    kds:destPropUri [ bf:heldBy <https://www.coloradocollege.edu/library/> ] ;
     kds:destClassUri bf:Item .
 
 bc:mods-abstract a kds:PropertyLinker;

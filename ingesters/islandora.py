@@ -61,6 +61,60 @@ class IslandoraIngester(mods_ingester.MODSIngester):
             rdflib.Literal("Fedora 3.8 PID", lang="en")))
         return local_bnode
 
+    def __add_pdf_ds_to_item__(self, pdf_pid, pdf_datastream, instance_iri):
+        """Method takes an existing PDF Datastream and either adds additional
+        BF metadata to the Instance and Item if the Instance's Work is
+        a Text or creates a new Instance and Item and creates a relationship
+        between the original Instance. 
+ 
+        Args:
+            pid_pid(str): PID of Datastream's Fedora Object 
+            pdf_datastream(etree.Element): Element of PDF Datastream
+            instance_iri(rdflib.URIRef): IRI of BIBFRAME Instance
+        """
+        text_work = self.graph.value(predicate=NS_MGR.rdf.type,
+            object=NS_MGR.bf.Text)
+        if text_work is None:
+            # Adds new instance
+            original_instance = instance_iri
+            instance_iri = self.__generate_uri__()
+            self.add_admin_metadata(instance_iri)
+            self.graph.add((instance_iri, NS_MGR.rdf.type, NS_MGR.bf.Instance))
+            self.graph.add((instance_iri, NS_MGR.bf.supplementTo, original_instance))
+            # Use the pdf_datastream label as a Instance Title
+            instance_title = rdflib.BNode()
+            self.graph.add((instance_iri, NS_MGR.bf.title, instance_title))
+            self.graph.add((instance_title, NS_MGR.rdf.type, NS_MGR.bf.InstanceTitle))
+            self.graph.add(
+                (instance_title, 
+                 NS_MGR.bf.mainTitle, 
+                 rdflib.Literal(pdf_datastream.get("LABEL"))))
+            item_iri = self.__generate_uri__()
+            self.add_admin_metadata(item_iri)
+            self.graph.add((item_iri, NS_MGR.rdf.type, NS_MGR.bf.Item))
+            self.graph.add((item_iri, NS_MGR.itemOf, instance_iri))
+            institution = next(self.rules_graph.objects(predicate=NS_MGR.bf.heldBy))
+            self.graph.add((item_iri, NS_MGR.bf.heldBy, institution))
+        else: 
+            item_iri = self.graph.value(predicate=NS_MGR.bf.itemOf,
+                object=instance_iri)
+       # Adds Encoding Format 
+        encoding_format = rdflib.BNode()
+        self.graph.add(
+            (encoding_format, NS_MGR.rdf.type, NS_MGR.bf.EncodingFormat))
+        self.graph.add(
+            (instance_iri, NS_MGR.bf.digitalCharacteristic, encoding_format))
+        self.graph.add((
+            encoding_format, 
+            NS_MGR.rdf.value, 
+            rdflib.Literal(pdf_datastream.get("mimeType"))))
+        # Adds PID as local identifier to the item
+        
+
+        
+        
+            
+
     def __get_content_model__(self, rels_ext):
         """Retrieves content models and filters out and
         returns.
@@ -84,6 +138,28 @@ class IslandoraIngester(mods_ingester.MODSIngester):
         if len(has_models) == 1:
             return has_models[0].get(
                 "{{{0}}}resource".format(NS_MGR.rdf))
+
+    def __get_datastreams__(self, pid):
+        """Method returns XML doc of Datastreams
+
+        Args:
+            pid(str): PID of Fedora Object
+
+        Returns:
+            etree.Element: XML Document of result listing
+        """
+        ds_url = "{0}{1}/datastreams?format=xml".format(
+            self.rest_url,
+            pid)
+        datastreams_result = requests.get(
+            ds_url, 
+            auth=self.auth)
+        if datastreams_result.status_code > 399:
+             raise ValueError(
+                "Cannot retrieve datastream listing for {}".format(pid)) 
+        ds_doc = etree.XML(datastreams_result.text)
+        return ds_doc
+
 
 
     def __get_label__(self, pid):
@@ -116,7 +192,7 @@ class IslandoraIngester(mods_ingester.MODSIngester):
             ?pid rdf:value "{0}" .
         }}""".format(pid)
         instance_result = requests.post(
-            self.triplestore,
+            self.triplestore_url,
             data={"query": sparql,
                   "format": "json"})
         if instance_result.status_code > 399:
@@ -163,6 +239,54 @@ class IslandoraIngester(mods_ingester.MODSIngester):
                 bf_work_classes.append(NS_MGR.bf.Audio)
         return bf_work_classes 
 
+    def __mods_to_bibframe__(self, pid):
+        """Downloads MODS based on the PID and runs the transformation 
+        to BIBFRAME.
+
+        Args:
+            pid: PID of Fedora OBject
+
+        Returns:
+            rdflib.URIRef: URI of Instance
+        """
+        mods_url = "{0}{1}/datastreams/MODS/content".format(
+                    self.rest_url,
+                    pid)
+        mods_result = requests.get(mods_url, auth=self.auth)
+        if mods_result.status_code == 404:
+            # Tries to retrieve first and use MODS Datastreams of 
+            # any related Fedora Objects
+            sparql = """SELECT DISTINCT ?s
+WHERE {{
+   ?s <fedora-rels-ext:isConstituentOf> <info:fedora/{0}> .
+}}""".format(pid)
+            constituents_response = requests.post(
+                self.ri_search,
+                data={"type": "tuples",
+                      "lang": "sparql",
+                      "format": "json",
+                      "query": sparql},
+                auth=self.auth)
+            constituents = constituents_response.json().get('results')
+            for row in constituents:
+                child_pid = row.get('s').split("/")[-1]
+                child_ds_doc = self.__get_datastreams__(child_pid)
+                mods_ds = child_ds_doc.find(
+                    """fedora_access:datastream[@disd="MODS"]""")
+                if mods_ds is not None:
+                    return self.__mods_to_bibframe__(child_pid)
+        else:   
+            mods_xml = etree.XML(mods_result.text)
+        self.transform(mods_xml)
+        instance_uri = self.graph.value(
+            predicate=NS_MGR.rdf.type,
+            object=NS_MGR.bf.Instance)
+        if instance_uri is None:
+            raise ValueError("Unable to extract Instance from Graph")
+        return instance_uri
+            
+                
+
     def ingest_collection(self, pid):
         """Takes a Fedora 3.8 PID, retrieves all children and ingests into
         triplestore 
@@ -197,8 +321,8 @@ class IslandoraIngester(mods_ingester.MODSIngester):
             for i,row in enumerate(children):
                 uri = row.get('s')
                 child_pid = uri.split("/")[-1]
-                child_iri = self.process_pid(child_pid)
                 # Adds Child Instance IRI as a part of the Collection
+                child_iri = self.process_pid(child_pid)
                 # Parent
                 collection_graph.add(
                     (collection_iri, NS_MGR.bf.hasPart, child_iri))
@@ -233,9 +357,18 @@ WHERE {{
         constituents = constituents_response.json().get('results')
         for row in constituents:
             child_pid = row.get('s').split("/")[-1]
-            child_iri = self.process_pid(child_pid)
+            child_ds_doc = self.__get_datastreams__(child_pid)
+            child_datastreams = child_ds_doc.find(
+                "fedora_access:datastream", 
+                FEDORA_NS)
+            pdf_datastream = child_datastreams.find(
+                "fedora_access:datastream[@mimeType='application/pdf']",
+                FEDORA_NS)
+            if pdf_datastream is not None:
+                self.__add_pdf_ds_to_item__(child_pid, 
+                    pdf_datastream, 
+                    instance_iri)
             self.ingested_pids.append(child_pid)
-            self.graph.add((child_iri, NS_MGR.bf.partOf, instance_iri))
         self.add_to_triplestore()
         return instance_iri
       
@@ -261,15 +394,12 @@ WHERE {{
         # If a collection model, returns result of calling ingest_collection
         if content_model.startswith('info:fedora/islandora:collectionCModel'):
             return self.ingest_collection(pid)
-        mods_url = "{0}{1}/datastreams/MODS/content".format(
-                    self.rest_url,
-                    pid)
-        mods_result = requests.get(mods_url, auth=self.auth)
-        mods_xml = etree.XML(mods_result.text)
-        self.transform(mods_xml)
-        instance_uri = self.graph.value(
-            predicate=NS_MGR.rdf.type,
-            object=NS_MGR.bf.Instance)
+        # Retrieves MODS for Fedora Object and performs MODS to BIBFRAME
+        # transformation
+        instance_uri = self.__mods_to_bibframe__(pid)
+        # Builds supporting Instances and Works if a compound object
+        if content_model.startswith("info:fedora/islandora:compoundCModel"):
+            return self.ingest_compound(pid, instance_uri)
         # Adds PID as Local Identifier
         local_bnode = self.__add_pid_identifier__(pid)
         self.graph.add((instance_uri, NS_MGR.bf.identifiedBy, local_bnode)) 
@@ -292,9 +422,6 @@ WHERE {{
                 (instance_uri, 
                  NS_MGR.rdf.type, 
                  addl_instance_class))
-        # Builds supporting Instances and Works if a compound object
-        if content_model.startswith("info:fedora/islandora:compoundCModel"):
-            return self.ingest_compound(pid, instance_uri)
         self.add_to_triplestore()
         return instance_uri
 

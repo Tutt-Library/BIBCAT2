@@ -26,12 +26,18 @@
                           rdf:value 1874 ];
     schema:subOrganization <https://www.coloradocollege.edu/admission/>,
         <https://www.coloradocollege.edu/academics/dept/anthropology/>,
+        <https://www.coloradocollege.edu/academics/dept/art/>, 
         <https://www.coloradocollege.edu/academics/dept/molecularbiology/>,
         <https://www.coloradocollege.edu/academics/dept/obe/>,
         <https://www.coloradocollege.edu/academics/dept/economics/>,
         <https://www.coloradocollege.edu/library/>,
         <https://www.coloradocollege.edu/academics/dept/mathematics/>;
     schema:sameAs <http://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/art/> a bf:Organization,
+    schema:CollegeDepartment;
+    rdfs:label "Art Department"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
 
 <https://www.coloradocollege.edu/academics/dept/economics/> a bf:Organization,
     schema:CollegeDepartment;
@@ -53,16 +59,20 @@
         <https://libraryweb.coloradocollege.edu/library/index.php/press> ;
     rdfs:label "Tutt Library"@en .
 
-cc_fac:professor a <https://www.loc.gov/marc/relators/tch>;
+cc_fac:professor a rdf:Resource;
+    rdf:range relators:tch;
     rdfs:label "Professor"@en .
 
-cc_fac:associate-professor a relators:tch;
+cc_fac:associate-professor a rdf:Resource;
+    rdf:range relators:tch;
     rdfs:label "Associate Professor"@en .
 
-cc_fac:assistant-professor a relators:tch ;
+cc_fac:assistant-professor a rdf:Resource;
+    rdf:range relators:tch;
     rdfs:label "Assistant Professor"@en .
 
-cc_fac:visiting-assistant-professor a relators:tch;
+cc_fac:visiting-assistant-professor a rdf:Resource;
+    rdf:range relators:tch;
     rdfs:label "Visiting Assistant Professor"@en .
 
 cc_fac:chair a schema:title;
