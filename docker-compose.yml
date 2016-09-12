@@ -1,9 +1,9 @@
-bibcat:
-    build: .
-    ports:
-        - "5000:5000"
-    links:
-     - semanticServer
+#bibcat:
+#    build: .
+#    ports:
+#        - "80:5000"
+#    links:
+#     - semanticServer
 
 semanticServer:
     image: jermnelson/semantic-server-core:dev
@@ -12,4 +12,5 @@ semanticServer:
      - "9999:9999"
     volumes:
      - /opt/bibcat_repository/fedora-data:/usr/share/fedora-data
-     - /opt/bibcat_triplestore:/opt/triplestore/data
+     - /opt/bibcat_triplestore:/usr/share/blazegraph
+     - $HOME/local_data:/local_data

@@ -4,7 +4,7 @@ import inspect
 import sys
 import argparse
 from urllib.parse import quote_plus
-from flask import  Flask, json
+from flask import  Flask, json, url_for
 from flask.ext.login import LoginManager
 from flask.ext.mail import Mail, Message
 #! Insert path to RdfFramework package
@@ -20,7 +20,7 @@ from werkzeug.wsgi import DispatcherMiddleware
 RDFW_RESET = True
 SERVER_CHECK = True
 
-__version_info__ = ('0', '0', '1')
+__version_info__ = ('0', '1', '0')
 __version__ = '.'.join(__version_info__)
 __author__ = "Jeremy Nelson, Mike Stabile"
 __license__ = 'MIT'
@@ -34,6 +34,8 @@ app.jinja_env.filters['pjson'] = lambda u: json.dumps(u, indent=4)
 app.jinja_env.filters['is_list'] = lambda u: isinstance(u, list)
 app.jinja_env.filters['separate_props'] = lambda u: separate_props(u)
 app.jinja_env.filters['app_item'] = lambda u: rdfw().app.get(u,str(u))
+app.jinja_env.filters['app_url'] = \
+        lambda u: (url_for('rdfw_core.base_path') + rdfw().app.get(u,str(u))).replace("//","/")
 
 # register the main site views
 app.register_blueprint(base_site, url_prefix='')
@@ -92,7 +94,6 @@ def setup(args={}):
         SERVER_CHECK = True
     else:
         SERVER_CHECK = False
-
     # initialize the rdfframework
     rdfw(config=app.config,
          reset=RDFW_RESET,
