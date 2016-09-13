@@ -382,8 +382,15 @@ WHERE {{
         Returns:
             rdflib.URIRef of PID Instance
         """ 
-        if pid in self.ingested_pids:
-            return self.__get_instance_iri__(pid)
+        pid_exists_sparql = PID_EXISTS.format(pid)
+        pid_exists = requests.post(self.triplestore_url,
+            data={"query": pid_exists_sparql,
+                  "format": "json"})
+        if pid_exists.status_code < 399:
+            bindings = pid_exists.json().get("results").get("bindings")
+            if len(bindings) > 0:
+                return self.__get_instance_iri__(
+                    bindings[0].get('subject').get('value'))
         # Retrieves RELS-EXT XML
         rels_ext_url = "{0}{1}/datastreams/RELS-EXT/content".format(
             self.rest_url,
@@ -397,12 +404,12 @@ WHERE {{
         # Retrieves MODS for Fedora Object and performs MODS to BIBFRAME
         # transformation
         instance_uri = self.__mods_to_bibframe__(pid)
-        # Builds supporting Instances and Works if a compound object
-        if content_model.startswith("info:fedora/islandora:compoundCModel"):
-            return self.ingest_compound(pid, instance_uri)
         # Adds PID as Local Identifier
         local_bnode = self.__add_pid_identifier__(pid)
         self.graph.add((instance_uri, NS_MGR.bf.identifiedBy, local_bnode)) 
+        # Builds supporting Instances and Works if a compound object
+        if content_model.startswith("info:fedora/islandora:compoundCModel"):
+            return self.ingest_compound(pid, instance_uri)
         # Matches best BIBFRAME Work Class 
         addl_work_classes = self.__guess_work_class__(instance_uri, content_model)
         work_bnode = self.graph.value(subject=instance_uri,
@@ -432,6 +439,13 @@ WHERE {{
 MEMBER_OF_SPARQL = """SELECT DISTINCT ?s
 WHERE {{
   ?s <fedora-rels-ext:isMemberOfCollection> <info:fedora/{}> .
+}}"""
+
+PID_EXISTS = NS_MGR.prefix() + """
+SELECT DISTINCT ?subject
+WHERE {{
+    ?subject bf:identifiedBy ?pid .
+    ?pid rdf:value "{0}" .
 }}"""
 
 # Command-line handler

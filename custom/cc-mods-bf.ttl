@@ -31,6 +31,13 @@ bc:mods-dateCreated a kds:PropertyLinker;
     kds:linkedRange bf:instanceOf ;
     kds:linkedClass bf:Instance .
 
+bc:mods-dateIssued a kds:PropertyLinker;
+    kds:srcPropXpath "mods:originInfo/mods:dateIssued" ;
+    kds:destPropUri bf:originDate ;
+    kds:destClassUri bf:Work ;
+    kds:linkedRange bf:instanceOf ;
+    kds:linkedClass bf:Instance .
+
 bc:mods-Sponsor a kds:PropertyLinker;
     kds:srcPropXpath "mods:name/mods:role[mods:roleTerm='sponsor']/../mods:namePart";
     kds:destPropUri rdfs:label ;
@@ -39,9 +46,24 @@ bc:mods-Sponsor a kds:PropertyLinker;
     kds:linkedRange relators:spn ;
     kds:linkedClass bf:Instance .
 
-bc:mods-AudioWork a kds:PropertyLinker;
+bc:mods-AudioWorkForm a kds:PropertyLinker, kds:ClassIdentifierLinker;
+    kds:srcPropXpath "mods:physicalDescription[mods:form='podcast']";
+    kds:destPropUri rdf:type;
+    kds:destClassUri  bf:Audio ;
+    kds:linkedRange bf:instanceOf ;
+    kds:linkedClass bf:Instance .
+
+bc:mods-AudioWorkSubject a kds:PropertyLinker, kds:ClassIdentifierLinker;
     kds:srcPropXpath "mods:subject[mods:genre='Audio recording']";
     kds:destPropUri rdf:type;
     kds:destClassUri  bf:Audio ;
     kds:linkedRange bf:instanceOf ;
     kds:linkedClass bf:Instance .
+
+bc:mods-MovingImageTypeOf a kds:PropertyLinker, kds:ClassIdentifierLinker;
+    kds:srcPropXpath ".[mods:typeOfResource='moving image']";
+    kds:destPropUri rdf:type;
+    kds:destClassUri  bf:MovingImage ;
+    kds:linkedRange bf:instanceOf ;
+    kds:linkedClass bf:Instance .
+
