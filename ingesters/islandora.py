@@ -109,9 +109,9 @@ class IslandoraIngester(mods_ingester.MODSIngester):
             NS_MGR.rdf.value, 
             rdflib.Literal(pdf_datastream.get("mimeType"))))
         # Adds PID as local identifier to the item
-        
-
-        
+        self.graph.add((instance_iri,
+            NS_MGR.bf.identifiedBy,
+            self.__add_pid_identifier__(pdf_pid)))
         
             
 
@@ -203,8 +203,6 @@ class IslandoraIngester(mods_ingester.MODSIngester):
             return
         elif len(bindings) == 1:
             return rdflib.URIRef(bindings[0]['instance']['value'])
-            
-            
 
     def __guess_instance_class__(self, work_classes):
         """Attempts to guess additional instanc classes for the Fedora Object
@@ -275,6 +273,8 @@ WHERE {{
                     """fedora_access:datastream[@disd="MODS"]""")
                 if mods_ds is not None:
                     return self.__mods_to_bibframe__(child_pid)
+            # Failed to find any mods
+            return
         else:   
             mods_xml = etree.XML(mods_result.text)
         self.transform(mods_xml)
@@ -404,6 +404,8 @@ WHERE {{
         # Retrieves MODS for Fedora Object and performs MODS to BIBFRAME
         # transformation
         instance_uri = self.__mods_to_bibframe__(pid)
+        if not instance_uri:
+            return
         # Adds PID as Local Identifier
         local_bnode = self.__add_pid_identifier__(pid)
         self.graph.add((instance_uri, NS_MGR.bf.identifiedBy, local_bnode)) 
