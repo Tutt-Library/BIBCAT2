@@ -21,10 +21,13 @@ NS_MGR = mods_ingester.NS_MGR
 NS_MGR.bind("pcdm", rdflib.Namespace("http://pcdm.org/models#"))
 
 FEDORA_NS = {
+    "fedora": "info:fedora/fedora-system:def/relations-external#",
     "fedora_access": "http://www.fedora.info/definitions/1/0/access/",
     "fedora_model": "info:fedora/fedora-system:def/model#",
+    "fedora_manage": "http://www.fedora.info/definitions/1/0/management/",
     "rdf": str(NS_MGR.rdf)
 }
+
 class IslandoraIngester(mods_ingester.MODSIngester):
 
     def __init__(self, **kwargs):
@@ -61,6 +64,94 @@ class IslandoraIngester(mods_ingester.MODSIngester):
             rdflib.Literal("Fedora 3.8 PID", lang="en")))
         return local_bnode
 
+    def __add_dataset__(self, dataset_pid, datastream, instance_iri):
+        """Method checks a potential datastream, if it size is greater
+        than 0, then creates a new Instance with a related Work to the 
+        original instance_iri.
+
+        Args:
+            dataset_pid(str): PID of potential dataset 
+            datastream(etree.Element): Element of potential dataset
+            instance_iri(rdflib.URIRef): IRI of BIBFRAME Instance
+        """
+        ds_profile_url = "{}{}/datastreams/FILE?format=xml".format(
+            self.rest_url,
+            dataset_pid)
+        ds_profile_result = requests.get(ds_profile_url, auth=self.auth)
+        if ds_profile_result.status_code > 399:
+            raise ValueError("Failed to retrieve {} Datastream Profile".format(
+                dataset_pid))
+        ds_profile = etree.XML(ds_profile_result.text)
+        ds_size = ds_profile.find("fedora_manage:dsSize", FEDORA_NS)
+        if int(ds_size.text) < 1:
+            return
+        dataset_uri = self.__generate_uri__()
+        self.add_admin_metadata(dataset_uri)
+        self.graph.add((dataset_uri, NS_MGR.rdf.type, NS_MGR.bf.Instance))
+        self.graph.add((dataset_uri, NS_MGR.rdf.type, NS_MGR.bf.Electronic))
+        # Adds filesize
+        file_size = rdflib.BNode()
+        self.graph.add((file_size, NS_MGR.rdf.type, NS_MGR.bf.FileSize))
+        self.graph.add((file_size, NS_MGR.rdf.value, rdflib.Literal(ds_size.text)))
+        self.graph.add((dataset_uri, NS_MGR.bf.digitalCharacteristic, file_size))
+        # Adds title
+        title_node = rdflib.BNode()
+        self.graph.add((title_node, NS_MGR.rdf.type, NS_MGR.bf.InstanceTitle))
+        self.graph.add((dataset_uri, NS_MGR.bf.title, title_node))
+        label = ds_profile.find("fedora_manage:dsLabel", FEDORA_NS)
+        if label and len(label.text) > 0:
+            title = rdflib.Literal(label.text)
+        else:
+            title = rdflib.Literal("Dataset", lang="en")
+        self.graph.add(
+             (title_node,
+              NS_MGR.bf.mainTitle,
+              title)
+        )
+        # Adds mime-type 
+        mime_type = ds_profile.find("fedora_manage:dsMIME", FEDORA_NS)
+        if mime_type is not None:
+            self.__add_encoding_format__(dataset_uri,
+                mime_type.text)
+        # Adds PID as local identifier to the item
+        self.graph.add((dataset_uri,
+            NS_MGR.bf.identifiedBy,
+            self.__add_pid_identifier__(dataset_pid)))
+        # Create a bf:Dataset as a Work bnode for dataset
+        dataset_work = rdflib.BNode()
+        self.graph.add((dataset_work, NS_MGR.rdf.type, NS_MGR.bf.Work))
+        self.graph.add((dataset_work, NS_MGR.rdf.type, NS_MGR.bf.Dataset))
+        self.graph.add((dataset_uri, NS_MGR.bf.instanceOf, dataset_work))
+        # Create Item for this instance
+        item_iri = self.__generate_uri__()
+        self.add_admin_metadata(item_iri)
+        self.graph.add((item_iri, NS_MGR.rdf.type, NS_MGR.bf.Item))
+        self.graph.add((item_iri, NS_MGR.bf.itemOf, dataset_uri))
+        institution = next(self.rules_graph.objects(predicate=NS_MGR.bf.heldBy))
+        self.graph.add((item_iri, NS_MGR.bf.heldBy, institution))
+        ds_location = rdflib.URIRef("{}{}/datastreams/FILE/content".format(
+            self.rest_url, 
+            dataset_pid))
+        self.graph.add((item_iri, NS_MGR.bf.electronicLocator, ds_location))  
+        # Dataset Accompanies Original Instance IRI
+        self.graph.add((dataset_uri, NS_MGR.bf.accompanies, instance_iri))
+
+
+
+    def __add_encoding_format__(self, instance_iri, mime_type):
+        """Method adds mime type as encoding format to instance"""
+        encoding_format = rdflib.BNode()
+        self.graph.add(
+            (encoding_format, NS_MGR.rdf.type, NS_MGR.bf.EncodingFormat))
+        self.graph.add(
+            (instance_iri, NS_MGR.bf.digitalCharacteristic, encoding_format))
+        self.graph.add((
+            encoding_format, 
+            NS_MGR.rdf.value, 
+            rdflib.Literal(mime_type)))     
+
+
+
     def __add_pdf_ds_to_item__(self, pdf_pid, pdf_datastream, instance_iri):
         """Method takes an existing PDF Datastream and either adds additional
         BF metadata to the Instance and Item if the Instance's Work is
@@ -68,7 +159,7 @@ class IslandoraIngester(mods_ingester.MODSIngester):
         between the original Instance. 
  
         Args:
-            pid_pid(str): PID of Datastream's Fedora Object 
+            pdf_pid(str): PID of Datastream's Fedora Object 
             pdf_datastream(etree.Element): Element of PDF Datastream
             instance_iri(rdflib.URIRef): IRI of BIBFRAME Instance
         """
@@ -98,16 +189,9 @@ class IslandoraIngester(mods_ingester.MODSIngester):
         else: 
             item_iri = self.graph.value(predicate=NS_MGR.bf.itemOf,
                 object=instance_iri)
-       # Adds Encoding Format 
-        encoding_format = rdflib.BNode()
-        self.graph.add(
-            (encoding_format, NS_MGR.rdf.type, NS_MGR.bf.EncodingFormat))
-        self.graph.add(
-            (instance_iri, NS_MGR.bf.digitalCharacteristic, encoding_format))
-        self.graph.add((
-            encoding_format, 
-            NS_MGR.rdf.value, 
-            rdflib.Literal(pdf_datastream.get("mimeType"))))
+        # Adds Encoding Format 
+        self.__add_encoding_format__(instance_iri, pdf_datastream.get("mimeType"))
+        
         # Adds PID as local identifier to the item
         self.graph.add((instance_iri,
             NS_MGR.bf.identifiedBy,
@@ -278,12 +362,12 @@ WHERE {{
         else:   
             mods_xml = etree.XML(mods_result.text)
         self.transform(mods_xml)
-        instance_uri = self.graph.value(
+        instance_iri = self.graph.value(
             predicate=NS_MGR.rdf.type,
             object=NS_MGR.bf.Instance)
-        if instance_uri is None:
+        if instance_iri is None:
             raise ValueError("Unable to extract Instance from Graph")
-        return instance_uri
+        return instance_iri
             
                 
 
@@ -323,6 +407,8 @@ WHERE {{
                 child_pid = uri.split("/")[-1]
                 # Adds Child Instance IRI as a part of the Collection
                 child_iri = self.process_pid(child_pid)
+                if not child_iri:
+                    continue
                 # Parent
                 collection_graph.add(
                     (collection_iri, NS_MGR.bf.hasPart, child_iri))
@@ -338,7 +424,7 @@ WHERE {{
         """Handles Complex Compound Objects
 
         Args:
-            instance_uri(rdflib.URIRef): IRI of base instance
+            instance_iri(rdflib.URIRef): IRI of base instance
         """
         sparql = """SELECT DISTINCT ?s
 WHERE {{
@@ -358,15 +444,19 @@ WHERE {{
         for row in constituents:
             child_pid = row.get('s').split("/")[-1]
             child_ds_doc = self.__get_datastreams__(child_pid)
-            child_datastreams = child_ds_doc.find(
-                "fedora_access:datastream", 
-                FEDORA_NS)
-            pdf_datastream = child_datastreams.find(
+            pdf_datastream = child_ds_doc.find(
                 "fedora_access:datastream[@mimeType='application/pdf']",
                 FEDORA_NS)
             if pdf_datastream is not None:
                 self.__add_pdf_ds_to_item__(child_pid, 
                     pdf_datastream, 
+                    instance_iri)
+            dataset_datastreams = child_ds_doc.findall(
+                "fedora_access:datastream[@dsid='FILE']",
+                FEDORA_NS)
+            for row in dataset_datastreams:
+                self.__add_dataset__(child_pid,
+                    row,
                     instance_iri)
             self.ingested_pids.append(child_pid)
         self.add_to_triplestore()
@@ -397,28 +487,32 @@ WHERE {{
             pid)
         rels_ext_result = requests.get(rels_ext_url, auth=self.auth)
         rels_ext = etree.XML(rels_ext_result.text)
+        # Skips any PIDS that are constituents of another object
+        if rels_ext.find("rdf:Description/fedora:isConstituentOf", 
+            FEDORA_NS) is not None:
+            return
         content_model = self.__get_content_model__(rels_ext)
         # If a collection model, returns result of calling ingest_collection
         if content_model.startswith('info:fedora/islandora:collectionCModel'):
             return self.ingest_collection(pid)
         # Retrieves MODS for Fedora Object and performs MODS to BIBFRAME
         # transformation
-        instance_uri = self.__mods_to_bibframe__(pid)
-        if not instance_uri:
+        instance_iri = self.__mods_to_bibframe__(pid)
+        if not instance_iri:
             return
         # Adds PID as Local Identifier
         local_bnode = self.__add_pid_identifier__(pid)
-        self.graph.add((instance_uri, NS_MGR.bf.identifiedBy, local_bnode)) 
+        self.graph.add((instance_iri, NS_MGR.bf.identifiedBy, local_bnode)) 
         # Builds supporting Instances and Works if a compound object
         if content_model.startswith("info:fedora/islandora:compoundCModel"):
-            return self.ingest_compound(pid, instance_uri)
+            return self.ingest_compound(pid, instance_iri)
         # Matches best BIBFRAME Work Class 
-        addl_work_classes = self.__guess_work_class__(instance_uri, content_model)
-        work_bnode = self.graph.value(subject=instance_uri,
+        addl_work_classes = self.__guess_work_class__(instance_iri, content_model)
+        work_bnode = self.graph.value(subject=instance_iri,
             predicate=NS_MGR.bf.instanceOf)
         if work_bnode is None:
             work_bnode = rdflib.BNode()
-            self.graph.add((instance_uri, NS_MGR.bf.instanceOf, work_bnode))
+            self.graph.add((instance_iri, NS_MGR.bf.instanceOf, work_bnode))
         for work_class in addl_work_classes:
             self.graph.add(
                 (work_bnode,
@@ -428,11 +522,11 @@ WHERE {{
         addl_instance_classes = self.__guess_instance_class__(rels_ext)
         for instance_class in addl_instance_classes:
             self.graph.add(
-                (instance_uri, 
+                (instance_iri, 
                  NS_MGR.rdf.type, 
                  addl_instance_class))
         self.add_to_triplestore()
-        return instance_uri
+        return instance_iri
 
         
 
