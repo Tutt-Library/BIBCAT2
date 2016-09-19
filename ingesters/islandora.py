@@ -152,7 +152,7 @@ class IslandoraIngester(mods_ingester.MODSIngester):
 
 
 
-    def __add_pdf_ds_to_item__(self, pdf_pid, pdf_datastream, instance_iri):
+    def __add_pdf_ds_to_item__(self, pdf_pid, pdf_datastream, instance_iri=None):
         """Method takes an existing PDF Datastream and either adds additional
         BF metadata to the Instance and Item if the Instance's Work is
         a Text or creates a new Instance and Item and creates a relationship
@@ -165,7 +165,7 @@ class IslandoraIngester(mods_ingester.MODSIngester):
         """
         text_work = self.graph.value(predicate=NS_MGR.rdf.type,
             object=NS_MGR.bf.Text)
-        if text_work is None:
+        if text_work is None or 1 > 0:
             # Adds new instance
             original_instance = instance_iri
             instance_iri = self.__generate_uri__()
@@ -183,7 +183,7 @@ class IslandoraIngester(mods_ingester.MODSIngester):
             item_iri = self.__generate_uri__()
             self.add_admin_metadata(item_iri)
             self.graph.add((item_iri, NS_MGR.rdf.type, NS_MGR.bf.Item))
-            self.graph.add((item_iri, NS_MGR.itemOf, instance_iri))
+            self.graph.add((item_iri, NS_MGR.bf.itemOf, instance_iri))
             institution = next(self.rules_graph.objects(predicate=NS_MGR.bf.heldBy))
             self.graph.add((item_iri, NS_MGR.bf.heldBy, institution))
         else: 
@@ -449,15 +449,13 @@ WHERE {{
                 FEDORA_NS)
             if pdf_datastream is not None:
                 self.__add_pdf_ds_to_item__(child_pid, 
-                    pdf_datastream, 
-                    instance_iri)
+                    pdf_datastream)
             dataset_datastreams = child_ds_doc.findall(
                 "fedora_access:datastream[@dsid='FILE']",
                 FEDORA_NS)
             for row in dataset_datastreams:
                 self.__add_dataset__(child_pid,
-                    row,
-                    instance_iri)
+                    row)
             self.ingested_pids.append(child_pid)
         self.add_to_triplestore()
         return instance_iri
@@ -492,6 +490,9 @@ WHERE {{
             FEDORA_NS) is not None:
             return
         content_model = self.__get_content_model__(rels_ext)
+        # Builds supporting Instances and Works if a compound object
+        if content_model.startswith("info:fedora/islandora:compoundCModel"):
+            return self.ingest_compound(pid)
         # If a collection model, returns result of calling ingest_collection
         if content_model.startswith('info:fedora/islandora:collectionCModel'):
             return self.ingest_collection(pid)
@@ -503,9 +504,6 @@ WHERE {{
         # Adds PID as Local Identifier
         local_bnode = self.__add_pid_identifier__(pid)
         self.graph.add((instance_iri, NS_MGR.bf.identifiedBy, local_bnode)) 
-        # Builds supporting Instances and Works if a compound object
-        if content_model.startswith("info:fedora/islandora:compoundCModel"):
-            return self.ingest_compound(pid, instance_iri)
         # Matches best BIBFRAME Work Class 
         addl_work_classes = self.__guess_work_class__(instance_iri, content_model)
         work_bnode = self.graph.value(subject=instance_iri,
