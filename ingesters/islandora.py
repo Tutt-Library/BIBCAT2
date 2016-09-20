@@ -11,6 +11,8 @@ import requests
 import sys
 import xml.etree.ElementTree as etree
 
+from fuzzywuzzy import fuzz
+
 TIGER_BASE = os.path.abspath(
     os.path.split(
         os.path.dirname(__file__))[0])
@@ -27,6 +29,65 @@ FEDORA_NS = {
     "fedora_manage": "http://www.fedora.info/definitions/1/0/management/",
     "rdf": str(NS_MGR.rdf)
 }
+
+class CompoundObjToWork(object):
+
+    def __init__(self, **kwargs):
+        self.ingester = kwargs.get("ingester")
+        self.instance = kwargs.get("instance")
+        self.work_bnode = self.ingester.graph.value(
+            subject=self.instance,
+            predicate=NS_MGR.bf.instanceOf)
+        self.work_iri = None
+
+
+    def __move_triples__(self):
+        for pred, obj in self.ingester.graph.predicate_objects(
+            subject=self.work_bnode):
+            self.ingester.graph.add((self.work_iri, pred, obj))
+            self.ingester.graph.remove((self.instance, pred, obj))
+            
+
+    def __work_classes__(self):
+        for obj in self.ingester.graph.objects(
+            subject=self.work_bnode,
+            predicate=NS_MGR.rdf.type):
+            if isinstance(obj, rdflib.URIRef):
+                self.ingester.graph.add((self.work_iri, NS_MGR.rdf.type, obj))
+            self.ingester.graph.remove((self.work_bnode, NS_MGR.rdf.type, obj))
+        
+    def __work_title__(self):
+        instance_title_bnode = self.ingester.graph.value(
+            subject=self.instance,
+            predicate=NS_MGR.bf.title)
+        work_title_bnode = rdflib.BNode()
+        self.ingester.graph.add((self.work_iri,
+            NS_MGR.bf.title,
+            work_title_bnode))
+        self.ingester.graph.add((work_title_bnode,
+            NS_MGR.rdf.type,
+            NS_MGR.bf.WorkTitle))
+        for pred, obj in self.ingester.graph.predicate_objects(
+            subject=instance_title_bnode):
+            if pred != NS_MGR.rdf.type:
+                self.ingester.graph.add((work_title_bnode, pred, obj))
+            self.ingester.graph.remove((instance_title_bnode, pred, obj))
+            
+
+    def run(self):
+        self.work_iri = self.ingester.__generate_uri__()
+        # Add Work RDF types
+        self.__work_classes__()
+        # Add Work Title
+        self.__work_title__()
+        # Move all triples from Instance Work bnode to IRI Work
+        self.__move_triples__()
+        return self.work_iri
+        
+
+        
+    
+        
 
 class IslandoraIngester(mods_ingester.MODSIngester):
 
@@ -74,14 +135,7 @@ class IslandoraIngester(mods_ingester.MODSIngester):
             datastream(etree.Element): Element of potential dataset
             instance_iri(rdflib.URIRef): IRI of BIBFRAME Instance
         """
-        ds_profile_url = "{}{}/datastreams/FILE?format=xml".format(
-            self.rest_url,
-            dataset_pid)
-        ds_profile_result = requests.get(ds_profile_url, auth=self.auth)
-        if ds_profile_result.status_code > 399:
-            raise ValueError("Failed to retrieve {} Datastream Profile".format(
-                dataset_pid))
-        ds_profile = etree.XML(ds_profile_result.text)
+        ds_profile = self.__get_datastream_profile__(dataset_pid)
         ds_size = ds_profile.find("fedora_manage:dsSize", FEDORA_NS)
         if int(ds_size.text) < 1:
             return
@@ -137,6 +191,45 @@ class IslandoraIngester(mods_ingester.MODSIngester):
         self.graph.add((dataset_uri, NS_MGR.bf.accompanies, instance_iri))
 
 
+    def __add_audio__(self, audio_pid):
+        """Adds a new related Work, Instance, and Item for an audio datastream
+
+        Args:
+            audio_pid(str): PID of Audio Fedora Object
+        """
+        ds_profile = self.__get_datastream_profile__(audio_pid)
+        audio_iri = self.__generate_uri__()
+        # Adds instance RDF classes
+        for rdf_type in [NS_MGR.bf.Instance, NS_MGR.bf.Electronic]:
+            self.graph.add((audio_iri, NS_MGR.rdf.type, rdf_type))
+        self.add_admin_metadata(audio_iri)
+        label = ds_profile.find("fedora_manage:dsLabel", FEDORA_NS)
+        if label and len(label.text) > 0:
+            title = rdflib.Literal(label.text)
+        else:
+            title = rdflib.Literal("Audio File", lang="en")
+        self.graph.add(
+             (title_node,
+              NS_MGR.bf.mainTitle,
+              title)
+        )
+        # Adds mime-type 
+        mime_type = ds_profile.find("fedora_manage:dsMIME", FEDORA_NS)
+        if mime_type is not None:
+            self.__add_encoding_format__(audio_iri,
+                mime_type.text)
+        # Adds PID as local identifier to the item
+        self.graph.add((instance_iri,
+            NS_MGR.bf.identifiedBy,
+            self.__add_pid_identifier__(audio_pid)))
+        item_iri = self.__generate_uri__()
+        self.graph.add((item_iri, NS_MGR.rdf.type, NS_MGR.bf.Item))
+        self.graph.add((item_iri, NS_MGR.bf.itemOf, audio_iri))
+        institution = next(self.rules_graph.objects(predicate=NS_MGR.bf.heldBy))
+        self.graph.add((item_iri, NS_MGR.bf.heldBy, institution))
+        return audio_iri
+        
+ 
 
     def __add_encoding_format__(self, instance_iri, mime_type):
         """Method adds mime type as encoding format to instance"""
@@ -163,29 +256,35 @@ class IslandoraIngester(mods_ingester.MODSIngester):
             pdf_datastream(etree.Element): Element of PDF Datastream
             instance_iri(rdflib.URIRef): IRI of BIBFRAME Instance
         """
-        text_work = self.graph.value(predicate=NS_MGR.rdf.type,
-            object=NS_MGR.bf.Text)
-        if text_work is None or 1 > 0:
-            # Adds new instance
-            original_instance = instance_iri
-            instance_iri = self.__generate_uri__()
-            self.add_admin_metadata(instance_iri)
-            self.graph.add((instance_iri, NS_MGR.rdf.type, NS_MGR.bf.Instance))
-            self.graph.add((instance_iri, NS_MGR.bf.supplementTo, original_instance))
-            # Use the pdf_datastream label as a Instance Title
-            instance_title = rdflib.BNode()
-            self.graph.add((instance_iri, NS_MGR.bf.title, instance_title))
-            self.graph.add((instance_title, NS_MGR.rdf.type, NS_MGR.bf.InstanceTitle))
-            self.graph.add(
-                (instance_title, 
-                 NS_MGR.bf.mainTitle, 
-                 rdflib.Literal(pdf_datastream.get("LABEL"))))
-            item_iri = self.__generate_uri__()
-            self.add_admin_metadata(item_iri)
-            self.graph.add((item_iri, NS_MGR.rdf.type, NS_MGR.bf.Item))
-            self.graph.add((item_iri, NS_MGR.bf.itemOf, instance_iri))
-            institution = next(self.rules_graph.objects(predicate=NS_MGR.bf.heldBy))
-            self.graph.add((item_iri, NS_MGR.bf.heldBy, institution))
+        ds_label = pdf_datastream.get("LABEL")
+        if instance_iri is not None:
+            primary_main_title = self.graph.value(subject=instance_iri,
+                predicate=NS_MGR.bf.title)
+            main_title = self.graph.value(subject=primary_main_title,
+                predicate=NS_MGR.bf.mainTitle)
+            # If the datastream title match 98% treat PDF datastream as 
+            # primary instance
+            if fuzz.ratio(str(main_title), ds_label) < 95:
+                # Adds new instance
+                original_instance = instance_iri
+                instance_iri = self.__generate_uri__()
+                self.add_admin_metadata(instance_iri)
+                self.graph.add((instance_iri, NS_MGR.rdf.type, NS_MGR.bf.Instance))
+                self.graph.add((instance_iri, NS_MGR.bf.supplementTo, original_instance))
+                # Use the pdf_datastream label as a Instance Title
+                instance_title = rdflib.BNode()
+                self.graph.add((instance_iri, NS_MGR.bf.title, instance_title))
+                self.graph.add((instance_title, NS_MGR.rdf.type, NS_MGR.bf.InstanceTitle))
+                self.graph.add(
+                   (instance_title, 
+                    NS_MGR.bf.mainTitle, 
+                    rdflib.Literal(ds_label)))
+                item_iri = self.__generate_uri__()
+                self.add_admin_metadata(item_iri)
+                self.graph.add((item_iri, NS_MGR.rdf.type, NS_MGR.bf.Item))
+                self.graph.add((item_iri, NS_MGR.bf.itemOf, instance_iri))
+                institution = next(self.rules_graph.objects(predicate=NS_MGR.bf.heldBy))
+                self.graph.add((item_iri, NS_MGR.bf.heldBy, institution))
         else: 
             item_iri = self.graph.value(predicate=NS_MGR.bf.itemOf,
                 object=instance_iri)
@@ -196,8 +295,8 @@ class IslandoraIngester(mods_ingester.MODSIngester):
         self.graph.add((instance_iri,
             NS_MGR.bf.identifiedBy,
             self.__add_pid_identifier__(pdf_pid)))
-        
             
+
 
     def __get_content_model__(self, rels_ext):
         """Retrieves content models and filters out and
@@ -244,7 +343,24 @@ class IslandoraIngester(mods_ingester.MODSIngester):
         ds_doc = etree.XML(datastreams_result.text)
         return ds_doc
 
+    def __get_datastream_profile__(self, pid):
+        """Method returns XML doc of Fedora Object Profile REST call
 
+        Args:
+            pid(str): PID of Fedora object
+    
+        Returns:
+            etree.Element - Root element of Object Profile XML 
+        """
+        ds_profile_url = "{}{}/datastreams/FILE?format=xml".format(
+            self.rest_url,
+            pid)
+        ds_profile_result = requests.get(ds_profile_url, auth=self.auth)
+        if ds_profile_result.status_code > 399:
+            raise ValueError("Failed to retrieve {} Datastream Profile".format(
+                pid))
+        return etree.XML(ds_profile_result.text)
+   
 
     def __get_label__(self, pid):
         """Retrieves label for a PID using the REST API"""
@@ -420,11 +536,13 @@ WHERE {{
             headers={"Content-Type": "text/turtle"})
         return collection_iri
 
-    def ingest_compound(self, pid, instance_iri):
-        """Handles Complex Compound Objects
+    def ingest_compound(self, pid):
+        """Handles Complex Compound Objects by creating a BF Work for the
+        compound object, iterates through datastreams and creates related
+        Instances from the compound's constituents Fedora Objects.
 
         Args:
-            instance_iri(rdflib.URIRef): IRI of base instance
+            pid(str): PID of Compound Object
         """
         sparql = """SELECT DISTINCT ?s
 WHERE {{
@@ -440,6 +558,13 @@ WHERE {{
         if constituents_response.status_code > 399:
             raise ValueError("Ingesting Compound {} Failed".format(
                 pid))
+        primary_instance = self.__mods_to_bibframe__(pid)
+        work_generator = CompoundObjToWork(ingester=self,
+            instance=primary_instance)
+        work_iri = work_generator.run()
+        self.graph.add((work_iri,
+            NS_MGR.bf.identifiedBy,
+            self.__add_pid_identifier__(pid)))
         constituents = constituents_response.json().get('results')
         for row in constituents:
             child_pid = row.get('s').split("/")[-1]
@@ -449,13 +574,28 @@ WHERE {{
                 FEDORA_NS)
             if pdf_datastream is not None:
                 self.__add_pdf_ds_to_item__(child_pid, 
-                    pdf_datastream)
+                    pdf_datastream,
+                    primary_instance)
             dataset_datastreams = child_ds_doc.findall(
                 "fedora_access:datastream[@dsid='FILE']",
                 FEDORA_NS)
             for row in dataset_datastreams:
                 self.__add_dataset__(child_pid,
                     row)
+            wav_datastreams = child_ds_doc.findall(
+                "fedora_access:datastream[@mimeType='audio/vnd.wave']",
+                FEDORA_NS)
+            for row in wav_datastreams:
+                self.__add_audio__(child_pid)
+            mp3_datastreams = child_ds_doc.findall(
+                "fedora_access:datastream[@mimeType='audio/mpeg']",
+                FEDORA_NS)
+            for row in mp3_datastreams:
+                self.__add_audio__(child_pid)
+
+ 
+
+
             self.ingested_pids.append(child_pid)
         self.add_to_triplestore()
         return instance_iri
