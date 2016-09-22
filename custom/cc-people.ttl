@@ -121,6 +121,12 @@
     schema:familyName "Fenn"@en ;
     schema:givenName "Aju"@en .
 
+<http://orcid.org/0000-0002-7543-3893> a bf:Person ;
+    rdfs:label "Jeremy Nelson"@en ;
+    schema:email "jeremy.nelson@coloradocollege.edu" ;
+    schema:familyName "Nelson"@en ;
+    schema:givenName "Jeremy"@en .
+
 <http://orcid.org/0000-0002-8157-8837> a bf:Person ;
     rdfs:label "Pedro de Arajuo"@en ;
     schema:familyName "de Arajuo"@en ;

@@ -475,7 +475,8 @@ WHERE {{
                     return self.__mods_to_bibframe__(child_pid)
             # Failed to find any mods
             return
-        else:   
+        else:
+            mods_result.encoding = 'utf-8'
             mods_xml = etree.XML(mods_result.text)
         self.transform(mods_xml)
         instance_iri = self.graph.value(
@@ -581,7 +582,8 @@ WHERE {{
                 FEDORA_NS)
             for row in dataset_datastreams:
                 self.__add_dataset__(child_pid,
-                    row)
+                    row,
+                    primary_instance)
             wav_datastreams = child_ds_doc.findall(
                 "fedora_access:datastream[@mimeType='audio/vnd.wave']",
                 FEDORA_NS)
@@ -598,7 +600,7 @@ WHERE {{
 
             self.ingested_pids.append(child_pid)
         self.add_to_triplestore()
-        return instance_iri
+        return primary_instance
       
 
     def process_pid(self, pid):
