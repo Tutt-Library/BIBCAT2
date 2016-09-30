@@ -57,6 +57,8 @@ class CompoundObjToWork(object):
             self.ingester.graph.remove((self.work_bnode, NS_MGR.rdf.type, obj))
         
     def __work_title__(self):
+        """Adds Work Title based on Instance Title and remove Instance Title
+        from Graph"""
         instance_title_bnode = self.ingester.graph.value(
             subject=self.instance,
             predicate=NS_MGR.bf.title)
@@ -72,6 +74,10 @@ class CompoundObjToWork(object):
             if pred != NS_MGR.rdf.type:
                 self.ingester.graph.add((work_title_bnode, pred, obj))
             self.ingester.graph.remove((instance_title_bnode, pred, obj))
+        self.ingester.graph.remove(
+            (self.instance, 
+             NS_MGR.bf.title, 
+             instance_title_bnode))
             
 
     def run(self):
@@ -153,7 +159,7 @@ class IslandoraIngester(mods_ingester.MODSIngester):
         self.graph.add((title_node, NS_MGR.rdf.type, NS_MGR.bf.InstanceTitle))
         self.graph.add((dataset_uri, NS_MGR.bf.title, title_node))
         label = ds_profile.find("fedora_manage:dsLabel", FEDORA_NS)
-        if label and len(label.text) > 0:
+        if label is not None and len(label.text) > 0:
             title = rdflib.Literal(label.text)
         else:
             title = rdflib.Literal("Dataset", lang="en")
@@ -197,14 +203,41 @@ class IslandoraIngester(mods_ingester.MODSIngester):
         Args:
             audio_pid(str): PID of Audio Fedora Object
         """
-        ds_profile = self.__get_datastream_profile__(audio_pid)
+        audio_work_iri = self.__generate_uri__()
+        for work_type in [NS_MGR.bf.Audio, NS_MGR.bf.Work]:
+            self.graph.add((audio_work_iri, NS_MGR.rdf.type, work_type))
+        self.add_admin_metadata(audio_work_iri) 
+        ds_doc = self.__get_datastreams__(audio_pid)
+        wav_datastreams = ds_doc.findall(
+             "fedora_access:datastream[@mimeType='audio/vnd.wave']",
+             FEDORA_NS)
+        for wav in wav_datastreams:
+            ds_id = wav.get("dsid")
+            self.__add_audio_instance__(audio_work_iri, audio_pid, ds_id)
+        mp3_datastreams = ds_doc.findall(
+             "fedora_access:datastream[@mimeType='audio/mpeg']",
+             FEDORA_NS)
+        for mp3 in mp3_datastreams:
+            ds_id = mp3.get("dsid")
+            self.__add_audio_instance__(audio_work_iri, audio_pid, ds_id)
+        # Adds PID as local identifier to the Work
+        self.graph.add((audio_work_iri,
+            NS_MGR.bf.identifiedBy,
+            self.__add_pid_identifier__(audio_pid)))
+        return audio_work_iri
+        
+    def __add_audio_instance__(self, work_iri, audio_pid, file_id):
+        """Adds an Audio Instance and Item for a work"""
         audio_iri = self.__generate_uri__()
         # Adds instance RDF classes
         for rdf_type in [NS_MGR.bf.Instance, NS_MGR.bf.Electronic]:
             self.graph.add((audio_iri, NS_MGR.rdf.type, rdf_type))
         self.add_admin_metadata(audio_iri)
+        ds_profile = self.__get_datastream_profile__(audio_pid, file_id)
+        # Adds Title
         label = ds_profile.find("fedora_manage:dsLabel", FEDORA_NS)
-        if label and len(label.text) > 0:
+        title_node = rdflib.BNode()
+        if label is not None and len(label.text) > 0:
             title = rdflib.Literal(label.text)
         else:
             title = rdflib.Literal("Audio File", lang="en")
@@ -213,23 +246,39 @@ class IslandoraIngester(mods_ingester.MODSIngester):
               NS_MGR.bf.mainTitle,
               title)
         )
+        self.graph.add((title_node, NS_MGR.rdf.type, NS_MGR.bf.InstanceTitle))
+        self.graph.add((audio_iri, NS_MGR.bf.title, title_node))
         # Adds mime-type 
         mime_type = ds_profile.find("fedora_manage:dsMIME", FEDORA_NS)
         if mime_type is not None:
             self.__add_encoding_format__(audio_iri,
                 mime_type.text)
-        # Adds PID as local identifier to the item
-        self.graph.add((instance_iri,
-            NS_MGR.bf.identifiedBy,
-            self.__add_pid_identifier__(audio_pid)))
+        # Adds file size
+        file_size = ds_profile.find("fedora_manage:dsSize", FEDORA_NS)
+        if file_size is not None:
+            file_size_node = rdflib.BNode()
+            self.graph.add((audio_iri, 
+                            NS_MGR.bf.digitalCharacteristic, 
+                            file_size_node))
+            self.graph.add((file_size_node,
+                            NS_MGR.rdf.type,
+                            NS_MGR.bf.FileSize))
+            self.graph.add((file_size_node,
+                            NS_MGR.rdf.value,
+                            rdflib.Literal(file_size.text)))
+        # Adds Creation Date
+        creation_date = ds_profile.find("fedora_manage:dsCreateDate", FEDORA_NS)
+        if creation_date is not None:
+            self.graph.add((audio_iri, 
+                            NS_MGR.bf.creationDate, 
+                            rdflib.Literal(creation_date.text)))
         item_iri = self.__generate_uri__()
         self.graph.add((item_iri, NS_MGR.rdf.type, NS_MGR.bf.Item))
         self.graph.add((item_iri, NS_MGR.bf.itemOf, audio_iri))
         institution = next(self.rules_graph.objects(predicate=NS_MGR.bf.heldBy))
         self.graph.add((item_iri, NS_MGR.bf.heldBy, institution))
-        return audio_iri
-        
- 
+
+
 
     def __add_encoding_format__(self, instance_iri, mime_type):
         """Method adds mime type as encoding format to instance"""
@@ -343,24 +392,24 @@ class IslandoraIngester(mods_ingester.MODSIngester):
         ds_doc = etree.XML(datastreams_result.text)
         return ds_doc
 
-    def __get_datastream_profile__(self, pid):
+    def __get_datastream_profile__(self, pid, file_id="FILE"):
         """Method returns XML doc of Fedora Object Profile REST call
 
         Args:
             pid(str): PID of Fedora object
+            file_id(str): File ID, defaults to FILE
     
         Returns:
             etree.Element - Root element of Object Profile XML 
         """
-        ds_profile_url = "{}{}/datastreams/FILE?format=xml".format(
-            self.rest_url,
-            pid)
+        ds_profile_url = "{}{}/datastreams/{}?format=xml".format(
+             self.rest_url,
+             pid,
+             file_id)
         ds_profile_result = requests.get(ds_profile_url, auth=self.auth)
-        if ds_profile_result.status_code > 399:
-            raise ValueError("Failed to retrieve {} Datastream Profile".format(
-                pid))
-        return etree.XML(ds_profile_result.text)
-   
+        if ds_profile_result.status_code < 399:
+             return etree.XML(ds_profile_result.text)
+                
 
     def __get_label__(self, pid):
         """Retrieves label for a PID using the REST API"""
@@ -403,6 +452,22 @@ class IslandoraIngester(mods_ingester.MODSIngester):
             return
         elif len(bindings) == 1:
             return rdflib.URIRef(bindings[0]['instance']['value'])
+
+    def __get_rels_ext__(self, pid):
+        """Retrieve RELS-EXT for a pid and returns XML doc
+
+        Args:
+            pid: Fedora Object PID
+
+        Returns:
+            etree.Element: REL-EXT XML Document
+        """
+        rels_ext_url = "{0}{1}/datastreams/RELS-EXT/content".format(
+            self.rest_url,
+            pid)
+        rels_ext_result = requests.get(rels_ext_url, auth=self.auth)
+        return etree.XML(rels_ext_result.text)
+
 
     def __guess_instance_class__(self, work_classes):
         """Attempts to guess additional instanc classes for the Fedora Object
@@ -569,6 +634,14 @@ WHERE {{
         constituents = constituents_response.json().get('results')
         for row in constituents:
             child_pid = row.get('s').split("/")[-1]
+            rels_ext = self.__get_rels_ext__(child_pid)
+            content_model = self.__get_content_model__(rels_ext)
+            if content_model.endswith("sp-audioCModel"):
+                audio_work_iri = self.__add_audio__(child_pid)
+                self.graph.add((audio_work_iri,
+                    NS_MGR.bf.accompanies,
+                    work_iri)) 
+                continue
             child_ds_doc = self.__get_datastreams__(child_pid)
             pdf_datastream = child_ds_doc.find(
                 "fedora_access:datastream[@mimeType='application/pdf']",
@@ -580,24 +653,10 @@ WHERE {{
             dataset_datastreams = child_ds_doc.findall(
                 "fedora_access:datastream[@dsid='FILE']",
                 FEDORA_NS)
-            for row in dataset_datastreams:
+            for data in dataset_datastreams:
                 self.__add_dataset__(child_pid,
-                    row,
+                    data,
                     primary_instance)
-            wav_datastreams = child_ds_doc.findall(
-                "fedora_access:datastream[@mimeType='audio/vnd.wave']",
-                FEDORA_NS)
-            for row in wav_datastreams:
-                self.__add_audio__(child_pid)
-            mp3_datastreams = child_ds_doc.findall(
-                "fedora_access:datastream[@mimeType='audio/mpeg']",
-                FEDORA_NS)
-            for row in mp3_datastreams:
-                self.__add_audio__(child_pid)
-
- 
-
-
             self.ingested_pids.append(child_pid)
         self.add_to_triplestore()
         return primary_instance
@@ -621,12 +680,7 @@ WHERE {{
             if len(bindings) > 0:
                 return self.__get_instance_iri__(
                     bindings[0].get('subject').get('value'))
-        # Retrieves RELS-EXT XML
-        rels_ext_url = "{0}{1}/datastreams/RELS-EXT/content".format(
-            self.rest_url,
-            pid)
-        rels_ext_result = requests.get(rels_ext_url, auth=self.auth)
-        rels_ext = etree.XML(rels_ext_result.text)
+        rels_ext = self.__get_rels_ext__(pid)        
         # Skips any PIDS that are constituents of another object
         if rels_ext.find("rdf:Description/fedora:isConstituentOf", 
             FEDORA_NS) is not None:
