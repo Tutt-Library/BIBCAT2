@@ -41,11 +41,11 @@
     schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> ;
     cc_fac:assistant-professor <http://catalog.coloradocollege.edu/25cee3de-72c1-11e6-93c0-005056c00008>,
         <http://catalog.coloradocollege.edu/4e3dedae-72c1-11e6-9913-005056c00008>,
-        <http://catalog.coloradocollege.edu/d1121fd4-72c1-11e6-81fa-005056c00008>,
-        <http://catalog.coloradocollege.edu/d49aee34-72c0-11e6-bfeb-005056c00008> ;
+        <http://catalog.coloradocollege.edu/d1121fd4-72c1-11e6-81fa-005056c00008> ;
     cc_fac:associate-chair <http://catalog.coloradocollege.edu/2ed5cbf4-72c0-11e6-a32d-005056c00008> ;
     cc_fac:associate-professor <http://catalog.coloradocollege.edu/2ed5cbf4-72c0-11e6-a32d-005056c00008>,
         <http://catalog.coloradocollege.edu/3583f264-72bf-11e6-b97c-005056c00008>,
+        <http://catalog.coloradocollege.edu/d49aee34-72c0-11e6-bfeb-005056c00008>,
         <http://catalog.coloradocollege.edu/716ae934-72bc-11e6-99f5-005056c00008> ;
     cc_fac:chair <http://catalog.coloradocollege.edu/3583f264-72bf-11e6-b97c-005056c00008> ;
     cc_fac:professor <http://catalog.coloradocollege.edu/012ccc6e-72be-11e6-9c71-005056c00008>,

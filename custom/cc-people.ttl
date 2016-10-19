@@ -51,6 +51,13 @@
     schema:familyName "Whitehead"@en ;
     schema:givenName "Matthew"@en .
 
+<http://catalog.coloradocollege.edu/54ae8afa-964e-11e6-8513-005056c00008> a bf:Person ;
+    rdfs:label "Owen Cramer"@en ;
+    schema:email "OCramer@ColoradoCollege.edu" ;
+    schema:familyName "Cramer"@en ;
+    schema:givenName "Owen"@en ;
+    schema:url <https://www.coloradocollege.edu/academics/dept/classics/people/profile.html?person=cramer_owen_c> .
+
 <http://catalog.coloradocollege.edu/716ae934-72bc-11e6-99f5-005056c00008> a bf:Person ;
     rdfs:label "David Brown"@en ;
     schema:email "dbrown@coloradocollege.edu" ;

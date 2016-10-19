@@ -1,85 +1,92 @@
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix cc_fac: <https://www.coloradocollege.edu/ns/faculty/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix kds: <http://knowledgelinks.io/ns/data-structures/> .
+@prefix dcr: <http://knowledgelinks.io/ns/dc/> .
 @prefix kdr: <http://knowledgelinks.io/ns/data-resources/> .
+@prefix kds: <http://knowledgelinks.io/ns/data-structures/> .
+@prefix loc: <http://id.loc.gov/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pcdm: <http://pcdm.org/models#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix relators: <http://id.loc.gov/vocabulary/relators/> .
-@prefix dcr: <http://knowledgelinks.io/ns/dc/> .
-@prefix loc: <http://id.loc.gov/> .
 @prefix schema: <http://schema.org/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://www.coloradocollege.edu/> a schema:CollegeOrUniversity,
-    bf:Organization;
-    rdfs:label "Colorado College"@en;
-    schema:address [ a schema:PostalAddress;
-        schema:addressCountry "US";
-        schema:addressLocality "Colorado Springs"@en;
-        schema:addressRegion "Colorado"@en;
-        schema:postalCode 80903;
-        schema:streetAddress "14 East Cache La Poudre Street" ];
-    schema:foundingDate [ a schema:Date;
-                          rdf:value 1874 ];
-    schema:subOrganization <https://www.coloradocollege.edu/admission/>,
-        <https://www.coloradocollege.edu/academics/dept/anthropology/>,
-        <https://www.coloradocollege.edu/academics/dept/art/>, 
-        <https://www.coloradocollege.edu/academics/dept/molecularbiology/>,
-        <https://www.coloradocollege.edu/academics/dept/obe/>,
-        <https://www.coloradocollege.edu/academics/dept/economics/>,
-        <https://www.coloradocollege.edu/library/>,
-        <https://www.coloradocollege.edu/academics/dept/mathematics/>;
-    schema:sameAs <http://www.coloradocollege.edu/> .
+cc_fac:assistant-professor a rdf:Resource ;
+    rdfs:label "Assistant Professor"@en ;
+    rdf:range relators:tch .
 
-<https://www.coloradocollege.edu/academics/dept/art/> a bf:Organization,
-    schema:CollegeDepartment;
-    rdfs:label "Art Department"@en ;
-    schema:parentOrganization <https://www.coloradocollege.edu/> .
+cc_fac:associate-chair a schema:title ;
+    rdfs:label "Associate Chair"@en .
 
-<https://www.coloradocollege.edu/academics/dept/economics/> a bf:Organization,
-    schema:CollegeDepartment;
-    rdfs:label "Economics and Business"@en;
-    schema:parentOrganization <https://www.coloradocollege.edu/> .
+cc_fac:associate-professor a rdf:Resource ;
+    rdfs:label "Associate Professor"@en ;
+    rdf:range relators:tch .
 
-<https://www.coloradocollege.edu/academics/dept/mathematics/> a bf:Organization,
-    schema:CollegeDepartment;
-    rdfs:label "Mathematics and Computer Science"@en;
-    schema:parentOrganization <https://www.coloradocollege.edu/> .
- 
-    
-<https://www.coloradocollege.edu/library/> a schema:Library,
-    bf:Organization;
-    bf:identifiedBy [ a bf:Oclc;
-        rdf:value "COCA" ] ;
-    schema:parentOrganization <https://www.coloradocollege.edu/> ;
-    schema:subOrganization <https://www.coloradocollege.edu/library/seay/>,
-        <https://libraryweb.coloradocollege.edu/library/index.php/press> ;
-    rdfs:label "Tutt Library"@en .
-
-cc_fac:professor a rdf:Resource;
-    rdf:range relators:tch;
-    rdfs:label "Professor"@en .
-
-cc_fac:associate-professor a rdf:Resource;
-    rdf:range relators:tch;
-    rdfs:label "Associate Professor"@en .
-
-cc_fac:assistant-professor a rdf:Resource;
-    rdf:range relators:tch;
-    rdfs:label "Assistant Professor"@en .
-
-cc_fac:visiting-assistant-professor a rdf:Resource;
-    rdf:range relators:tch;
-    rdfs:label "Visiting Assistant Professor"@en .
-
-cc_fac:chair a schema:title;
+cc_fac:chair a schema:title ;
     rdfs:label "Chair"@en .
 
-cc_fac:associate-chair a schema:title;
-    rdfs:label "Associate Chair"@en .
+cc_fac:professor a rdf:Resource ;
+    rdfs:label "Professor"@en ;
+    rdf:range relators:tch .
 
 cc_fac:sabbatical a schema:EducationalEvent ;
     rdfs:label "Sabbatical"@en .
+
+cc_fac:visiting-assistant-professor a rdf:Resource ;
+    rdfs:label "Visiting Assistant Professor"@en ;
+    rdf:range relators:tch .
+
+<https://www.coloradocollege.edu/academics/dept/art/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "Art Department"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/classics/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "Classics"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/economics/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "Economics and Business"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/mathematics/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "Mathematics and Computer Science"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/library/> a bf:Organization,
+        schema:Library ;
+    rdfs:label "Tutt Library"@en ;
+    bf:identifiedBy [ a bf:Oclc ;
+            rdf:value "COCA" ] ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> ;
+    schema:subOrganization <https://libraryweb.coloradocollege.edu/library/index.php/press>,
+        <https://www.coloradocollege.edu/library/seay/> .
+
+<https://www.coloradocollege.edu/> a bf:Organization,
+        schema:CollegeOrUniversity ;
+    rdfs:label "Colorado College"@en ;
+    schema:address [ a schema:PostalAddress ;
+            schema:addressCountry "US" ;
+            schema:addressLocality "Colorado Springs"@en ;
+            schema:addressRegion "Colorado"@en ;
+            schema:postalCode 80903 ;
+            schema:streetAddress "14 East Cache La Poudre Street" ] ;
+    schema:foundingDate [ a schema:Date ;
+            rdf:value 1874 ] ;
+    schema:sameAs <http://www.coloradocollege.edu/> ;
+    schema:subOrganization <https://www.coloradocollege.edu/academics/dept/anthropology/>,
+        <https://www.coloradocollege.edu/academics/dept/art/>,
+        <https://www.coloradocollege.edu/academics/dept/classics/>,
+        <https://www.coloradocollege.edu/academics/dept/economics/>,
+        <https://www.coloradocollege.edu/academics/dept/mathematics/>,
+        <https://www.coloradocollege.edu/academics/dept/molecularbiology/>,
+        <https://www.coloradocollege.edu/academics/dept/obe/>,
+        <https://www.coloradocollege.edu/admission/>,
+        <https://www.coloradocollege.edu/library/> .
+
