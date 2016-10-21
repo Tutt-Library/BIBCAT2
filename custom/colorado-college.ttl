@@ -60,7 +60,8 @@ cc_fac:visiting-assistant-professor a rdf:Resource ;
     schema:parentOrganization <https://www.coloradocollege.edu/> .
 
 <https://www.coloradocollege.edu/library/> a bf:Organization,
-        schema:Library ;
+        schema:Library,
+        schema:CollegeDepartment ;
     rdfs:label "Tutt Library"@en ;
     bf:identifiedBy [ a bf:Oclc ;
             rdf:value "COCA" ] ;

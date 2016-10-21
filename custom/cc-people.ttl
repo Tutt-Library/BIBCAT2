@@ -58,6 +58,12 @@
     schema:givenName "Owen"@en ;
     schema:url <https://www.coloradocollege.edu/academics/dept/classics/people/profile.html?person=cramer_owen_c> .
 
+<http://catalog.coloradocollege.edu/49994cf8-97ca-11e6-b708-005056c00008> a bf:Person ;
+    rdfs:label "Sanjaya Thakur"@en ;
+    schema:email "Sanjaya.Thakur@ColoradoCollege.edu" ;
+    schema:familyName "Thakur"@en ;
+    schema:givenName "Sanjay"@en .
+
 <http://catalog.coloradocollege.edu/716ae934-72bc-11e6-99f5-005056c00008> a bf:Person ;
     rdfs:label "David Brown"@en ;
     schema:email "dbrown@coloradocollege.edu" ;
