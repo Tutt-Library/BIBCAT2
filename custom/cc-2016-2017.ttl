@@ -42,14 +42,6 @@ iso6391:la rdfs:label "Latin"@en .
     schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c0000> .
 
 <http://catalog.coloradocollege.edu/e1f4904a-97a6-11e6-ac63-005056c00008> a schema:EducationalEvent ;
-    etd:theses [etd:fedora38-pid "coccc:26672";
-            etd:language iso6391:en, iso6391:la, iso6391:el ;
-            etd:slug "classics" ], 
-        [ rdfs:label "Classics - Psychoanalysis Minor"@en ;
-          etd:fedora38-pid "coccc:26929" ;
-          etd:thesis_note "Senior Capstone -- Colorado College"@en ;
-          etd:additional-note "This capstone fulfills the requirements of the Colorado College Psychoanalysis Minor."@en ;
-          etd:slug "classics-psychoanalysis-minor" ] ;
     cc_fac:assistant-professor <http://catalog.coloradocollege.edu/49994cf8-97ca-11e6-b708-005056c00008> ;
     cc_fac:professor <http://catalog.coloradocollege.edu/54ae8afa-964e-11e6-8513-005056c00008> ; 
     rdfs:label "Classics Department Academic Year 2016-2017"@en ;
@@ -58,8 +50,6 @@ iso6391:la rdfs:label "Latin"@en .
 
 
 <http://catalog.coloradocollege.edu/34f089c2-7082-11e6-a872-005056c00008> a schema:EducationalEvent ;
-    etd:theses [ etd:fedora38-pid "coccc:26674";
-        etd:slug "economics-and-business" ];
     rdfs:label "Economics and Business Academic Year 2016-2017"@en ;
     schema:organizer <https://www.coloradocollege.edu/academics/dept/economics/> ;
     schema:staff <http://catalog.coloradocollege.edu/b38ec026-7084-11e6-917d-005056c00008> ;
@@ -76,22 +66,9 @@ iso6391:la rdfs:label "Latin"@en .
     schema:startDate "2016-08-29T06:00:00" ;
     schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
 
-<http://catalog.coloradocollege.edu/90a1710c-97a0-11e6-b950-005056c00008> a schema:EducationalEvent ;
-    rdfs:label "Library Test Test Collection 2016-2017"@en ;
-    schema:organizer <https://www.coloradocollege.edu/library/> ;
-    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> ;
-    etd:theses [ etd:fedora38-pid "coccc:17501" ;
-        etd:language iso6391:en, iso6391:la ;
-        etd:thesis_note "Senior Capstone -- Colorado College"@en ;
-        etd:additional-note "This fulfills the Book as an Object minor"@en ;
-        etd:slug "library-test" ];
-    
-    cc_fac:assistant-professor <http://orcid.org/0000-0002-7543-3893> .
 
 <http://catalog.coloradocollege.edu/d0e7610a-72ba-11e6-b6dc-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Mathematics and Computer Science Academic Year 2016-2017"@en ;
-    etd:theses [ etd:fedora38-pid "coccc:26687";
-        etd:slug "mathematics-and-computer-science" ];
     schema:organizer <https://www.coloradocollege.edu/academics/dept/mathematics/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> ;
     cc_fac:assistant-professor <http://catalog.coloradocollege.edu/25cee3de-72c1-11e6-93c0-005056c00008>,

@@ -18,6 +18,7 @@ TIGER_BASE = os.path.abspath(
         os.path.dirname(__file__))[0])
 sys.path.append(TIGER_BASE)
 import bibcat.ingesters.mods as mods_ingester
+from bibcat.ingesters.ingester import new_graph
 
 NS_MGR = mods_ingester.NS_MGR
 NS_MGR.bind("pcdm", rdflib.Namespace("http://pcdm.org/models#"))
@@ -275,7 +276,10 @@ class IslandoraIngester(mods_ingester.MODSIngester):
         item_iri = self.__generate_uri__()
         self.graph.add((item_iri, NS_MGR.rdf.type, NS_MGR.bf.Item))
         self.graph.add((item_iri, NS_MGR.bf.itemOf, audio_iri))
-        institution = next(self.rules_graph.objects(predicate=NS_MGR.bf.heldBy))
+        for row in self.rules_graph.objects(predicate=NS_MGR.bf.heldBy):
+            institution = row
+            self.graph.add((item_iri, NS_MGR.bf.heldBy, institution))
+            break
         self.graph.add((item_iri, NS_MGR.bf.heldBy, institution))
 
 
@@ -332,7 +336,10 @@ class IslandoraIngester(mods_ingester.MODSIngester):
                 self.add_admin_metadata(item_iri)
                 self.graph.add((item_iri, NS_MGR.rdf.type, NS_MGR.bf.Item))
                 self.graph.add((item_iri, NS_MGR.bf.itemOf, instance_iri))
-                institution = next(self.rules_graph.objects(predicate=NS_MGR.bf.heldBy))
+                for row in self.rules_graph.objects(
+                    predicate=NS_MGR.bf.heldBy):
+                    institution = row
+                    break
                 self.graph.add((item_iri, NS_MGR.bf.heldBy, institution))
         else: 
             item_iri = self.graph.value(predicate=NS_MGR.bf.itemOf,
@@ -600,6 +607,13 @@ WHERE {{
             self.triplestore_url,
             data=collection_graph.serialize(format='turtle'),
             headers={"Content-Type": "text/turtle"})
+        cc_to_date = new_graph()
+        cc_to_date.parse("E:/2016/dpla-service-hub/data/rdf/colorado-college.ttl", format='turtle')
+        cc_to_date += collection_graph
+        cc_to_date += self.graph
+        print("Writing CC temp rdf for {}".format(pid), end="")
+        with open("E:/2016/dpla-service-hub/data/rdf/colorado-college.ttl", "wb+") as fo:
+            fo.write(cc_to_date.serialize(format='turtle'))
         return collection_iri
 
     def ingest_compound(self, pid):
