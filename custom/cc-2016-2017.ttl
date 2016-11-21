@@ -8,11 +8,11 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcr: <http://knowledgelinks.io/ns/dc/> .
 @prefix dcterm: <http://purl.org/dc/terms/> .
-@prefix etd: <http://catalog.coloradocollege.edu/ns/etd#> .
 @prefix es: <http://knowledgelinks.io/ns/elasticsearch/> .
+@prefix etd: <http://catalog.coloradocollege.edu/ns/etd#> .
+@prefix iso6391: <http://id.loc.gov/vocabulary/iso639-1/> .
 @prefix kdr: <http://knowledgelinks.io/ns/data-resources/> .
 @prefix kds: <http://knowledgelinks.io/ns/data-structures/> .
-@prefix iso6391: <http://id.loc.gov/vocabulary/iso639-1/> .
 @prefix loc: <http://id.loc.gov/authorities/> .
 @prefix loc1: <http://id.loc.gov/> .
 @prefix m21: <http://knowledgelinks.io/ns/marc21/> .
@@ -29,36 +29,126 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-iso6391:el rdfs:label "Greek"@en .
-iso6391:en rdfs:label "English"@en .
-iso6391:la rdfs:label "Latin"@en .
-
-
 <http://catalog.coloradocollege.edu.edu/0a75d55a-76ad-11e6-a286-005056c00008> a schema:EducationalEvent ;
-    etd:theses [ etd:fedora38-pid "coccc:26669";
-        etd:slug "art" ] ;
     rdfs:label "Art Department Academic Year 2016-2017"@en ;
+    etd:theses [ etd:fedora38-pid "coccc:26669" ;
+            etd:slug "art" ] ;
     schema:organizer <https://www.coloradocollege.edu/academics/dept/art/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c0000> .
 
-<http://catalog.coloradocollege.edu/e1f4904a-97a6-11e6-ac63-005056c00008> a schema:EducationalEvent ;
-    cc_fac:assistant-professor <http://catalog.coloradocollege.edu/49994cf8-97ca-11e6-b708-005056c00008> ;
-    cc_fac:professor <http://catalog.coloradocollege.edu/54ae8afa-964e-11e6-8513-005056c00008> ; 
-    rdfs:label "Classics Department Academic Year 2016-2017"@en ;
-    schema:organizer <https://www.coloradocollege.edu/academics/dept/classics/> ;
+<http://catalog.coloradocollege.edu/05410c86-b040-11e6-8f9f-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Block Five"@en ;
+    schema:endDate "2017-02-15T19:00:00" ;
+    schema:startDate "2017-01-23T16:00:00" ;
     schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
 
+<http://catalog.coloradocollege.edu/0589002c-b02c-11e6-be85-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Geology Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/geology/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/096d7834-b02d-11e6-98eb-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Sociology Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/sociology/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/0d463178-b02b-11e6-a76c-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Organismal Biology and Ecology Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/obe/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/127d2b74-b02c-11e6-95a5-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "German Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/german/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/1b794e18-b02d-11e6-9867-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Southwest Studies Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/southweststudies/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/1e965c74-b02a-11e6-a7af-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Anthropology Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/anthropology/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/232e6aac-b040-11e6-9d65-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Block Six"@en ;
+    schema:endDate "2017-03-15T19:00:00" ;
+    schema:startDate "2017-02-20T16:00:00" ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/23c63018-b02c-11e6-b93f-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "German, Russian and East Asian Languages Department Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/greal/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/2c62efca-b02d-11e6-9aff-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Spanish and Portuguese Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/spanish/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
 
 <http://catalog.coloradocollege.edu/34f089c2-7082-11e6-a872-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Economics and Business Academic Year 2016-2017"@en ;
     schema:organizer <https://www.coloradocollege.edu/academics/dept/economics/> ;
     schema:staff <http://catalog.coloradocollege.edu/b38ec026-7084-11e6-917d-005056c00008> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> ;
-    cc_fac:chair <http://orcid.org/0000-0002-8157-8837> ;
     cc_fac:assistant-professor <http://orcid.org/0000-0003-3203-0928> ;
-    cc_fac:professor <http://orcid.org/0000-0002-8157-8837>,
-        <http://orcid.org/0000-0002-0674-7995>  .
+    cc_fac:chair <http://orcid.org/0000-0002-8157-8837> ;
+    cc_fac:professor <http://orcid.org/0000-0002-0674-7995>,
+        <http://orcid.org/0000-0002-8157-8837> .
 
+<http://catalog.coloradocollege.edu/3a968548-b040-11e6-b226-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Block Seven"@en ;
+    schema:endDate "2017-04-19T19:00:00" ;
+    schema:startDate "2017-03-27T16:00:00" ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/3c3bb762-b02b-11e6-b097-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Chemistry and Biochemistry Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/chemistry/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/3cba7d3a-b02c-11e6-b475-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "History Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/history/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/3f4aec9c-b02d-11e6-b775-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Theatre and Dance Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/theatredance/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/492c2d68-b040-11e6-8d0b-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Block Eight"@en ;
+    schema:endDate "2017-05-17T19:00:00" ;
+    schema:startDate "2017-04-24T16:00:00" ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/4afda1e4-b02b-11e6-acd7-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Comparative Literature Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/comparativeliterature/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/51d6b500-b02c-11e6-a55e-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Human Biology and Kinesiology Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/humanbiologykinesiology/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/59c40706-b02a-11e6-a96a-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Asian Studies Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/asianstudies/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/5b003324-b02b-11e6-be37-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "East Asian Languages Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/eastasianlanguages/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/5f848952-b02c-11e6-a51f-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Music Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/music/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
 
 <http://catalog.coloradocollege.edu/62292a8c-7085-11e6-b00f-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Block One"@en ;
@@ -66,6 +156,56 @@ iso6391:la rdfs:label "Latin"@en .
     schema:startDate "2016-08-29T06:00:00" ;
     schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
 
+<http://catalog.coloradocollege.edu/8d8198c2-b02c-11e6-9654-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Neuroscience Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/neuroscience/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/9b0c25e2-b02b-11e6-8b4f-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Education Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/education/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/a0228a5a-b02c-11e6-84a7-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Philosophy Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/philosophy/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/a89d3570-b02b-11e6-a38e-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "English Department Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/english/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/ad3deeb6-b02c-11e6-b4d0-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Physics Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/physics/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/b6458b3e-b02b-11e6-8b71-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Environmental Program Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/environmentalprogram/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/bdfb9834-b03f-11e6-b229-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Block Two"@en ;
+    schema:endDate "2016-10-19T19:00:00" ;
+    schema:startDate "2016-09-26T16:00:00" ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/c0956864-b02c-11e6-bbcf-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Political Science Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/politicalscience/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/c80e131e-b02b-11e6-983d-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Feminist and Gender Studies Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/feministandgenderstudies/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/d099ce78-b02c-11e6-9057-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Psychology Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/politicalscience/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
 
 <http://catalog.coloradocollege.edu/d0e7610a-72ba-11e6-b6dc-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Mathematics and Computer Science Academic Year 2016-2017"@en ;
@@ -89,12 +229,71 @@ iso6391:la rdfs:label "Latin"@en .
         <http://catalog.coloradocollege.edu/ac1a487e-72c2-11e6-b54e-005056c00008>,
         <http://catalog.coloradocollege.edu/ce89220c-72c2-11e6-bb68-005056c00008> .
 
+<http://catalog.coloradocollege.edu/d3adfd26-b03f-11e6-b847-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Block Three"@en ;
+    schema:endDate "2016-11-16T19:00:00" ;
+    schema:startDate "2016-10-24T16:00:00" ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/e0ae3af0-b02c-11e6-b3ad-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Race, Ethnicity, and Migration Studies Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/raceethnicitymigration/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/e1f4904a-97a6-11e6-ac63-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Classics Department Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/classics/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> ;
+    cc_fac:assistant-professor <http://catalog.coloradocollege.edu/49994cf8-97ca-11e6-b708-005056c00008> ;
+    cc_fac:professor <http://catalog.coloradocollege.edu/54ae8afa-964e-11e6-8513-005056c00008> .
+
+<http://catalog.coloradocollege.edu/e47c4b42-b02b-11e6-af79-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Film and Media Studies Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/filmandnewmedia/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/e92f3d76-b03f-11e6-81de-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Block Four"@en ;
+    schema:endDate "2016-12-21T19:00:00" ;
+    schema:startDate "2016-11-28T16:00:00" ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/ed144fc6-b02c-11e6-9061-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Religion Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/religion/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/f47ec300-b02a-11e6-ba85-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Molecular Biology Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/molecularbiology/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/f5feecee-b02b-11e6-896a-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "French and Italian Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/french-italian-arabic/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+<http://catalog.coloradocollege.edu/fe09b1e2-b02c-11e6-9d7f-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Russian and Eurasian Studies Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/russianeurasianstudies/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+
+iso6391:el rdfs:label "Greek"@en .
+
+iso6391:en rdfs:label "English"@en .
+
+iso6391:la rdfs:label "Latin"@en .
+
 <https://www.coloradocollege.edu/> schema:event <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
 
 <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Academic Year 2016-2017"@en ;
-    cc_info:graduation [ rdf:value "2017-07" ; rdfs:label "Summer 2017"@en ],
-        [rdf:value "2016-12" ; rdfs:label "Fall 2016"@en ],
-        [rdf:value "2017-05" ; rdfs:label "Spring 2017"@en ] ;
     schema:endDate "2017-05-22T07:00:00" ;
-    schema:startDate "2016-08-29T06:00:00" .
+    schema:startDate "2016-08-29T06:00:00" ;
+    cc_info:graduation [ rdfs:label "Summer 2017"@en ;
+            rdf:value "2017-07" ],
+        [ rdfs:label "Fall 2016"@en ;
+            rdf:value "2016-12" ],
+        [ rdfs:label "Spring 2017"@en ;
+            rdf:value "2017-05" ] .
+

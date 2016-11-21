@@ -39,9 +39,24 @@ cc_fac:visiting-assistant-professor a rdf:Resource ;
     rdfs:label "Visiting Assistant Professor"@en ;
     rdf:range relators:tch .
 
+<https://www.coloradocollege.edu/academics/dept/anthropology/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "Anthropology"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
 <https://www.coloradocollege.edu/academics/dept/art/> a bf:Organization,
         schema:CollegeDepartment ;
     rdfs:label "Art Department"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/asianstudies/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "Asian Studies"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/chemistry/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "Chemistry and Biochemistry"@en ;
     schema:parentOrganization <https://www.coloradocollege.edu/> .
 
 <https://www.coloradocollege.edu/academics/dept/classics/> a bf:Organization,
@@ -49,9 +64,74 @@ cc_fac:visiting-assistant-professor a rdf:Resource ;
     rdfs:label "Classics"@en ;
     schema:parentOrganization <https://www.coloradocollege.edu/> .
 
+<https://www.coloradocollege.edu/academics/dept/comparativeliterature/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "Comparative Literature"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/eastasianlanguages/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "East Asian Languages"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
 <https://www.coloradocollege.edu/academics/dept/economics/> a bf:Organization,
         schema:CollegeDepartment ;
     rdfs:label "Economics and Business"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/education/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "Education"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/english/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "English Department"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/environmentalprogram/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "Environmental Program"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/feministandgenderstudies/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "Feminist and Gender Studies"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/filmandnewmedia/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "Film and Media Studies"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/french-italian-arabic/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "French and Italian"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/geology/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "Geology"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/german/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "German"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/greal/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "German, Russian and East Asian Languages Department"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/history/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "History"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/humanbiologykinesiology/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "Human Biology and Kinesiology"@en ;
     schema:parentOrganization <https://www.coloradocollege.edu/> .
 
 <https://www.coloradocollege.edu/academics/dept/mathematics/> a bf:Organization,
@@ -59,9 +139,80 @@ cc_fac:visiting-assistant-professor a rdf:Resource ;
     rdfs:label "Mathematics and Computer Science"@en ;
     schema:parentOrganization <https://www.coloradocollege.edu/> .
 
-<https://www.coloradocollege.edu/library/> a bf:Organization,
-        schema:Library,
+<https://www.coloradocollege.edu/academics/dept/molecularbiology/> a bf:Organization,
         schema:CollegeDepartment ;
+    rdfs:label "Molecular Biology"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/music/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "Music"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/neuroscience/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "Neuroscience"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/obe/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "Organismal Biology and Ecology"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/philosophy/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "Philosophy"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/physics/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "Physics"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/politicalscience/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "Political Science"@en,
+        "Psychology"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/raceethnicitymigration/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "Race, Ethnicity, and Migration Studies"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/religion/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "Religion"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/russianeurasianstudies/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "Russian and Eurasian Studies"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/sociology/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "Sociology"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/southweststudies/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "Southwest Studies"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/spanish/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "Spanish and Portuguese"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/theatredance/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "Theatre and Dance"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/library/> a bf:Organization,
+        schema:CollegeDepartment,
+        schema:Library ;
     rdfs:label "Tutt Library"@en ;
     bf:identifiedBy [ a bf:Oclc ;
             rdf:value "COCA" ] ;
@@ -83,11 +234,38 @@ cc_fac:visiting-assistant-professor a rdf:Resource ;
     schema:sameAs <http://www.coloradocollege.edu/> ;
     schema:subOrganization <https://www.coloradocollege.edu/academics/dept/anthropology/>,
         <https://www.coloradocollege.edu/academics/dept/art/>,
+        <https://www.coloradocollege.edu/academics/dept/asianstudies/>,
+        <https://www.coloradocollege.edu/academics/dept/chemistry/>,
         <https://www.coloradocollege.edu/academics/dept/classics/>,
+        <https://www.coloradocollege.edu/academics/dept/comparativeliterature/>,
+        <https://www.coloradocollege.edu/academics/dept/eastasianlanguages/>,
         <https://www.coloradocollege.edu/academics/dept/economics/>,
+        <https://www.coloradocollege.edu/academics/dept/education/>,
+        <https://www.coloradocollege.edu/academics/dept/english/>,
+        <https://www.coloradocollege.edu/academics/dept/environmentalprogram/>,
+        <https://www.coloradocollege.edu/academics/dept/feministandgenderstudies/>,
+        <https://www.coloradocollege.edu/academics/dept/filmandnewmedia/>,
+        <https://www.coloradocollege.edu/academics/dept/french-italian-arabic/>,
+        <https://www.coloradocollege.edu/academics/dept/geology/>,
+        <https://www.coloradocollege.edu/academics/dept/german/>,
+        <https://www.coloradocollege.edu/academics/dept/greal/>,
+        <https://www.coloradocollege.edu/academics/dept/history/>,
+        <https://www.coloradocollege.edu/academics/dept/humanbiologykinesiology/>,
         <https://www.coloradocollege.edu/academics/dept/mathematics/>,
         <https://www.coloradocollege.edu/academics/dept/molecularbiology/>,
+        <https://www.coloradocollege.edu/academics/dept/music/>,
+        <https://www.coloradocollege.edu/academics/dept/neuroscience/>,
         <https://www.coloradocollege.edu/academics/dept/obe/>,
+        <https://www.coloradocollege.edu/academics/dept/philosophy/>,
+        <https://www.coloradocollege.edu/academics/dept/physics/>,
+        <https://www.coloradocollege.edu/academics/dept/politicalscience/>,
+        <https://www.coloradocollege.edu/academics/dept/raceethnicitymigration/>,
+        <https://www.coloradocollege.edu/academics/dept/religion/>,
+        <https://www.coloradocollege.edu/academics/dept/russianeurasianstudies/>,
+        <https://www.coloradocollege.edu/academics/dept/sociology/>,
+        <https://www.coloradocollege.edu/academics/dept/southweststudies/>,
+        <https://www.coloradocollege.edu/academics/dept/spanish/>,
+        <https://www.coloradocollege.edu/academics/dept/theatredance/>,
         <https://www.coloradocollege.edu/admission/>,
         <https://www.coloradocollege.edu/library/> .
 
