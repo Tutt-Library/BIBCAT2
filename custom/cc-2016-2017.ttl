@@ -278,12 +278,6 @@
     schema:organizer <https://www.coloradocollege.edu/academics/dept/russianeurasianstudies/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
 
-iso6391:el rdfs:label "Greek"@en .
-
-iso6391:en rdfs:label "English"@en .
-
-iso6391:la rdfs:label "Latin"@en .
-
 <https://www.coloradocollege.edu/> schema:event <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
 
 <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> a schema:EducationalEvent ;
