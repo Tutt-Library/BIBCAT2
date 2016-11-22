@@ -171,8 +171,12 @@ cc_fac:visiting-assistant-professor a rdf:Resource ;
 
 <https://www.coloradocollege.edu/academics/dept/politicalscience/> a bf:Organization,
         schema:CollegeDepartment ;
-    rdfs:label "Political Science"@en,
-        "Psychology"@en ;
+    rdfs:label "Political Science"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/psychology/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "Psychology"@en ;
     schema:parentOrganization <https://www.coloradocollege.edu/> .
 
 <https://www.coloradocollege.edu/academics/dept/raceethnicitymigration/> a bf:Organization,
