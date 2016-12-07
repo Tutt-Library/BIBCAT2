@@ -176,10 +176,28 @@
     schema:organizer <https://www.coloradocollege.edu/academics/dept/economics/> ;
     schema:staff <http://catalog.coloradocollege.edu/b38ec026-7084-11e6-917d-005056c00008> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> ;
-    cc_fac:assistant-professor <http://orcid.org/0000-0003-3203-0928> ;
-    cc_fac:chair <http://orcid.org/0000-0002-8157-8837> ;
-    cc_fac:professor <http://orcid.org/0000-0002-0674-7995>,
-        <http://orcid.org/0000-0002-8157-8837> .
+    cc_fac:assistant-professor <http://catalog.coloradocollege.edu/3774eaa4-bcd4-11e6-9808-005056c00008>,
+        <http://catalog.coloradocollege.edu/3a1aec80-bcd4-11e6-9cd9-005056c00008>,
+        <http://orcid.org/0000-0003-3203-0928> ;
+    cc_fac:associate-professor <http://catalog.coloradocollege.edu/35f9e386-bcd4-11e6-a603-005056c00008>,
+        <http://catalog.coloradocollege.edu/38063594-bcd4-11e6-894f-005056c00008>,
+        <http://catalog.coloradocollege.edu/39135a12-bcd4-11e6-a418-005056c00008> ;
+    cc_fac:chair <http://catalog.coloradocollege.edu/35f9e386-bcd4-11e6-a603-005056c00008>,
+        <http://orcid.org/0000-0002-8157-8837> ;
+    cc_fac:faculty <http://catalog.coloradocollege.edu/3c2bf9be-bcd4-11e6-a9c4-005056c00008>,
+        <http://catalog.coloradocollege.edu/3cb03828-bcd4-11e6-8c2d-005056c00008>,
+        <http://catalog.coloradocollege.edu/3dab5a5e-bcd4-11e6-a06f-005056c00008>,
+        <http://catalog.coloradocollege.edu/3e2b3f48-bcd4-11e6-a3f1-005056c00008>,
+        <http://catalog.coloradocollege.edu/3eac7050-bcd4-11e6-9c44-005056c00008> ;
+    cc_fac:professor <http://catalog.coloradocollege.edu/367aed78-bcd4-11e6-81be-005056c00008>,
+        <http://catalog.coloradocollege.edu/389040ae-bcd4-11e6-a733-005056c00008>,
+        <http://catalog.coloradocollege.edu/3aa03c68-bcd4-11e6-8492-005056c00008>,
+        <http://catalog.coloradocollege.edu/3b2997b4-bcd4-11e6-9953-005056c00008>,
+        <http://catalog.coloradocollege.edu/3bab8c12-bcd4-11e6-b031-005056c00008>,
+        <http://orcid.org/0000-0002-0674-7995>,
+        <http://orcid.org/0000-0002-8157-8837> ;
+    cc_fac:sabbatical [ schema:member <http://catalog.coloradocollege.edu/389040ae-bcd4-11e6-a733-005056c00008> ;
+            cc_fac:length "Fall"@en ] .
 
 <http://catalog.coloradocollege.edu/3c3bb762-b02b-11e6-b097-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Chemistry and Biochemistry Academic Year 2016-2017"@en ;
