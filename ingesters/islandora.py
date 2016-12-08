@@ -496,6 +496,8 @@ class IslandoraIngester(mods_ingester.MODSIngester):
         bf_work_classes = []
         if content_model.startswith("info:fedora/islandora:sp_pdf"):
             bf_work_classes.append(NS_MGR.bf.Text)
+        if content_model.startswith("info:fedora/islandora:sp_basic_image"):
+            bf_work_classes.append(NS_MGR.bf.StillImage)
         genre_query = NS_MGR.prefix() +"""
         SELECT ?value
         WHERE {{
@@ -550,11 +552,12 @@ WHERE {{
         else:
             mods_result.encoding = 'utf-8'
             mods_xml = etree.XML(mods_result.text)
-        self.transform(mods_xml)
+        item_iri = rdflib.URIRef("https://digitalcc.coloradocollege.edu/pid/{}".format(pid))
+        self.transform(mods_xml, item_uri=item_iri)
         instance_iri = self.graph.value(
             predicate=NS_MGR.rdf.type,
             object=NS_MGR.bf.Instance)
-        if instance_iri is None:
+        if not instance_iri:
             raise ValueError("Unable to extract Instance from Graph")
         return instance_iri
             
@@ -694,7 +697,8 @@ WHERE {{
             if len(bindings) > 0:
                 return self.__get_instance_iri__(
                     bindings[0].get('subject').get('value'))
-        rels_ext = self.__get_rels_ext__(pid)        
+        rels_ext = self.__get_rels_ext__(pid)
+        #import pdb; pdb.set_trace() 
         # Skips any PIDS that are constituents of another object
         if rels_ext.find("rdf:Description/fedora:isConstituentOf", 
             FEDORA_NS) is not None:
