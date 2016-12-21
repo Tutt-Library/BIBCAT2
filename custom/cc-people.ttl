@@ -526,6 +526,7 @@
 
 <http://catalog.coloradocollege.edu/36fd08e6-bcd4-11e6-8d0a-005056c00008> a bf:Person ;
     rdfs:label "Richard Fullerton" ;
+    schema:deathDate "2016-12-11" ;
     schema:familyName "Fullerton"@en ;
     schema:givenName "Richard"@en .
 

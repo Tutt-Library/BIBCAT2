@@ -176,8 +176,7 @@
     schema:organizer <https://www.coloradocollege.edu/academics/dept/economics/> ;
     schema:staff <http://catalog.coloradocollege.edu/b38ec026-7084-11e6-917d-005056c00008> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> ;
-    cc_fac:assistant-professor <http://catalog.coloradocollege.edu/3774eaa4-bcd4-11e6-9808-005056c00008>,
-        <http://catalog.coloradocollege.edu/3a1aec80-bcd4-11e6-9cd9-005056c00008>,
+    cc_fac:assistant-professor <http://catalog.coloradocollege.edu/3a1aec80-bcd4-11e6-9cd9-005056c00008>,
         <http://orcid.org/0000-0003-3203-0928> ;
     cc_fac:associate-professor <http://catalog.coloradocollege.edu/35f9e386-bcd4-11e6-a603-005056c00008>,
         <http://catalog.coloradocollege.edu/38063594-bcd4-11e6-894f-005056c00008>,
