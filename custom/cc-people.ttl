@@ -606,6 +606,12 @@
     schema:familyName "Jeter"@en ;
     schema:givenName "Tom"@en .
 
+<http://catalog.coloradocollege.edu/3d5dd1f8-e7e6-11e6-927b-005056c00008> a bf:Person ;
+    rdfs:label "Cody Duckworth" ;
+    schema:email "cody.duckworth@ColoradoCollege.edu" ;
+    schema:familyName "Duckworth"@en ;
+    schema:givenName "Cody"@en .
+
 <http://catalog.coloradocollege.edu/3dab5a5e-bcd4-11e6-a06f-005056c00008> a bf:Person ;
     rdfs:label "Judy Laux" ;
     schema:email "JLaux@ColoradoCollege.edu" ;
@@ -785,12 +791,24 @@
     schema:familyName "Vaghoo"@en ;
     schema:givenName "Habiba"@en .
 
+<http://catalog.coloradocollege.edu/5482bb52-e7e6-11e6-8286-005056c00008> a bf:Person ;
+    rdfs:label "Sam Elkind" ;
+    schema:email "sam.elkind@ColoradoCollege.edu" ;
+    schema:familyName "Elkind"@en ;
+    schema:givenName "Sam"@en .
+
 <http://catalog.coloradocollege.edu/54ae8afa-964e-11e6-8513-005056c00008> a bf:Person ;
     rdfs:label "Owen Cramer"@en ;
     schema:email "OCramer@ColoradoCollege.edu" ;
     schema:familyName "Cramer"@en ;
     schema:givenName "Owen"@en ;
     schema:url <https://www.coloradocollege.edu/academics/dept/classics/people/profile.html?person=cramer_owen_c> .
+
+<http://catalog.coloradocollege.edu/558b3962-e7e0-11e6-b847-005056c00008> a bf:Person ;
+    rdfs:label "Meghan Rubenstein" ;
+    schema:email "Meghan.Rubenstein@coloradocollege.edu" ;
+    schema:familyName "Rubenstein"@en ;
+    schema:givenName "Meghan"@en .
 
 <http://catalog.coloradocollege.edu/5f93d92e-b0f0-11e6-aeec-005056c00008> a bf:Person ;
     rdfs:label "Susan Ashley" ;
@@ -1021,6 +1039,12 @@
     schema:familyName "Kim"@en ;
     schema:givenName "Michael"@en .
 
+<http://catalog.coloradocollege.edu/922041e2-e7e0-11e6-8358-005056c00008> a bf:Person ;
+    rdfs:label "Niels Davis" ;
+    schema:email "Niels.Davis@coloradocollege.edu" ;
+    schema:familyName "Davis"@en ;
+    schema:givenName "Niels"@en .
+
 <http://catalog.coloradocollege.edu/959f1e2e-72be-11e6-b83d-005056c00008> a bf:Person ;
     rdfs:label "Fred Tinsely"@en ;
     schema:email "ftinsley@coloradocollege.edu"@en ;
@@ -1193,6 +1217,12 @@
     schema:familyName "Evitt"@en ;
     schema:givenName "Regula"@en .
 
+<http://catalog.coloradocollege.edu/b4a8a8d2-e7de-11e6-b5b2-005056c00008> a bf:Person ;
+    rdfs:label "Karen Britton" ;
+    schema:email "karen.britton@coloradocollege.edu" ;
+    schema:familyName "Britton"@en ;
+    schema:givenName "Karen"@en .
+
 <http://catalog.coloradocollege.edu/b4fc51e6-b0e1-11e6-aadc-005056c00008> a bf:Person ;
     rdfs:label "Claire Garcia" ;
     schema:email "cgarcia@ColoradoCollege.edu" ;
@@ -1291,6 +1321,12 @@
     rdfs:label "Dan Tynan" ;
     schema:familyName "Tynan"@en ;
     schema:givenName "Dan"@en .
+
+<http://catalog.coloradocollege.edu/ba263aa2-e7e0-11e6-8622-005056c00008> a bf:Person ;
+    rdfs:label "Guyda Marr" ;
+    schema:email "GMarr@coloradocollege.edu" ;
+    schema:familyName "Marr"@en ;
+    schema:givenName "Guyda"@en .
 
 <http://catalog.coloradocollege.edu/c3372e36-b0f5-11e6-bf02-005056c00008> a bf:Person ;
     rdfs:label "Daniel Arroyo-Rodriguez" ;
@@ -1498,6 +1534,12 @@
     schema:email "andrea.bruder@coloradocollege.edu" ;
     schema:familyName "Bruder"@en ;
     schema:givenName "Andrea"@en .
+
+<http://catalog.coloradocollege.edu/ddd1c0a2-e7e5-11e6-851c-005056c00008> a bf:Person ;
+    rdfs:label "Mandy Sulfrian" ;
+    schema:email "msulfrian@coloradocollege.edu" ;
+    schema:familyName "Sulfrian"@en ;
+    schema:givenName "Mandy"@en .
 
 <http://catalog.coloradocollege.edu/e42d2c5c-b0f4-11e6-9c25-005056c00008> a bf:Person ;
     rdfs:label "Dwanna Robertson" ;
@@ -1822,6 +1864,12 @@
     schema:familyName "Ding"@en ;
     schema:givenName "Monica"@en .
 
+<http://catalog.coloradocollege.edu/ffbaa152-e7e5-11e6-b7da-005056c00008> a bf:Person ;
+    rdfs:label "Stephen Weaver" ;
+    schema:email "sweaver@coloradocollege.edu" ;
+    schema:familyName "Weaver"@en ;
+    schema:givenName "Stephen"@en .
+
 <http://catalog.coloradocollege.edu/ffe9887e-b0f0-11e6-8509-005056c00008> a bf:Person ;
     rdfs:label "Katya Dobrotvorskaia" ;
     schema:familyName "Dobrotvorskaia"@en ;
@@ -1836,8 +1884,8 @@
 
 <http://orcid.org/0000-0002-0674-7995> a bf:Person ;
     rdfs:label "Aju Fenn"@en ;
-    schema:familyName "Fenn"@en ;
     schema:email "Aju.Fenn@ColoradoCollege.edu" ;
+    schema:familyName "Fenn"@en ;
     schema:givenName "Aju"@en .
 
 <http://orcid.org/0000-0002-7543-3893> a bf:Person ;
@@ -1848,13 +1896,13 @@
 
 <http://orcid.org/0000-0002-8157-8837> a bf:Person ;
     rdfs:label "Pedro de Arajuo"@en ;
-    schema:familyName "de Arajuo"@en ;
     schema:email "Pedro@ColoradoCollege.edu" ;
+    schema:familyName "de Arajuo"@en ;
     schema:givenName "Pedro"@en .
 
 <http://orcid.org/0000-0003-3203-0928> a bf:Person ;
     rdfs:label "Jessica Hoel"@en ;
-    schema:familyName "Hoel"@en ;
     schema:email "Jessica.Hoel@ColoradoCollege.edu" ;
+    schema:familyName "Hoel"@en ;
     schema:givenName "Jessica"@en .
 
