@@ -46,6 +46,8 @@
         <http://catalog.coloradocollege.edu/d1c691f6-b0de-11e6-982a-005056c00008>,
         <http://catalog.coloradocollege.edu/d28be7e2-b0de-11e6-b93c-005056c00008> ;
     cc_fac:visiting-assistant-professor <http://catalog.coloradocollege.edu/d07c74de-b0de-11e6-a456-005056c00008> ;
+    cc_info:academic-administrative-assistant <http://catalog.coloradocollege.edu/b4a8a8d2-e7de-11e6-b5b2-005056c00008>,
+        <http://catalog.coloradocollege.edu/c56ef828-f2e5-11e6-936b-005056c00008> ;
     cc_info:administrative-assistant <http://catalog.coloradocollege.edu/b4a8a8d2-e7de-11e6-b5b2-005056c00008> ;
     cc_info:curator-of-visual-resources <http://catalog.coloradocollege.edu/558b3962-e7e0-11e6-b847-005056c00008> ;
     cc_info:office-manager <http://catalog.coloradocollege.edu/ba263aa2-e7e0-11e6-8622-005056c00008> ;
@@ -62,7 +64,8 @@
         <http://catalog.coloradocollege.edu/2e08aa0c-b0e3-11e6-ba28-005056c00008>,
         <http://catalog.coloradocollege.edu/2e538234-b0e3-11e6-874d-005056c00008> ;
     cc_fac:sabbatical [ schema:member <http://catalog.coloradocollege.edu/2eadfe42-b0e3-11e6-ba86-005056c00008> ;
-            cc_fac:length "Full Year"@en ] ;
+            cc_fac:length <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> ] ;
+    cc_info:academic-administrative-assistant <http://catalog.coloradocollege.edu/e9b69ce2-f2e5-11e6-af14-005056c00008> ;
     cc_info:department-secretary <http://catalog.coloradocollege.edu/ddd1c0a2-e7e5-11e6-851c-005056c00008> ;
     cc_info:paraprofessional <http://catalog.coloradocollege.edu/3d5dd1f8-e7e6-11e6-927b-005056c00008>,
         <http://catalog.coloradocollege.edu/5482bb52-e7e6-11e6-8286-005056c00008> ;
@@ -80,7 +83,8 @@
         <http://catalog.coloradocollege.edu/42519764-b0f5-11e6-8072-005056c00008> ;
     cc_fac:faculty <http://catalog.coloradocollege.edu/432575ac-b0f5-11e6-929c-005056c00008> ;
     cc_fac:professor <http://catalog.coloradocollege.edu/4028b06c-b0f5-11e6-979a-005056c00008> ;
-    cc_fac:visiting-assistant-professor <http://catalog.coloradocollege.edu/42bb0794-b0f5-11e6-853a-005056c00008> .
+    cc_fac:visiting-assistant-professor <http://catalog.coloradocollege.edu/42bb0794-b0f5-11e6-853a-005056c00008> ;
+    cc_info:academic-administrative-assistant <http://catalog.coloradocollege.edu/5b34f30a-f2e6-11e6-a75d-005056c00008> .
 
 <http://catalog.coloradocollege.edu/0d463178-b02b-11e6-a76c-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Organismal Biology and Ecology Academic Year 2016-2017"@en ;
@@ -96,7 +100,8 @@
         <http://catalog.coloradocollege.edu/5077542c-b0f1-11e6-bb80-005056c00008>,
         <http://catalog.coloradocollege.edu/50dc096c-b0f1-11e6-a9b6-005056c00008> ;
     cc_fac:sabbatical [ schema:member <http://catalog.coloradocollege.edu/50dc096c-b0f1-11e6-a9b6-005056c00008> ;
-            cc_fac:length "Spring"@en ] .
+            cc_fac:length "Spring"@en ] ;
+    cc_info:academic-administrative-assistant <http://catalog.coloradocollege.edu/3e6a92a2-f2e6-11e6-9464-005056c00008> .
 
 <http://catalog.coloradocollege.edu/127d2b74-b02c-11e6-95a5-005056c00008> a schema:EducationalEvent ;
     rdfs:label "German Academic Year 2016-2017"@en ;
@@ -111,7 +116,8 @@
     cc_fac:associate-professor <http://catalog.coloradocollege.edu/278aaee4-b0e5-11e6-9700-005056c00008> ;
     cc_fac:professor <http://catalog.coloradocollege.edu/2db4969c-b0e3-11e6-9eb7-005056c00008> ;
     cc_fac:sabbatical [ schema:member <http://catalog.coloradocollege.edu/278aaee4-b0e5-11e6-9700-005056c00008> ;
-            cc_fac:length "Spring"@en ] .
+            cc_fac:length "Spring"@en ] ;
+    cc_info:academic-administrative-assistant <http://catalog.coloradocollege.edu/5b83e9e2-f2e6-11e6-b7cc-005056c00008> .
 
 <http://catalog.coloradocollege.edu/1d39943a-b0fe-11e6-875a-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Theatre and Dance Academic Year 2016-2017 Block 7"@en ;
@@ -144,7 +150,8 @@
         <http://catalog.coloradocollege.edu/a095d974-b0dd-11e6-8742-005056c00008>,
         <http://catalog.coloradocollege.edu/a0d1d414-b0dd-11e6-96f0-005056c00008> ;
     cc_fac:professor <http://catalog.coloradocollege.edu/9f02c8c0-b0dd-11e6-b1ed-005056c00008> ;
-    cc_fac:visiting-assistant-professor <http://catalog.coloradocollege.edu/9e66cee4-b0dd-11e6-a5cb-005056c00008> .
+    cc_fac:visiting-assistant-professor <http://catalog.coloradocollege.edu/9e66cee4-b0dd-11e6-a5cb-005056c00008> ;
+    cc_info:academic-administrative-assistant <http://catalog.coloradocollege.edu/c505af0a-f2e5-11e6-b728-005056c00008> .
 
 <http://catalog.coloradocollege.edu/23c63018-b02c-11e6-b93f-005056c00008> a schema:EducationalEvent ;
     rdfs:label "German, Russian and East Asian Languages Department Academic Year 2016-2017"@en ;
@@ -161,7 +168,8 @@
     cc_fac:professor <http://catalog.coloradocollege.edu/f055f394-b0e3-11e6-819e-005056c00008>,
         <http://catalog.coloradocollege.edu/f0a8e20a-b0e3-11e6-bf82-005056c00008> ;
     cc_fac:visiting-assistant-professor <http://catalog.coloradocollege.edu/f0f41bdc-b0e3-11e6-9961-005056c00008>,
-        <http://catalog.coloradocollege.edu/f2f4319c-b0e3-11e6-bd85-005056c00008> .
+        <http://catalog.coloradocollege.edu/f2f4319c-b0e3-11e6-bd85-005056c00008> ;
+    cc_info:lead-academic-administrative-assistant <http://catalog.coloradocollege.edu/ea05459a-f2e5-11e6-8a2f-005056c00008> .
 
 <http://catalog.coloradocollege.edu/2c62efca-b02d-11e6-9aff-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Spanish and Portuguese Academic Year 2016-2017"@en ;
@@ -178,7 +186,14 @@
     cc_fac:sabbatical [ schema:member <http://catalog.coloradocollege.edu/c5c7b09c-b0f5-11e6-80ee-005056c00008> ;
             cc_fac:length "Spring"@en ] ;
     cc_fac:visiting-assistant-professor <http://catalog.coloradocollege.edu/0bdfd752-b0e1-11e6-8ba1-005056c00008>,
-        <http://catalog.coloradocollege.edu/c3c404e4-b0f5-11e6-8f37-005056c00008> .
+        <http://catalog.coloradocollege.edu/c3c404e4-b0f5-11e6-8f37-005056c00008> ;
+    cc_info:academic-administrative-assistant <http://catalog.coloradocollege.edu/e44fc8f8-f2e5-11e6-a232-005056c00008> .
+
+<http://catalog.coloradocollege.edu/32a6c070-f2e5-11e6-a140-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "General Studies Academic Year 2016-2017"@en ;
+    schema:organizer <https://www.coloradocollege.edu/academics/curriculum/catalog/20162017/nondepartmental/general-studies> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> ;
+    cc_info:faculty-employment-specialist <http://catalog.coloradocollege.edu/e963875a-f2e5-11e6-be97-005056c00008> .
 
 <http://catalog.coloradocollege.edu/34f089c2-7082-11e6-a872-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Economics and Business Academic Year 2016-2017"@en ;
@@ -205,7 +220,8 @@
         <http://orcid.org/0000-0002-0674-7995>,
         <http://orcid.org/0000-0002-8157-8837> ;
     cc_fac:sabbatical [ schema:member <http://catalog.coloradocollege.edu/389040ae-bcd4-11e6-a733-005056c00008> ;
-            cc_fac:length "Fall"@en ] .
+            cc_fac:length "Fall"@en ] ;
+    cc_info:academic-administrative-assistant <http://catalog.coloradocollege.edu/b38ec026-7084-11e6-917d-005056c00008> .
 
 <http://catalog.coloradocollege.edu/3c3bb762-b02b-11e6-b097-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Chemistry and Biochemistry Academic Year 2016-2017"@en ;
@@ -221,7 +237,8 @@
     cc_fac:professor <http://catalog.coloradocollege.edu/5081ee9e-b0e0-11e6-b5bb-005056c00008>,
         <http://catalog.coloradocollege.edu/5105bb98-b0e0-11e6-8868-005056c00008>,
         <http://catalog.coloradocollege.edu/514d2746-b0e0-11e6-80f5-005056c00008> ;
-    cc_fac:visiting-assistant-professor <http://catalog.coloradocollege.edu/50c9f638-b0e0-11e6-ae3f-005056c00008> .
+    cc_fac:visiting-assistant-professor <http://catalog.coloradocollege.edu/50c9f638-b0e0-11e6-ae3f-005056c00008> ;
+    cc_info:academic-administrative-assistant <http://catalog.coloradocollege.edu/c668735a-f2e5-11e6-9a9b-005056c00008> .
 
 <http://catalog.coloradocollege.edu/3cba7d3a-b02c-11e6-b475-005056c00008> a schema:EducationalEvent ;
     rdfs:label "History Academic Year 2016-2017"@en ;
@@ -240,7 +257,8 @@
         <http://catalog.coloradocollege.edu/61ff6e74-b0f0-11e6-a459-005056c00008>,
         <http://catalog.coloradocollege.edu/62b7604a-b0f0-11e6-80f6-005056c00008>,
         <http://catalog.coloradocollege.edu/631a5454-b0f0-11e6-9cf2-005056c00008>,
-        <http://catalog.coloradocollege.edu/63799edc-b0f0-11e6-bbba-005056c00008> .
+        <http://catalog.coloradocollege.edu/63799edc-b0f0-11e6-bbba-005056c00008> ;
+    cc_info:academic-administrative-assistant <http://catalog.coloradocollege.edu/2d104812-f2e6-11e6-8d76-005056c00008> .
 
 <http://catalog.coloradocollege.edu/4afda1e4-b02b-11e6-acd7-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Comparative Literature Academic Year 2016-2017"@en ;
@@ -251,7 +269,8 @@
         <http://catalog.coloradocollege.edu/f0005986-b0e3-11e6-b255-005056c00008> ;
     cc_fac:chair <http://catalog.coloradocollege.edu/f0005986-b0e3-11e6-b255-005056c00008> ;
     cc_fac:professor <http://catalog.coloradocollege.edu/cc7740e4-b0e4-11e6-bb93-005056c00008> ;
-    cc_fac:visiting-assistant-professor <http://catalog.coloradocollege.edu/cbd47134-b0e4-11e6-8661-005056c00008> .
+    cc_fac:visiting-assistant-professor <http://catalog.coloradocollege.edu/cbd47134-b0e4-11e6-8661-005056c00008> ;
+    cc_info:academic-administrative-assistant <http://catalog.coloradocollege.edu/c6b6f500-f2e5-11e6-91fe-005056c00008> .
 
 <http://catalog.coloradocollege.edu/51d6b500-b02c-11e6-a55e-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Human Biology and Kinesiology Academic Year 2016-2017"@en ;
@@ -260,12 +279,14 @@
     cc_fac:associate-professor <http://catalog.coloradocollege.edu/9a7774a4-b0f0-11e6-aa7e-005056c00008> ;
     cc_fac:faculty <http://catalog.coloradocollege.edu/9a0726a4-b0f0-11e6-8e32-005056c00008>,
         <http://catalog.coloradocollege.edu/9ae4c8ec-b0f0-11e6-8e2f-005056c00008>,
-        <http://catalog.coloradocollege.edu/9b47e406-b0f0-11e6-b17e-005056c00008> .
+        <http://catalog.coloradocollege.edu/9b47e406-b0f0-11e6-b17e-005056c00008> ;
+    cc_info:academic-administrative-assistant <http://catalog.coloradocollege.edu/2d6cac68-f2e6-11e6-ac25-005056c00008> .
 
 <http://catalog.coloradocollege.edu/59c40706-b02a-11e6-a96a-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Asian Studies Academic Year 2016-2017"@en ;
     schema:organizer <https://www.coloradocollege.edu/academics/dept/asianstudies/> ;
-    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> ;
+    cc_info:academic-administrative-assistant <http://catalog.coloradocollege.edu/c60cd252-f2e5-11e6-ab35-005056c00008> .
 
 <http://catalog.coloradocollege.edu/5b003324-b02b-11e6-be37-005056c00008> a schema:EducationalEvent ;
     rdfs:label "East Asian Languages Academic Year 2016-2017"@en ;
@@ -311,7 +332,9 @@
         <http://catalog.coloradocollege.edu/071614be-b0f1-11e6-981f-005056c00008>,
         <http://catalog.coloradocollege.edu/08e012d4-b0f1-11e6-868c-005056c00008>,
         <http://catalog.coloradocollege.edu/fde4dedc-b0f0-11e6-aa07-005056c00008>,
-        <http://catalog.coloradocollege.edu/fedce6f4-b0f0-11e6-b6fa-005056c00008> .
+        <http://catalog.coloradocollege.edu/fedce6f4-b0f0-11e6-b6fa-005056c00008> ;
+    cc_info:academic-administrative-assistant <http://catalog.coloradocollege.edu/3e12fcc0-f2e6-11e6-adae-005056c00008> ;
+    cc_info:lead-academic-administrative-assistant <http://catalog.coloradocollege.edu/3dbee952-f2e6-11e6-bb11-005056c00008> .
 
 <http://catalog.coloradocollege.edu/8d8198c2-b02c-11e6-9654-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Neuroscience Academic Year 2016-2017"@en ;
@@ -337,7 +360,8 @@
         <http://catalog.coloradocollege.edu/08f2a066-b0e1-11e6-b425-005056c00008>,
         <http://catalog.coloradocollege.edu/0a2106dc-b0e1-11e6-9383-005056c00008>,
         <http://catalog.coloradocollege.edu/0a6a742e-b0e1-11e6-922d-005056c00008>,
-        <http://catalog.coloradocollege.edu/0bdfd752-b0e1-11e6-8ba1-005056c00008> .
+        <http://catalog.coloradocollege.edu/0bdfd752-b0e1-11e6-8ba1-005056c00008> ;
+    cc_info:academic-administrative-assistant <http://catalog.coloradocollege.edu/cfc1f1b8-f2e5-11e6-82dc-005056c00008> .
 
 <http://catalog.coloradocollege.edu/a0228a5a-b02c-11e6-84a7-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Philosophy Academic Year 2016-2017"@en ;
@@ -354,7 +378,8 @@
     cc_fac:professor <http://catalog.coloradocollege.edu/80a32d4c-b0f1-11e6-ade9-005056c00008>,
         <http://catalog.coloradocollege.edu/80fe459c-b0f1-11e6-99dd-005056c00008> ;
     cc_fac:sabbatical [ schema:member <http://catalog.coloradocollege.edu/7f729c8c-b0f1-11e6-94c0-005056c00008> ;
-            cc_fac:length "Spring"@en ] .
+            cc_fac:length "Spring"@en ] ;
+    cc_info:academic-administrative-assistant <http://catalog.coloradocollege.edu/4a4b449a-f2e6-11e6-bc80-005056c00008> .
 
 <http://catalog.coloradocollege.edu/a89d3570-b02b-11e6-a38e-005056c00008> a schema:EducationalEvent ;
     rdfs:label "English Department Academic Year 2016-2017"@en ;
@@ -379,12 +404,14 @@
     cc_fac:sabbatical [ schema:member <http://catalog.coloradocollege.edu/b4511302-b0e1-11e6-bc42-005056c00008> ;
             cc_fac:length "Fall"@en ] ;
     cc_fac:visiting-assistant-professor <http://catalog.coloradocollege.edu/b81e3cdc-b0e1-11e6-b1eb-005056c00008>,
-        <http://catalog.coloradocollege.edu/b872d4ae-b0e1-11e6-9e48-005056c00008> .
+        <http://catalog.coloradocollege.edu/b872d4ae-b0e1-11e6-9e48-005056c00008> ;
+    cc_info:academic-administrative-assistant <http://catalog.coloradocollege.edu/d0114a38-f2e5-11e6-8593-005056c00008> .
 
 <http://catalog.coloradocollege.edu/ad3deeb6-b02c-11e6-b4d0-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Physics Academic Year 2016-2017"@en ;
     schema:organizer <https://www.coloradocollege.edu/academics/dept/physics/> ;
-    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> .
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> ;
+    cc_info:academic-administrative-assistant <http://catalog.coloradocollege.edu/4a9a4ef8-f2e6-11e6-85cf-005056c00008> .
 
 <http://catalog.coloradocollege.edu/b3aebc74-b100-11e6-b176-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Theatre and Dance Academic Year 2016-2017 Block 3"@en ;
@@ -442,7 +469,8 @@
     cc_fac:associate-professor <http://catalog.coloradocollege.edu/278aaee4-b0e5-11e6-9700-005056c00008> ;
     cc_fac:faculty <http://catalog.coloradocollege.edu/269c91dc-b0e5-11e6-a02d-005056c00008> ;
     cc_fac:sabbatical [ schema:member <http://catalog.coloradocollege.edu/278aaee4-b0e5-11e6-9700-005056c00008> ;
-            cc_fac:length "Full Year"@en ] .
+            cc_fac:length <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> ] ;
+    cc_info:lead-academic-administrative-assistant <http://catalog.coloradocollege.edu/d06d73f8-f2e5-11e6-bb18-005056c00008> .
 
 <http://catalog.coloradocollege.edu/c0956864-b02c-11e6-bbcf-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Political Science Academic Year 2016-2017"@en ;
@@ -466,7 +494,8 @@
     cc_fac:sabbatical [ schema:member <http://catalog.coloradocollege.edu/29d4786c-b0f2-11e6-8935-005056c00008> ;
             cc_fac:length "Fall"@en ],
         [ schema:member <http://catalog.coloradocollege.edu/28185d06-b0f2-11e6-aa7f-005056c00008> ;
-            cc_fac:length "Fall"@en ] .
+            cc_fac:length "Fall"@en ] ;
+    cc_info:academic-administrative-assistant <http://catalog.coloradocollege.edu/4aee27d2-f2e6-11e6-bcc9-005056c00008> .
 
 <http://catalog.coloradocollege.edu/c80e131e-b02b-11e6-983d-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Feminist and Gender Studies Academic Year 2016-2017"@en ;
@@ -475,7 +504,8 @@
     cc_fac:assistant-professor <http://catalog.coloradocollege.edu/77321234-b0e5-11e6-aa8c-005056c00008>,
         <http://catalog.coloradocollege.edu/778a09be-b0e5-11e6-b859-005056c00008> ;
     cc_fac:faculty <http://catalog.coloradocollege.edu/77e4e776-b0e5-11e6-a8ce-005056c00008>,
-        <http://catalog.coloradocollege.edu/783921f4-b0e5-11e6-b34b-005056c00008> .
+        <http://catalog.coloradocollege.edu/783921f4-b0e5-11e6-b34b-005056c00008> ;
+    cc_info:academic-administrative-assistant <http://catalog.coloradocollege.edu/c60cd252-f2e5-11e6-ab35-005056c00008> .
 
 <http://catalog.coloradocollege.edu/d099ce78-b02c-11e6-9057-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Psychology Academic Year 2016-2017"@en ;
@@ -493,7 +523,8 @@
         <http://catalog.coloradocollege.edu/a34607ca-b0f4-11e6-ac87-005056c00008>,
         <http://catalog.coloradocollege.edu/a3ad551c-b0f4-11e6-a3d1-005056c00008> ;
     cc_fac:sabbatical [ schema:member <http://catalog.coloradocollege.edu/a18dd07a-b0f4-11e6-8553-005056c00008> ;
-            cc_fac:length "Spring"@en ] .
+            cc_fac:length "Spring"@en ] ;
+    cc_info:academic-administrative-assistant <http://catalog.coloradocollege.edu/2d6cac68-f2e6-11e6-ac25-005056c00008> .
 
 <http://catalog.coloradocollege.edu/d0e7610a-72ba-11e6-b6dc-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Mathematics and Computer Science Academic Year 2016-2017"@en ;
@@ -515,7 +546,8 @@
     cc_fac:visiting-assistant-professor <http://catalog.coloradocollege.edu/381d2dbe-72c3-11e6-a471-005056c00008>,
         <http://catalog.coloradocollege.edu/774da448-72c3-11e6-8b86-005056c00008>,
         <http://catalog.coloradocollege.edu/ac1a487e-72c2-11e6-b54e-005056c00008>,
-        <http://catalog.coloradocollege.edu/ce89220c-72c2-11e6-bb68-005056c00008> .
+        <http://catalog.coloradocollege.edu/ce89220c-72c2-11e6-bb68-005056c00008> ;
+    cc_info:academic-administrative-assistant <http://catalog.coloradocollege.edu/2dbfd578-f2e6-11e6-968f-005056c00008> .
 
 <http://catalog.coloradocollege.edu/e0ae3af0-b02c-11e6-b3ad-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Race, Ethnicity, and Migration Studies Academic Year 2016-2017"@en ;
@@ -524,14 +556,16 @@
     cc_fac:assistant-professor <http://catalog.coloradocollege.edu/6254cdec-b0f0-11e6-9a7d-005056c00008>,
         <http://catalog.coloradocollege.edu/e42d2c5c-b0f4-11e6-9c25-005056c00008>,
         <http://catalog.coloradocollege.edu/e4a0608c-b0f4-11e6-874a-005056c00008> ;
-    cc_fac:professor <http://catalog.coloradocollege.edu/b4fc51e6-b0e1-11e6-aadc-005056c00008> .
+    cc_fac:professor <http://catalog.coloradocollege.edu/b4fc51e6-b0e1-11e6-aadc-005056c00008> ;
+    cc_info:academic-administrative-assistant <http://catalog.coloradocollege.edu/c60cd252-f2e5-11e6-ab35-005056c00008> .
 
 <http://catalog.coloradocollege.edu/e1f4904a-97a6-11e6-ac63-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Classics Department Academic Year 2016-2017"@en ;
     schema:organizer <https://www.coloradocollege.edu/academics/dept/classics/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> ;
     cc_fac:assistant-professor <http://catalog.coloradocollege.edu/49994cf8-97ca-11e6-b708-005056c00008> ;
-    cc_fac:professor <http://catalog.coloradocollege.edu/54ae8afa-964e-11e6-8513-005056c00008> .
+    cc_fac:professor <http://catalog.coloradocollege.edu/54ae8afa-964e-11e6-8513-005056c00008> ;
+    cc_info:academic-administrative-assistant <http://catalog.coloradocollege.edu/c6b6f500-f2e5-11e6-91fe-005056c00008> .
 
 <http://catalog.coloradocollege.edu/e47c4b42-b02b-11e6-af79-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Film and Media Studies Academic Year 2016-2017"@en ;
@@ -547,7 +581,8 @@
     cc_fac:sabbatical [ schema:member <http://catalog.coloradocollege.edu/f81edcee-b0ef-11e6-9b93-005056c00008> ;
             cc_fac:length "Fall"@en ],
         [ schema:member <http://catalog.coloradocollege.edu/f770fd34-b0ef-11e6-a70c-005056c00008> ;
-            cc_fac:length "Fall"@en ] .
+            cc_fac:length "Fall"@en ] ;
+    cc_info:academic-administrative-assistant <http://catalog.coloradocollege.edu/de536bd2-f2e5-11e6-9837-005056c00008> .
 
 <http://catalog.coloradocollege.edu/ed144fc6-b02c-11e6-9061-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Religion Academic Year 2016-2017"@en ;
@@ -560,7 +595,8 @@
     cc_fac:chair <http://catalog.coloradocollege.edu/1e5e19a4-b0f5-11e6-a896-005056c00008> ;
     cc_fac:professor <http://catalog.coloradocollege.edu/1ca0b234-b0f5-11e6-8683-005056c00008> ;
     cc_fac:sabbatical [ schema:member <http://catalog.coloradocollege.edu/1ca0b234-b0f5-11e6-8683-005056c00008> ;
-            cc_fac:length "Spring"@en ] .
+            cc_fac:length "Spring"@en ] ;
+    cc_info:academic-administrative-assistant <http://catalog.coloradocollege.edu/4a4b449a-f2e6-11e6-bc80-005056c00008> .
 
 <http://catalog.coloradocollege.edu/f47ec300-b02a-11e6-ba85-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Molecular Biology Academic Year 2016-2017"@en ;
@@ -573,7 +609,8 @@
         <http://catalog.coloradocollege.edu/ccffc7dc-b0f0-11e6-9273-005056c00008> ;
     cc_fac:professor <http://catalog.coloradocollege.edu/cb2d6552-b0f0-11e6-96cb-005056c00008> ;
     cc_fac:sabbatical [ schema:member <http://catalog.coloradocollege.edu/ccffc7dc-b0f0-11e6-9273-005056c00008> ;
-            cc_fac:length "Full Year"@en ] .
+            cc_fac:length <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> ] ;
+    cc_info:academic-administrative-assistant <http://catalog.coloradocollege.edu/2e1ab330-f2e6-11e6-bff0-005056c00008> .
 
 <http://catalog.coloradocollege.edu/f5feecee-b02b-11e6-896a-005056c00008> a schema:EducationalEvent ;
     rdfs:label "French and Italian Academic Year 2016-2017"@en ;
@@ -586,7 +623,8 @@
         <http://catalog.coloradocollege.edu/74959cc6-b0e2-11e6-9f96-005056c00008> ;
     cc_fac:professor <http://catalog.coloradocollege.edu/736323ba-b0e2-11e6-87fc-005056c00008> ;
     cc_fac:visiting-assistant-professor <http://catalog.coloradocollege.edu/730deb54-b0e2-11e6-aa01-005056c00008>,
-        <http://catalog.coloradocollege.edu/74e78d54-b0e2-11e6-932b-005056c00008> .
+        <http://catalog.coloradocollege.edu/74e78d54-b0e2-11e6-932b-005056c00008> ;
+    cc_info:academic-administrative-assistant <http://catalog.coloradocollege.edu/e44fc8f8-f2e5-11e6-a232-005056c00008> .
 
 <http://catalog.coloradocollege.edu/fe09b1e2-b02c-11e6-9d7f-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Russian and Eurasian Studies Academic Year 2016-2017"@en ;
@@ -673,7 +711,8 @@
     cc_fac:sabbatical [ schema:member <http://catalog.coloradocollege.edu/e8bdbb8c-b0f5-11e6-bab7-005056c00008> ;
             cc_fac:length "Spring"@en ],
         [ schema:member <http://catalog.coloradocollege.edu/e7491cec-b0f5-11e6-94d5-005056c00008> ;
-            cc_fac:length "Spring"@en ] .
+            cc_fac:length "Spring"@en ] ;
+    cc_info:academic-administrative-assistant <http://catalog.coloradocollege.edu/5c2ff4da-f2e6-11e6-a5a4-005056c00008> .
 
 <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Academic Year 2016-2017"@en ;

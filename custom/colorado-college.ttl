@@ -109,6 +109,11 @@ cc_fac:visiting-assistant-professor a rdf:Resource ;
     rdfs:label "French and Italian"@en ;
     schema:parentOrganization <https://www.coloradocollege.edu/> .
 
+<https://www.coloradocollege.edu/academics/curriculum/catalog/20162017/nondepartmental/general-studies> a bf:Organization,
+    schema:CollegeDepartment ;
+    rdfs:label "General Studies"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
 <https://www.coloradocollege.edu/academics/dept/geology/> a bf:Organization,
         schema:CollegeDepartment ;
     rdfs:label "Geology"@en ;
@@ -235,6 +240,7 @@ cc_fac:visiting-assistant-professor a rdf:Resource ;
             schema:streetAddress "14 East Cache La Poudre Street" ] ;
     schema:foundingDate [ a schema:Date ;
             rdf:value 1874 ] ;
+    schema:name "Colorado College"@en ;
     schema:sameAs <http://www.coloradocollege.edu/> ;
     schema:subOrganization <https://www.coloradocollege.edu/academics/dept/anthropology/>,
         <https://www.coloradocollege.edu/academics/dept/art/>,
