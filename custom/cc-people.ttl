@@ -888,6 +888,12 @@
     schema:familyName "Quinn"@en ;
     schema:givenName "Shaylan"@en .
 
+<http://catalog.coloradocollege.edu/5ee6fb30-2e8f-11e7-a2cf-005056c00008> a bf:Person ;
+    rdfs:label "Annette Megneys"@en ;
+    schema:email "amegneys@coloradocollege.edu" ;
+    schema:familyName "Megneys"@en ;
+    schema:givenName "Annette"@en .
+
 <http://catalog.coloradocollege.edu/5f93d92e-b0f0-11e6-aeec-005056c00008> a bf:Person ;
     rdfs:label "Susan Ashley" ;
     schema:email "SAshley@ColoradoCollege.edu" ;
