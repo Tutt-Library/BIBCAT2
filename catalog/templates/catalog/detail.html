@@ -1,0 +1,19 @@
+{% extends 'catalog/base.html' %}
+
+{% block sub_title %}{{ graph|get_label(iri) }}{% endblock sub_title %}
+
+{% block main %}
+<h1>{{ graph|get_label(iri) }}</h1>
+<legend><strong>URI:</strong> {{ iri }}</legend>
+{{ graph|display_triples(iri)|safe }}
+
+<h3>Output Formats</h3>
+{% set uuid = iri.split("/")[-1] %}
+<div class="serializations">
+    <a href="{{ url_for('catalog.detail', uuid=uuid, ext='json') }}">As JSON-LD</a>|
+    <a href="{{ url_for('catalog.detail', uuid=uuid, ext='xml') }}">As RDF-XML</a>|
+    <a href="{{ url_for('catalog.detail', uuid=uuid, ext='ttl') }}">As RDF Turtle</a>|
+    <a href="{{ url_for('catalog.detail', uuid=uuid, ext='nt') }}">As RDF nt</a>
+</div>
+{% endblock %}
+

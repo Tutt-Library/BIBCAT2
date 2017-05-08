@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+    {% set title = "Colorado College's Tiger Catalog" %}
+    <head>
+        <meta charset="utf-8">
+        <title>{{ title }} {% block sub_title %}{% endblock %}</title>
+        <style>
+            body {
+                font-family: Georgia!important;
+            }
+            h1, h2, h3, h4 {
+                font-family: montserrat!important;
+           }
+        </style>
+    </head>
+    <body>
+    {% block main %}{% endblock %}
+    </body>
+</html>
