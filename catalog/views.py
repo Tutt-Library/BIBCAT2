@@ -39,12 +39,16 @@ def display_triple(graph, iri):
             output += "</ul></dd>\n"
         else:
             output += "<dd>"
-            if obj.startswith("http://catalog"):
-                uuid = str(obj).split("/")[-1]
-                label = get_label(KNOWLEDGE_GRAPH, obj)
-                output += """<a href="{0}">{1}</a>""".format(
-                    url_for('catalog.detail', uuid=uuid, ext='html'),
-                    label)               
+            if obj.startswith("http"):
+                if obj.startswith("http://catalog"):
+                    uuid = str(obj).split("/")[-1]
+                    label = get_label(KNOWLEDGE_GRAPH, obj)
+                    output += """<a href="{0}">{1}</a>""".format(
+                        url_for('catalog.detail', uuid=uuid, ext='html'),
+                        label)
+                else:
+                    output += """<a href="{0}">{0}</a>""".format(
+                        obj)
             else:
                 output += str(obj)
             output += "</dd>"
