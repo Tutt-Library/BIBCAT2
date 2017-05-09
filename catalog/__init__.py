@@ -29,3 +29,4 @@ def setup():
 
 setup()
 from .views import *
+from .filters import *

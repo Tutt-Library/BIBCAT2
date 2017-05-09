@@ -6,11 +6,17 @@
         <title>{{ title }} {% block sub_title %}{% endblock %}</title>
         <style>
             body {
+                display: grid;
                 font-family: Georgia!important;
+                {#grid-template-rows: 80px min-content min-content 1fr;
+                grid-template-columns: 15em 1fr;#}
             }
+
             h1, h2, h3, h4 {
                 font-family: montserrat!important;
-           }
+            }
+    
+            {% block more_css %}{% endblock %}
         </style>
     </head>
     <body>

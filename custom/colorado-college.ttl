@@ -28,6 +28,10 @@ cc_fac:associate-professor a rdf:Resource ;
 cc_fac:chair a schema:title ;
     rdfs:label "Chair"@en .
 
+cc_fac:faculty a rdf:Resource ;
+    rdfs:label "Faculty"@en ;
+    rdf:range relators:tch .
+
 cc_fac:professor a rdf:Resource ;
     rdfs:label "Professor"@en ;
     rdf:range relators:tch .
@@ -220,7 +224,6 @@ cc_fac:visiting-assistant-professor a rdf:Resource ;
     schema:parentOrganization <https://www.coloradocollege.edu/> .
 
 <https://www.coloradocollege.edu/library/> a bf:Organization,
-        schema:CollegeDepartment,
         schema:Library ;
     rdfs:label "Tutt Library"@en ;
     bf:identifiedBy [ a bf:Oclc ;

@@ -6,6 +6,8 @@
 <h1>{{ graph|get_label(iri) }}</h1>
 <legend><strong>URI:</strong> {{ iri }}</legend>
 {{ graph|display_triples(iri)|safe }}
+{{ graph|display_people(iri)|safe }}
+
 
 <h3>Output Formats</h3>
 {% set uuid = iri.split("/")[-1] %}

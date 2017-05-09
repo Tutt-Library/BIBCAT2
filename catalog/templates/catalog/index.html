@@ -1,0 +1,26 @@
+{% extends 'catalog/base.html' %}
+
+{% block more_css %}
+    #depts {
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    #people {
+        grid-row: 2;
+        grid-column: 2;
+    }
+{% endblock %}
+
+{% block main %}
+<h1>Knowledge Graph for {{ graph|get_label(institution_iri) }}</h1>
+<div>
+    <article id="depts">
+        <h2>Departments</h2>
+        {{ graph|get_departments(institution_iri)|safe }}
+    </article>
+    <article id="people">
+        <h2>People</h2>
+    </article>
+</div>
+{% endblock %}
