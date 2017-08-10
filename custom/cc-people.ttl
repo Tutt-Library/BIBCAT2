@@ -1492,6 +1492,12 @@
     schema:familyName "Bizzarro"@en ;
     schema:givenName "Kathleen"@en .
 
+<http://catalog.coloradocollege.edu/c8ee193a-5836-11e7-9dee-005056c00008> a bf:Person ;
+    rdfs:label "Tyler Cornelius"@en ;
+    schema:email "tyler.cornelius@coloradocollege.edu" ;
+    schema:familyName "Cornelius"@en ;
+    schema:givenName "Tyler"@en .
+
 <http://catalog.coloradocollege.edu/cabb561c-b0f0-11e6-98ec-005056c00008> a bf:Person ;
     rdfs:label "Mario Montano" ;
     schema:email "MMontano@ColoradoCollege.edu" ;
