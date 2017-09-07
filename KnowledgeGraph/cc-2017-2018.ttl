@@ -1,0 +1,12 @@
+@prefix cc_info: <https://www.coloradocollege.edu/ns/info/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://catalog.coloradocollege.edu.edu/583b1766-5835-11e7-820c-005056c00008> a schema:EducationalEvent ;
+    rdfs:label "Academic Year 2017-2018"@en ;
+    cc_info:graduation [ rdfs:label "Fall 2017"@en ;
+            rdf:value "2017-12" ] .
+
