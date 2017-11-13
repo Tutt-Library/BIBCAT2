@@ -14,6 +14,16 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<https://www.coloradocollege.edu/academics/curriculum/catalog/20162017/nondepartmental/general-studies> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "General Studies"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/academics/dept/psychology/> a bf:Organization,
+        schema:CollegeDepartment ;
+    rdfs:label "Psychology"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
 cc_fac:assistant-professor a rdf:Resource ;
     rdfs:label "Assistant Professor"@en ;
     rdf:range relators:tch .
@@ -42,6 +52,10 @@ cc_fac:sabbatical a schema:EducationalEvent ;
 cc_fac:visiting-assistant-professor a rdf:Resource ;
     rdfs:label "Visiting Assistant Professor"@en ;
     rdf:range relators:tch .
+
+<https://www.coloradocollege.edu/offices/dean/> a bf:Organization ;
+    rdfs:label "Office of the Dean"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
 
 <https://www.coloradocollege.edu/academics/dept/anthropology/> a bf:Organization,
         schema:CollegeDepartment ;
@@ -113,11 +127,6 @@ cc_fac:visiting-assistant-professor a rdf:Resource ;
     rdfs:label "French and Italian"@en ;
     schema:parentOrganization <https://www.coloradocollege.edu/> .
 
-<https://www.coloradocollege.edu/academics/curriculum/catalog/20162017/nondepartmental/general-studies> a bf:Organization,
-    schema:CollegeDepartment ;
-    rdfs:label "General Studies"@en ;
-    schema:parentOrganization <https://www.coloradocollege.edu/> .
-
 <https://www.coloradocollege.edu/academics/dept/geology/> a bf:Organization,
         schema:CollegeDepartment ;
     rdfs:label "Geology"@en ;
@@ -130,7 +139,7 @@ cc_fac:visiting-assistant-professor a rdf:Resource ;
 
 <https://www.coloradocollege.edu/academics/dept/greal/> a bf:Organization,
         schema:CollegeDepartment ;
-    rdfs:label "German, Russian and East Asian Languages Department"@en ;
+    rdfs:label "German, Russian, and East Asian Languages Department"@en ;
     schema:parentOrganization <https://www.coloradocollege.edu/> .
 
 <https://www.coloradocollege.edu/academics/dept/history/> a bf:Organization,
@@ -181,11 +190,6 @@ cc_fac:visiting-assistant-professor a rdf:Resource ;
 <https://www.coloradocollege.edu/academics/dept/politicalscience/> a bf:Organization,
         schema:CollegeDepartment ;
     rdfs:label "Political Science"@en ;
-    schema:parentOrganization <https://www.coloradocollege.edu/> .
-
-<https://www.coloradocollege.edu/academics/dept/psychology/> a bf:Organization,
-        schema:CollegeDepartment ;
-    rdfs:label "Psychology"@en ;
     schema:parentOrganization <https://www.coloradocollege.edu/> .
 
 <https://www.coloradocollege.edu/academics/dept/raceethnicitymigration/> a bf:Organization,

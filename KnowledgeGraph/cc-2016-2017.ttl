@@ -33,7 +33,7 @@
 <http://catalog.coloradocollege.edu.edu/0a75d55a-76ad-11e6-a286-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Art Department Academic Year 2016-2017"@en ;
     schema:organizer <https://www.coloradocollege.edu/academics/dept/art/> ;
-    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c0000> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> ;
     cc_fac:assistant-professor <http://catalog.coloradocollege.edu/d245ee24-b0de-11e6-9121-005056c00008> ;
     cc_fac:associate-professor <http://catalog.coloradocollege.edu/d0357d2e-b0de-11e6-bfdb-005056c00008>,
         <http://catalog.coloradocollege.edu/d0f8eab6-b0de-11e6-a68b-005056c00008>,
@@ -604,8 +604,7 @@
     schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> ;
     cc_fac:assistant-professor <http://catalog.coloradocollege.edu/cbdffffa-b0f0-11e6-b5fc-005056c00008>,
         <http://catalog.coloradocollege.edu/cc42a5e4-b0f0-11e6-8579-005056c00008> ;
-    cc_fac:associate-professor <http://catalog.coloradocollege.edu/cabb561c-b0f0-11e6-98ec-005056c00008>,
-        <http://catalog.coloradocollege.edu/cca70d06-b0f0-11e6-b828-005056c00008>,
+    cc_fac:associate-professor <http://catalog.coloradocollege.edu/cca70d06-b0f0-11e6-b828-005056c00008>,
         <http://catalog.coloradocollege.edu/ccffc7dc-b0f0-11e6-9273-005056c00008> ;
     cc_fac:professor <http://catalog.coloradocollege.edu/cb2d6552-b0f0-11e6-96cb-005056c00008> ;
     cc_fac:sabbatical [ schema:member <http://catalog.coloradocollege.edu/ccffc7dc-b0f0-11e6-9273-005056c00008> ;
