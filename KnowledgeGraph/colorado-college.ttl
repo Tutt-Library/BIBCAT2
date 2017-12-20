@@ -24,6 +24,10 @@
     rdfs:label "Psychology"@en ;
     schema:parentOrganization <https://www.coloradocollege.edu/> .
 
+cc_fac:affiliated-faculty a rdf:Resource ;
+    rdfs:label "Affiliated Faculty"@en ;
+    rdfs:range relators:tch .
+
 cc_fac:assistant-professor a rdf:Resource ;
     rdfs:label "Assistant Professor"@en ;
     rdf:range relators:tch .

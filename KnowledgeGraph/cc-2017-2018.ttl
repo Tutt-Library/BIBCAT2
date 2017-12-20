@@ -11,11 +11,14 @@
     schema:member <http://catalog.coloradocollege.edu/278aaee4-b0e5-11e6-9700-005056c00008> ;
     schema:organizer <https://www.coloradocollege.edu/academics/dept/environmentalprogram/> ;
     schema:superEvent <http://catalog.coloradocollege.edu.edu/583b1766-5835-11e7-820c-005056c00008> ;
+    cc_fac:affiliated-faculty <http://catalog.coloradocollege.edu/0777ac54-b0e1-11e6-b0b6-005056c00008>,
+        <http://catalog.coloradocollege.edu/501d4d4c-b0f1-11e6-8c7d-005056c00008>,
+        <http://catalog.coloradocollege.edu/50dc096c-b0f1-11e6-a9b6-005056c00008> ;
     cc_fac:assistant-professor <http://catalog.coloradocollege.edu/25e8841c-b0e5-11e6-b535-005056c00008>,
         <http://catalog.coloradocollege.edu/2644fbfe-b0e5-11e6-bae0-005056c00008>,
-        <http://catalog.coloradocollege.edu/26f0f36c-b0e5-11e6-94e7-005056c00008>,
         <http://catalog.coloradocollege.edu/29646506-b0f2-11e6-9bc8-005056c00008> ;
-    cc_fac:associate-professor <http://catalog.coloradocollege.edu/803abb06-b0f1-11e6-8bde-005056c00008> ;
+    cc_fac:associate-professor <http://catalog.coloradocollege.edu/26f0f36c-b0e5-11e6-94e7-005056c00008>,
+        <http://catalog.coloradocollege.edu/803abb06-b0f1-11e6-8bde-005056c00008> ;
     cc_fac:professor <http://catalog.coloradocollege.edu/80a32d4c-b0f1-11e6-ade9-005056c00008> .
 
 <http://catalog.coloradocollege.edu/097a49d0-bdb6-11e7-83da-005056c00008> a schema:EducationalEvent ;
@@ -187,8 +190,7 @@
     schema:organizer <https://www.coloradocollege.edu/academics/dept/filmandnewmedia/> ;
     schema:superEvent <http://catalog.coloradocollege.edu.edu/583b1766-5835-11e7-820c-005056c00008> ;
     cc_fac:assistant-professor <http://catalog.coloradocollege.edu/f770fd34-b0ef-11e6-a70c-005056c00008>,
-        <http://catalog.coloradocollege.edu/f7c92f54-b0ef-11e6-8116-005056c00008>,
-        <http://orcid.org/0000-0002-7543-3893> ;
+        <http://catalog.coloradocollege.edu/f7c92f54-b0ef-11e6-8116-005056c00008> ;
     cc_fac:professor <http://catalog.coloradocollege.edu/b770c7ae-b0e1-11e6-9795-005056c00008> .
 
 <http://catalog.coloradocollege.edu/239de0ae-bdb6-11e7-9337-005056c00008> a schema:EducationalEvent ;
@@ -481,8 +483,8 @@
     rdfs:label "Classics Department Academic Year 2017-2018"@en ;
     schema:organizer <https://www.coloradocollege.edu/academics/dept/classics/> ;
     schema:superEvent <http://catalog.coloradocollege.edu.edu/583b1766-5835-11e7-820c-005056c00008> ;
-    cc_fac:assistant-professor <http://catalog.coloradocollege.edu/218c8b64-c89f-11e7-adfd-005056c00008>,
-        <http://catalog.coloradocollege.edu/49994cf8-97ca-11e6-b708-005056c00008> ;
+    cc_fac:associate-professor <http://catalog.coloradocollege.edu/49994cf8-97ca-11e6-b708-005056c00008> ;
+    cc_fac:chair <http://catalog.coloradocollege.edu/49994cf8-97ca-11e6-b708-005056c00008> ;
     cc_fac:professor <http://catalog.coloradocollege.edu/323c2e5e-c89f-11e7-82cd-005056c00008>,
         <http://catalog.coloradocollege.edu/54ae8afa-964e-11e6-8513-005056c00008> .
 
@@ -524,8 +526,19 @@
         <http://catalog.coloradocollege.edu/fedce6f4-b0f0-11e6-b6fa-005056c00008>,
         <http://orcid.org/0000-0003-0573-2852> .
 
+<http://catalog.coloradocollege.edu/8370a487-4a44-4642-8c60-771e3de8bab6> a schema:EducationalEvent ;
+    rdfs:label "Office of the Dean Academic Year 2017-2018"@en ;
+    schema:organizer <https://www.coloradocollege.edu/offices/dean/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu.edu/583b1766-5835-11e7-820c-005056c00008> ;
+    cc_fac:associate-dean <http://catalog.coloradocollege.edu/a10f6534-b0f4-11e6-8c2f-005056c00008>,
+        <http://orcid.org/0000-0002-8157-8837> ;
+    cc_fac:associate-professor <http://orcid.org/0000-0002-8157-8837> ;
+    cc_fac:dean-of-the-college <http://catalog.coloradocollege.edu/432575ac-b0f5-11e6-929c-005056c00008> .
+
 <http://catalog.coloradocollege.edu.edu/583b1766-5835-11e7-820c-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Academic Year 2017-2018"@en ;
+    schema:endDate "2018-07-31T00:00:00" ;
+    schema:startDate "2017-08-30T00:00:00" ;
     cc_info:graduation [ rdfs:label "Fall 2017"@en ;
             rdf:value "2017-12" ],
         [ rdfs:label "Summer 2018"@en ;
