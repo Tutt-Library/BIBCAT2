@@ -1,6 +1,7 @@
 *.swp
 *.pyc
 *.bak
+*.db
 *.project
 *.pydevproject
 instance/

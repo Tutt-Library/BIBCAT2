@@ -2353,6 +2353,11 @@
     schema:familyName "Hoel"@en ;
     schema:givenName "Jessica"@en .
 
+<https://orcid.org/0000-0002-5352-9886> a bf:Person ;
+    rdfs:label "Jessy Randall"@en ;
+    schema:familyName "Randall"@en ;
+    schema:givenName "Jessy"@en .
+
 <https://orcid.org/0000-0002-8845-2954> a bf:Person ;
     rdfs:label "Diane Westerfield"@en ;
     schema:email "diane.westerfield@coloradocollege.edu" ;
