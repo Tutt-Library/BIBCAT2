@@ -2355,6 +2355,7 @@
 
 <https://orcid.org/0000-0002-5352-9886> a bf:Person ;
     rdfs:label "Jessy Randall"@en ;
+    schema:email "jrandall@coloradocollege.edu" ;
     schema:familyName "Randall"@en ;
     schema:givenName "Jessy"@en .
 

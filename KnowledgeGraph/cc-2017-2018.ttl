@@ -9,6 +9,7 @@
 
 <http://catalog.coloradocolleg.edu/f1b05664-f4bc-11e7-982d-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Tutt Library Academic Year 2017-2018"@en ;
+    schema:superEvent <http://catalog.coloradocollege.edu.edu/583b1766-5835-11e7-820c-005056c00008> ;
     schema:organizer <https://www.coloradocollege.edu/library/> ;
     cc_staff:librarian <http://orcid.org/0000-0002-7543-3893>,
         <https://orcid.org/0000-0002-5352-9886>,
