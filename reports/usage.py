@@ -38,16 +38,17 @@ def __get_item_id__(item_url, connection):
     cursor.close()
     return item_result[0]
 
-def __get_usage__(rec):
+def __get_usage__(rec, connection):
     if not '945' in rec:
         return
     field945_y = rec['945']['y']
+    if field945_y is None:
+        return
     item_url = ITEM_TEMPLATE.format(field945_y[1:-1])
     item_result = requests.get(item_url)
     if item_result.status_code == 404:
         return
     item_xml = lxml.etree.XML(item_result.text.encode())
-    connection = sqlite3.connect(DB_PATH)
     sql = """INSERT INTO log (item, last_check_out, total_checkouts) 
 VALUES (?,?,?)"""
     item_id = __get_item_id__(item_url, connection)
@@ -75,8 +76,7 @@ VALUES (?,?,?)"""
     cursor = connection.cursor()
     cursor.execute(sql, (item_id, last_checkin, total_checkouts))
     connection.commit()
-    connection.close()
-    
+    cursor.close()
     
     
     
@@ -91,8 +91,9 @@ def harvest(marc):
     click.echo("Started usage harvesting for all III Item records in {} at {}".format(
         start,
         marc))
+    connection = sqlite3.connect(DB_PATH)
     for i,rec in enumerate(marc_reader):
-        __get_usage__(rec)
+        __get_usage__(rec, connection)
         if not i%100 and i > 0:
             click.echo(".", nl=False)
         if not i%1000:

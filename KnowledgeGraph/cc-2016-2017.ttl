@@ -715,8 +715,8 @@
 
 <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Academic Year 2016-2017"@en ;
-    schema:endDate "2017-05-22T07:00:00" ;
-    schema:startDate "2016-08-29T06:00:00" ;
+    schema:endDate "2017-05-22T07:00:00.0"^^xsd:dateTime ;
+    schema:startDate "2016-08-29T06:00:00.0"^^xsd:dateTime ;
     cc_info:graduation [ rdfs:label "Summer 2017"@en ;
             rdf:value "2017-07" ],
         [ rdfs:label "Fall 2016"@en ;
