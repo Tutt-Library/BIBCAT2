@@ -1266,6 +1266,12 @@
     schema:familyName "Moran"@en ;
     schema:givenName "Molly"@en .
 
+<http://catalog.coloradocollege.edu/8e5ecb8c-f593-11e7-9016-a41f7283f8d4> a bf:Person ;
+    rdfs:label "Nathan Bower"@en ;
+    schema:email "nbower@coloradocollege.edu" ;
+    schema:familyName "Bower"@en ;
+    schema:givenName "Nathan"@en .
+
 <http://catalog.coloradocollege.edu/919903e8-c8a2-11e7-a205-005056c00008> a bf:Person ;
     rdfs:label "Patricia Purdue"@en ;
     schema:email "ppurdue@ColoradoCollege.edu" ;
@@ -2352,6 +2358,12 @@
     schema:email "shoel@coloradocollege.edu" ;
     schema:familyName "Hoel"@en ;
     schema:givenName "Jessica"@en .
+
+<https://orcid.org/0000-0002-5976-3083> a bf:Person ;
+    rdfs:label "Aaron Stoller"@en ;
+    ns2:email "aaronstoller@coloradocollege.edu" ;
+    ns2:familyName "Stoller"@en ;
+    ns2:givenName "Aaron"@en .
 
 <https://orcid.org/0000-0002-8845-2954> a bf:Person ;
     rdfs:label "Diane Westerfield"@en ;
