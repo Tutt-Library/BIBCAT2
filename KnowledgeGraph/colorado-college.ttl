@@ -11,6 +11,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix relators: <http://id.loc.gov/vocabulary/relators/> .
 @prefix schema: <http://schema.org/> .
+@prefix cc_staff: <https://www.coloradocollege.edu/ns/staff/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -56,6 +57,9 @@ cc_fac:sabbatical a schema:EducationalEvent ;
 cc_fac:visiting-assistant-professor a rdf:Resource ;
     rdfs:label "Visiting Assistant Professor"@en ;
     rdf:range relators:tch .
+
+cc_staff:librarian a rdf:Resource ;
+    rdfs:label "Librarian"@en .
 
 <https://www.coloradocollege.edu/offices/dean/> a bf:Organization ;
     rdfs:label "Office of the Dean"@en ;
