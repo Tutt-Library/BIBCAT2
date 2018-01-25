@@ -2361,9 +2361,9 @@
 
 <https://orcid.org/0000-0002-5976-3083> a bf:Person ;
     rdfs:label "Aaron Stoller"@en ;
-    ns2:email "aaronstoller@coloradocollege.edu" ;
-    ns2:familyName "Stoller"@en ;
-    ns2:givenName "Aaron"@en .
+    schema:email "aaronstoller@coloradocollege.edu" ;
+    schema:familyName "Stoller"@en ;
+    schema:givenName "Aaron"@en .
 
 <https://orcid.org/0000-0002-8845-2954> a bf:Person ;
     rdfs:label "Diane Westerfield"@en ;
