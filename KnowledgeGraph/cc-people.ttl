@@ -1189,6 +1189,12 @@
     schema:familyName "Randolph"@en ;
     schema:givenName "Kathleen"@en .
 
+<http://catalog.coloradocollege.edu/7d304e52-0c32-11e8-a74e-005056c00008> a bf:Person ;
+    rdfs:label "Madeleine Garcia"@en ;
+    schema:email "mgarcia@coloradocollege.edu" ;
+    schema:familyName "Garcia"@en ;
+    schema:givenName "Madeleine"@en .
+
 <http://catalog.coloradocollege.edu/7ee5c5dc-b0f1-11e6-8239-005056c00008> a bf:Person ;
     rdfs:label "Helen Daly" ;
     schema:email "Helen.Daly@ColoradoCollege.edu",
@@ -1894,6 +1900,12 @@
     schema:email "shoseman@coloradocollege.edu" ;
     schema:familyName "Hoseman"@en ;
     schema:givenName "Aimee"@en .
+
+<http://catalog.coloradocollege.edu/da412336-0c30-11e8-a860-005056c00008> a bf:Person ;
+    rdfs:label "Mark Saviano"@en ;
+    schema:email "msaviano@coloradocollege.edu" ;
+    schema:familyName "Saviano"@en ;
+    schema:givenName "Mark"@en .
 
 <http://catalog.coloradocollege.edu/ddd1c0a2-e7e5-11e6-851c-005056c00008> a bf:Person ;
     rdfs:label "Mandy Sulfrian" ;

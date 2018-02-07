@@ -9,8 +9,8 @@
 
 <http://catalog.coloradocolleg.edu/f1b05664-f4bc-11e7-982d-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Tutt Library Academic Year 2017-2018"@en ;
-    schema:superEvent <http://catalog.coloradocollege.edu.edu/583b1766-5835-11e7-820c-005056c00008> ;
     schema:organizer <https://www.coloradocollege.edu/library/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu.edu/583b1766-5835-11e7-820c-005056c00008> ;
     cc_staff:librarian <http://orcid.org/0000-0002-7543-3893>,
         <https://orcid.org/0000-0002-5352-9886>,
         <https://orcid.org/0000-0002-8845-295> .
@@ -54,7 +54,20 @@
 <http://catalog.coloradocollege.edu/0d1794d0-bdb6-11e7-8508-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Psychology Academic Year 2017-2018"@en ;
     schema:organizer <https://www.coloradocollege.edu/academics/dept/psychology/> ;
-    schema:superEvent <http://catalog.coloradocollege.edu.edu/583b1766-5835-11e7-820c-005056c00008> .
+    schema:superEvent <http://catalog.coloradocollege.edu.edu/583b1766-5835-11e7-820c-005056c00008> ;
+    cc_fac:assistant-professor <http://catalog.coloradocollege.edu/a26c8434-b0f4-11e6-88db-005056c00008>,
+        <http://catalog.coloradocollege.edu/a474d754-b0f4-11e6-8d25-005056c00008> ;
+    cc_fac:associate-professor <http://catalog.coloradocollege.edu/76cad86e-b0e5-11e6-9d22-005056c00008>,
+        <http://catalog.coloradocollege.edu/a10f6534-b0f4-11e6-8c2f-005056c00008> ;
+    cc_fac:chair <http://catalog.coloradocollege.edu/a2e12b7a-b0f4-11e6-8cc2-005056c00008> ;
+    cc_fac:professor <http://catalog.coloradocollege.edu/9a0726a4-b0f0-11e6-8e32-005056c00008>,
+        <http://catalog.coloradocollege.edu/a18dd07a-b0f4-11e6-8553-005056c00008>,
+        <http://catalog.coloradocollege.edu/a2e12b7a-b0f4-11e6-8cc2-005056c00008>,
+        <http://catalog.coloradocollege.edu/a34607ca-b0f4-11e6-ac87-005056c00008>,
+        <http://catalog.coloradocollege.edu/a3ad551c-b0f4-11e6-a3d1-005056c00008> ;
+    cc_staff:department-staff-assistant <http://catalog.coloradocollege.edu/2d6cac68-f2e6-11e6-ac25-005056c00008> ;
+    cc_staff:psychology-paraprofessional <http://catalog.coloradocollege.edu/7d304e52-0c32-11e8-a74e-005056c00008> ;
+    cc_staff:statisticaltechnical-director <http://catalog.coloradocollege.edu/da412336-0c30-11e8-a860-005056c00008> .
 
 <http://catalog.coloradocollege.edu/1036fd40-bdb6-11e7-9360-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Race, Ethnicity, and Migration Studies Academic Year 2017-2018"@en ;
@@ -546,8 +559,8 @@
 
 <http://catalog.coloradocollege.edu.edu/583b1766-5835-11e7-820c-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Academic Year 2017-2018"@en ;
-    schema:endDate "2018-07-31T00:00:00.0"^^xsd:dateTime ;
-    schema:startDate "2017-08-30T00:00:00.0"^^xsd:dateTime ;
+    schema:endDate "2018-07-31T00:00:00"^^xsd:dateTime ;
+    schema:startDate "2017-08-30T00:00:00"^^xsd:dateTime ;
     cc_info:graduation [ rdfs:label "Fall 2017"@en ;
             rdf:value "2017-12" ],
         [ rdfs:label "Summer 2018"@en ;
