@@ -13,7 +13,7 @@
     schema:superEvent <http://catalog.coloradocollege.edu.edu/583b1766-5835-11e7-820c-005056c00008> ;
     cc_staff:librarian <http://orcid.org/0000-0002-7543-3893>,
         <https://orcid.org/0000-0002-5352-9886>,
-        <https://orcid.org/0000-0002-8845-295> .
+        <https://orcid.org/0000-0002-8845-2954> .
 
 <http://catalog.coloradocollege.edu/08bb1880-bdb6-11e7-8b53-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Environmental Program Academic Year 2017-2018"@en ;
