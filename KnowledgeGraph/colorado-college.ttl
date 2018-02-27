@@ -52,6 +52,10 @@ cc_fac:professor a rdf:Resource ;
     rdfs:label "Professor"@en ;
     rdf:range relators:tch .
 
+cc_fac:retired-faculty a rdf:Resource ;
+    rdfs:label "Retired Faculty"@en ;
+    rdf:range relators: .
+
 cc_fac:sabbatical a schema:EducationalEvent ;
     rdfs:label "Sabbatical"@en .
 
@@ -61,6 +65,9 @@ cc_fac:visiting-assistant-professor a rdf:Resource ;
 
 cc_staff:librarian a rdf:Resource ;
     rdfs:label "Librarian"@en .
+
+cc_staff:paraprofessional a rdf:Resource ;
+    rdfs:label "Paraprofessional"@en .
 
 <https://www.coloradocollege.edu/offices/dean/> a bf:Organization ;
     rdfs:label "Office of the Dean"@en ;

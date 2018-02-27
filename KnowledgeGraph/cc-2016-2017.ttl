@@ -234,6 +234,7 @@
     cc_fac:associate-professor <http://catalog.coloradocollege.edu/4fc08876-b0e0-11e6-95c9-005056c00008>,
         <http://catalog.coloradocollege.edu/4ffe5c1e-b0e0-11e6-935e-005056c00008> ;
     cc_fac:chair <http://catalog.coloradocollege.edu/4fc08876-b0e0-11e6-95c9-005056c00008> ;
+    cc_fac:emeritus <http://catalog.coloradocollege.edu/8e5ecb8c-f593-11e7-9016-a41f7283f8d4> ;
     cc_fac:professor <http://catalog.coloradocollege.edu/5081ee9e-b0e0-11e6-b5bb-005056c00008>,
         <http://catalog.coloradocollege.edu/5105bb98-b0e0-11e6-8868-005056c00008>,
         <http://catalog.coloradocollege.edu/514d2746-b0e0-11e6-80f5-005056c00008> ;
@@ -715,8 +716,8 @@
 
 <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Academic Year 2016-2017"@en ;
-    schema:endDate "2017-05-22T07:00:00.0"^^xsd:dateTime ;
-    schema:startDate "2016-08-29T06:00:00.0"^^xsd:dateTime ;
+    schema:endDate "2017-05-22T07:00:00"^^xsd:dateTime ;
+    schema:startDate "2016-08-29T06:00:00"^^xsd:dateTime ;
     cc_info:graduation [ rdfs:label "Summer 2017"@en ;
             rdf:value "2017-07" ],
         [ rdfs:label "Fall 2016"@en ;

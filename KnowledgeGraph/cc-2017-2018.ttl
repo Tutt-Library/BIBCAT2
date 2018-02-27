@@ -358,7 +358,8 @@
     cc_fac:professor <http://catalog.coloradocollege.edu/4f5507c6-b0f1-11e6-b84c-005056c00008>,
         <http://catalog.coloradocollege.edu/5077542c-b0f1-11e6-bb80-005056c00008>,
         <http://catalog.coloradocollege.edu/50dc096c-b0f1-11e6-a9b6-005056c00008> ;
-    cc_fac:visiting-assistant-professor <http://catalog.coloradocollege.edu/75e6cc70-c8a1-11e7-a0ce-005056c00008> .
+    cc_fac:visiting-assistant-professor <http://catalog.coloradocollege.edu/75e6cc70-c8a1-11e7-a0ce-005056c00008> ;
+    cc_staff:staff <http://catalog.coloradocollege.edu/47d58550-1b1c-11e8-b144-a41f7283f8d4> .
 
 <http://catalog.coloradocollege.edu/31d58e80-bdb6-11e7-afbd-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Philosophy Academic Year 2017-2018"@en ;
