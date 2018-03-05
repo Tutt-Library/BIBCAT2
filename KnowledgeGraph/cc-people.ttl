@@ -2447,6 +2447,15 @@
     schema:familyName "Hoel"@en ;
     schema:givenName "Jessica"@en .
 
+<https://orcid.org/0000-0002-5352-9886> a bf:Person ;
+    rdfs:label "Jessy Randell"@en ;
+    schema:email "jrandall@coloradocollege.edu" ;
+    schema:familyName "Randell"@en ;
+    schema:givenName "Jessy"@en ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:atTime "2018-02-28T21:02:25.312824"^^xsd:dateTime ;
+            prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] .
+
 <https://orcid.org/0000-0002-5976-3083> a bf:Person ;
     rdfs:label "Aaron Stoller"@en ;
     schema:email "astoller@coloradocollege.edu" ;
