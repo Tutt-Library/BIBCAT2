@@ -108,10 +108,10 @@
         <http://catalog.coloradocollege.edu/d1121fd4-72c1-11e6-81fa-005056c00008>,
         <http://catalog.coloradocollege.edu/f32e5018-c8a0-11e7-9302-005056c00008> ;
     cc_fac:associate-professor <http://catalog.coloradocollege.edu/2ed5cbf4-72c0-11e6-a32d-005056c00008>,
-<http://catalog.coloradocollege.edu/d49aee34-72c0-11e6-bfeb-005056c00008>,
         <http://catalog.coloradocollege.edu/716ae934-72bc-11e6-99f5-005056c00008>,
         <http://catalog.coloradocollege.edu/8a413e7a-c8a0-11e7-a718-005056c00008>,
-        <http://catalog.coloradocollege.edu/a3456aee-c8a0-11e7-a0c6-005056c00008> ;
+        <http://catalog.coloradocollege.edu/a3456aee-c8a0-11e7-a0c6-005056c00008>,
+        <http://catalog.coloradocollege.edu/d49aee34-72c0-11e6-bfeb-005056c00008> ;
     cc_fac:chair <http://catalog.coloradocollege.edu/3583f264-72bf-11e6-b97c-005056c00008> ;
     cc_fac:faculty <http://catalog.coloradocollege.edu/243b86ca-c8a1-11e7-aa10-005056c00008>,
         <http://catalog.coloradocollege.edu/f32e5018-c8a0-11e7-9302-005056c00008>,
