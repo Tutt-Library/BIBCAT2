@@ -330,9 +330,9 @@
     schema:organizer <https://www.coloradocollege.edu/academics/dept/geology/> ;
     schema:superEvent <http://catalog.coloradocollege.edu.edu/583b1766-5835-11e7-820c-005056c00008> ;
     cc_fac:associate-professor <http://catalog.coloradocollege.edu/2d22b6dc-b0e3-11e6-8215-005056c00008> ;
-    cc_fac:professor <http://catalog.coloradocollege.edu/012ccc6e-72be-11e6-9c71-005056c00008>,
-        <http://catalog.coloradocollege.edu/2e08aa0c-b0e3-11e6-ba28-005056c00008>,
+    cc_fac:professor <http://catalog.coloradocollege.edu/2e08aa0c-b0e3-11e6-ba28-005056c00008>,
         <http://catalog.coloradocollege.edu/2e538234-b0e3-11e6-874d-005056c00008>,
+        <http://catalog.coloradocollege.edu/2eadfe42-b0e3-11e6-ba86-005056c00008>,
         <http://catalog.coloradocollege.edu/d187eb9a-b0de-11e6-a68d-005056c00008> ;
     cc_fac:visiting-assistant-professor <http://catalog.coloradocollege.edu/6abb3d92-c8a0-11e7-aac4-005056c00008> .
 
