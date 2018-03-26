@@ -1290,6 +1290,12 @@
     schema:familyName "Kim"@en ;
     schema:givenName "Michael"@en .
 
+<http://catalog.coloradocollege.edu/86f4bce4-3149-11e8-ac2e-001fc69cf6df> a bf:Person ;
+    rdfs:label "Eric Perramond"@en ;
+    schema:email "eperramond@coloradocollege.edu" ;
+    schema:familyName "Perramond"@en ;
+    schema:givenName "Eric"@en .
+
 <http://catalog.coloradocollege.edu/8a413e7a-c8a0-11e7-a718-005056c00008> a bf:Person ;
     rdfs:label "Molly Moran"@en ;
     schema:email "mmoran@coloradocollege.edu" ;
@@ -1769,7 +1775,7 @@
 
 <http://catalog.coloradocollege.edu/cb8758ae-b0f0-11e6-9d4d-005056c00008> a bf:Person ;
     rdfs:label "Jennifer Garcia" ;
-    schema:email "sgarcia@coloradocollege.edu" ;
+    schema:email "jfgarcia@coloradocollege.edu" ;
     schema:familyName "Garcia"@en ;
     schema:givenName "Jennifer"@en .
 
