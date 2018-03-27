@@ -28,7 +28,7 @@
         <http://catalog.coloradocollege.edu/29646506-b0f2-11e6-9bc8-005056c00008> ;
     cc_fac:associate-professor <http://catalog.coloradocollege.edu/26f0f36c-b0e5-11e6-94e7-005056c00008>,
         <http://catalog.coloradocollege.edu/803abb06-b0f1-11e6-8bde-005056c00008> ;
-    cc_fac:professor <http://catalog.coloradocollege.edu/80a32d4c-b0f1-11e6-ade9-005056c00008> ;
+    cc_fac:professor <http://catalog.coloradocollege.edu/80a32d4c-b0f1-11e6-ade9-005056c00008>, 
         <http://catalog.coloradocollege.edu/278aaee4-b0e5-11e6-9700-005056c00008> ;
     cc_fac:sabbatical [ schema:member <http://catalog.coloradocollege.edu/278aaee4-b0e5-11e6-9700-005056c00008> ;
             cc_fac:length "Year"@en ] .
@@ -158,7 +158,7 @@
     cc_fac:professor <http://catalog.coloradocollege.edu/278aaee4-b0e5-11e6-9700-005056c00008> ;
     cc_fac:visiting-assistant-professor <http://catalog.coloradocollege.edu/42bb745e-c8a3-11e7-a2e9-005056c00008> ;
     cc_fac:sabbatical [ schema:member <http://catalog.coloradocollege.edu/278aaee4-b0e5-11e6-9700-005056c00008> ;
-            cc_fac:length "Year"@en ] 
+            cc_fac:length "Year"@en ] .
 
 <http://catalog.coloradocollege.edu/1bca8d1e-bdb6-11e7-b18f-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Economics and Business Academic Year 2017-2018"@en ;
