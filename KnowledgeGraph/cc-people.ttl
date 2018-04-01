@@ -2493,3 +2493,8 @@
     schema:familyName "Westerfield"@en ;
     schema:givenName "Diane"@en .
 
+<http://orcid.org/0000-0002-7543-3893> a bf:Person ;
+    rdfs:label "Jeremy Nelson"@en ;
+    schema:email "jernelson@coloradocollege.edu" ;
+    schema:familyName "Nelson"@en ;
+    schema:givenName "Jeremy"@en .
