@@ -351,6 +351,12 @@
     schema:familyName "Wright"@en ;
     schema:givenName "Peter"@en .
 
+<http://catalog.coloradocollege.edu/1f549770-35d2-11e8-9d98-001fc69cf6df> a bf:Person ;
+    rdfs:label "Neal Rappaort"@en ;
+    schema:email "nrappaport@coloradocollege.edu" ;
+    schema:familyName "Rappaport"@en ;
+    schema:givenName "Neal"@en .
+
 <http://catalog.coloradocollege.edu/218c8b64-c89f-11e7-adfd-005056c00008> a bf:Person ;
     rdfs:label "Richard Buxton"@en ;
     schema:email "rbuxton@coloradocollege.edu" ;
@@ -652,8 +658,9 @@
     schema:givenName "Vibha"@en .
 
 <http://catalog.coloradocollege.edu/39135a12-bcd4-11e6-a418-005056c00008> a bf:Person ;
-    rdfs:label "Kristina Lybecker" ;
+    rdfs:label "Kristina M.L. Acri, nee Lybecker" ;
     schema:email "klybecker@coloradocollege.edu" ;
+    schema:additionalName "Acri"@en ;
     schema:familyName "Lybecker"@en ;
     schema:givenName "Kristina"@en .
 
@@ -701,13 +708,13 @@
 
 <http://catalog.coloradocollege.edu/3cb03828-bcd4-11e6-8c2d-005056c00008> a bf:Person ;
     rdfs:label "Jean Cooley" ;
-    schema:email "scooley@coloradocollege.edu" ;
+    schema:email "jcooley@coloradocollege.edu" ;
     schema:familyName "Cooley"@en ;
     schema:givenName "Jean"@en .
 
 <http://catalog.coloradocollege.edu/3d31b754-bcd4-11e6-9f70-005056c00008> a bf:Person ;
     rdfs:label "Tom Jeter" ;
-    schema:email "sjeter@coloradocollege.edu" ;
+    schema:email "tjeter@coloradocollege.edu" ;
     schema:familyName "Jeter"@en ;
     schema:givenName "Tom"@en .
 
@@ -982,6 +989,12 @@
     schema:email "mrubenstein@coloradocollege.edu" ;
     schema:familyName "Rubenstein"@en ;
     schema:givenName "Meghan"@en .
+
+<http://catalog.coloradocollege.edu/5a97b458-35d3-11e8-84b2-001fc69cf6df> a bf:Person ;
+    rdfs:label "Sandeep Sharma"@en ;
+    schema:email "ssharma@coloradocollege.edu" ;
+    schema:givenName "Sandeep"@en;
+    schema:familyName "Sharma"@en .
 
 <http://catalog.coloradocollege.edu/5b34f30a-f2e6-11e6-a75d-005056c00008> a bf:Person ;
     rdfs:label "Lisa Ruth" ;
@@ -2479,10 +2492,4 @@
     schema:email "dwesterfield@coloradocollege.edu" ;
     schema:familyName "Westerfield"@en ;
     schema:givenName "Diane"@en .
-
-<http://orcid.org/0000-0002-7543-3893> a bf:Person ;
-    rdfs:label "Jeremy Nelson"@en ;
-    schema:email "jernelson@coloradocollege.edu" ;
-    schema:familyName "Nelson"@en ;
-    schema:givenName "Jeremy"@en .
 
