@@ -44,6 +44,14 @@ cc_fac:associate-professor a rdf:Resource ;
 cc_fac:chair a schema:title ;
     rdfs:label "Chair"@en .
 
+cc_fac:director-of-education-and-senior-lecturer a rdf:Resource ;
+    rdfs:label "Director of Museum Education and Senior Lecturer" ;
+    rdf:range relators:tch .
+
+cc_fac:director-of-writing-center-lectuer  a rdf:Resource ;
+    rdfs:label "Director of the Writing Program and Writing Center, Lecturer in English";
+    rdf:range relators:tch .
+
 cc_fac:faculty a rdf:Resource ;
     rdfs:label "Faculty"@en ;
     rdf:range relators:tch .
@@ -51,10 +59,6 @@ cc_fac:faculty a rdf:Resource ;
 cc_fac:professor a rdf:Resource ;
     rdfs:label "Professor"@en ;
     rdf:range relators:tch .
-
-cc_fac:retired-faculty a rdf:Resource ;
-    rdfs:label "Retired Faculty"@en ;
-    rdf:range relators: .
 
 cc_fac:sabbatical a schema:EducationalEvent ;
     rdfs:label "Sabbatical"@en .
@@ -65,9 +69,6 @@ cc_fac:visiting-assistant-professor a rdf:Resource ;
 
 cc_staff:librarian a rdf:Resource ;
     rdfs:label "Librarian"@en .
-
-cc_staff:paraprofessional a rdf:Resource ;
-    rdfs:label "Paraprofessional"@en .
 
 <https://www.coloradocollege.edu/offices/dean/> a bf:Organization ;
     rdfs:label "Office of the Dean"@en ;

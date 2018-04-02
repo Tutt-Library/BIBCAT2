@@ -347,8 +347,7 @@
     schema:organizer <https://www.coloradocollege.edu/academics/dept/education/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6dc97f06-7080-11e6-ae7e-005056c00008> ;
     cc_fac:assistant-professor <http://catalog.coloradocollege.edu/07b23b54-b0e1-11e6-bb5b-005056c00008>,
-        <http://catalog.coloradocollege.edu/08067c6c-b0e1-11e6-8a0c-005056c00008>,
-        <http://catalog.coloradocollege.edu/09383dba-b0e1-11e6-8380-005056c00008> ;
+        <http://catalog.coloradocollege.edu/08067c6c-b0e1-11e6-8a0c-005056c00008> ;
     cc_fac:faculty <http://catalog.coloradocollege.edu/09895e82-b0e1-11e6-b8dc-005056c00008>,
         <http://catalog.coloradocollege.edu/0abd696c-b0e1-11e6-ab18-005056c00008>,
         <http://catalog.coloradocollege.edu/0b05c576-b0e1-11e6-b859-005056c00008>,
@@ -359,6 +358,7 @@
     cc_fac:visiting-assistant-professor <http://catalog.coloradocollege.edu/0852bbf0-b0e1-11e6-bfc1-005056c00008>,
         <http://catalog.coloradocollege.edu/08a00cc0-b0e1-11e6-a43c-005056c00008>,
         <http://catalog.coloradocollege.edu/08f2a066-b0e1-11e6-b425-005056c00008>,
+        <http://catalog.coloradocollege.edu/09383dba-b0e1-11e6-8380-005056c00008>,
         <http://catalog.coloradocollege.edu/0a2106dc-b0e1-11e6-9383-005056c00008>,
         <http://catalog.coloradocollege.edu/0a6a742e-b0e1-11e6-922d-005056c00008>,
         <http://catalog.coloradocollege.edu/0bdfd752-b0e1-11e6-8ba1-005056c00008> ;
@@ -394,14 +394,14 @@
         <http://catalog.coloradocollege.edu/b72347e6-b0e1-11e6-a709-005056c00008> ;
     cc_fac:chair <http://catalog.coloradocollege.edu/b67a2bc8-b0e1-11e6-8fff-005056c00008> ;
     cc_fac:faculty <http://catalog.coloradocollege.edu/b5411f90-b0e1-11e6-9bf1-005056c00008>,
-        <http://catalog.coloradocollege.edu/b8bc5d0c-b0e1-11e6-9ba4-005056c00008>,
-        <http://catalog.coloradocollege.edu/b9a5518c-b0e1-11e6-8781-005056c00008> ;
+        <http://catalog.coloradocollege.edu/b8bc5d0c-b0e1-11e6-9ba4-005056c00008> ;
     cc_fac:professor <http://catalog.coloradocollege.edu/b4511302-b0e1-11e6-bc42-005056c00008>,
         <http://catalog.coloradocollege.edu/b4fc51e6-b0e1-11e6-aadc-005056c00008>,
         <http://catalog.coloradocollege.edu/b5dbbd7a-b0e1-11e6-b247-005056c00008>,
         <http://catalog.coloradocollege.edu/b67a2bc8-b0e1-11e6-8fff-005056c00008>,
         <http://catalog.coloradocollege.edu/b770c7ae-b0e1-11e6-9795-005056c00008>,
         <http://catalog.coloradocollege.edu/b7c54bfa-b0e1-11e6-b0c3-005056c00008> ;
+    cc_fac:director-of-writing-center-lectuer <http://catalog.coloradocollege.edu/b9a5518c-b0e1-11e6-8781-005056c00008> ;
     cc_fac:sabbatical [ schema:member <http://catalog.coloradocollege.edu/b4511302-b0e1-11e6-bc42-005056c00008> ;
             cc_fac:length "Fall"@en ] ;
     cc_fac:visiting-assistant-professor <http://catalog.coloradocollege.edu/b81e3cdc-b0e1-11e6-b1eb-005056c00008>,
