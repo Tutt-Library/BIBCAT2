@@ -8,6 +8,7 @@
 @prefix loc: <http://id.loc.gov/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pcdm: <http://pcdm.org/models#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix relators: <http://id.loc.gov/vocabulary/relators/> .
@@ -71,6 +72,13 @@ cc_staff:paraprofessional a rdf:Resource ;
 <https://www.coloradocollege.edu/offices/dean/> a bf:Organization ;
     rdfs:label "Office of the Dean"@en ;
     schema:parentOrganization <https://www.coloradocollege.edu/> .
+
+<https://www.coloradocollege.edu/other/fye/> a schema:Organization ;
+    rdfs:label "First Year Experience"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/offices/colketcenter/> ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:atTime "2018-02-22T21:09:29.585448"^^xsd:dateTime ;
+            prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] .
 
 <https://www.coloradocollege.edu/academics/dept/anthropology/> a bf:Organization,
         schema:CollegeDepartment ;
@@ -251,6 +259,13 @@ cc_staff:paraprofessional a rdf:Resource ;
     schema:subOrganization <https://libraryweb.coloradocollege.edu/library/index.php/press>,
         <https://www.coloradocollege.edu/library/seay/> .
 
+<https://www.coloradocollege.edu/offices/colketcenter/> a schema:Organization ;
+    rdfs:label "Colket Center for Academic Excellence"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:atTime "2018-02-22T21:07:33.007448"^^xsd:dateTime ;
+            prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] .
+
 <https://www.coloradocollege.edu/> a bf:Organization,
         schema:CollegeOrUniversity ;
     rdfs:label "Colorado College"@en ;
@@ -299,5 +314,6 @@ cc_staff:paraprofessional a rdf:Resource ;
         <https://www.coloradocollege.edu/academics/dept/spanish/>,
         <https://www.coloradocollege.edu/academics/dept/theatredance/>,
         <https://www.coloradocollege.edu/admission/>,
-        <https://www.coloradocollege.edu/library/> .
+        <https://www.coloradocollege.edu/library/>,
+        <https://www.coloradocollege.edu/offices/colketcenter/> .
 
