@@ -429,6 +429,7 @@
         <http://catalog.coloradocollege.edu/c4d6c0ee-b0f5-11e6-bf5a-005056c00008>,
         <http://catalog.coloradocollege.edu/c6b9639c-b0f5-11e6-8cbc-005056c00008> ;
     cc_fac:professor <http://catalog.coloradocollege.edu/c44ad49c-b0f5-11e6-b192-005056c00008> ;
+    cc_fac:professor_emeritus <http://catalog.coloradocollege.edu/e7542aee-3458-11e8-a78a-a41f7283f8d4> ;
     cc_fac:visiting-assistant-professor <http://catalog.coloradocollege.edu/0bdfd752-b0e1-11e6-8ba1-005056c00008> .
 
 <http://catalog.coloradocollege.edu/3acec46e-bdb6-11e7-80f9-005056c00008> a schema:EducationalEvent ;
