@@ -59,6 +59,12 @@
     schema:familyName "Lasmawan"@en ;
     schema:givenName "I. Made"@en .
 
+<http://catalog.coloradocollege.edu/01f28790-369b-11e8-bcfe-a41f7283f8d4> a bf:Person ;
+    rdfs:label "Traci Freeman"@en ;
+    schema:email "tfreeman@coloradocollege.edu" ;
+    schema:familyName "Freeman"@en ;
+    schema:givenName "Traci"@en .
+
 <http://catalog.coloradocollege.edu/023eea2c-b0f1-11e6-a04b-005056c00008> a bf:Person ;
     rdfs:label "Ni Ketut Marni" ;
     schema:email "nmarni@coloradocollege.edu" ;
@@ -1101,6 +1107,12 @@
     schema:familyName "Levandowski"@en ;
     schema:givenName "Will"@en .
 
+<http://catalog.coloradocollege.edu/6af054c6-369a-11e8-b69d-a41f7283f8d4> a bf:Person ;
+    rdfs:label "Marianne Aldrich"@en ;
+    schema:email "maldrich@coloradocollge.edu"@en ;
+    schema:familyName "Aldrich"@en ;
+    schema:givenName "Marianne"@en .
+
 <http://catalog.coloradocollege.edu/704bf470-1b25-11e8-91e1-a41f7283f8d4> a bf:person ;
     rdfs:label "Liliana Delman"@en ;
     schema:email "liliana.delman@coloradocollege.edu" ;
@@ -1482,6 +1494,12 @@
     schema:email "michael.penn@coloradocollege.edu" ;
     schema:familyName "Penn"@en ;
     schema:givenName "Michael"@en .
+
+<http://catalog.coloradocollege.edu/b35f74ac-369a-11e8-b0af-a41f7283f8d4> a bf:Person ;
+    rdfs:label "Amy Brooks"@en ;
+    schema:email "abrooks@coloradocollge.edu"@en ;
+    schema:familyName "Brooks"@en ;
+    schema:givenName "Amy"@en .
 
 <http://catalog.coloradocollege.edu/b38ec026-7084-11e6-917d-005056c00008> a bf:Person ;
     rdfs:label "Nancy Heinecke",
@@ -2029,6 +2047,12 @@
     schema:familyName "Kedhar"@en ;
     schema:givenName "Anusha"@en .
 
+<http://catalog.coloradocollege.edu/e7542aee-3458-11e8-a78a-a41f7283f8d4> a bf:person ;
+    rdfs:label "Salvatore Bizzarro"@es ;
+    schema:email "sbizzarro@coloradocollege.edu" ;
+    schema:familyName "Bizzarro"@es ;
+    schema:givenName "Salvatore"@es .
+
 <http://catalog.coloradocollege.edu/e7bf856c-b0f5-11e6-8231-005056c00008> a bf:Person ;
     rdfs:label "Thomas Lindblade" ;
     schema:email "tlindblade@coloradocollege.edu" ;
@@ -2225,6 +2249,12 @@
     schema:familyName "Zuther"@en ;
     schema:givenName "Dirk"@en .
 
+<http://catalog.coloradocollege.edu/f4b1701c-3699-11e8-944c-a41f7283f8d4> a bf:Person ;
+    rdfs:label "Nethery Wylie"@en ;
+    schema:email "nwylie@coloradocollge.edu"@en ;
+    schema:familyName "Wylie"@en ;
+    schema:givenName "Nethery"@en .
+
 <http://catalog.coloradocollege.edu/f5944d9c-c89d-11e7-82b3-005056c00008> a bf:Person ;
     rdfs:label "Jeanne Steiner"@en ;
     schema:email "jsteiner@coloradocollege.edu" ;
@@ -2416,6 +2446,12 @@
     schema:familyName "Fenn"@en ;
     schema:givenName "Aju"@en .
 
+<http://orcid.org/0000-0002-3020-5205> a bf:Person ;
+    rdfs:label "Steve Taylor"@en ;
+    schema:email "sjtaylor@coloradocollege.edu" ;
+    schema:familyName "Taylor"@en ;
+    schema:givenName "Steve"@en .
+
 <http://orcid.org/0000-0002-8157-8837> a bf:Person ;
     rdfs:label "Pedro de Araujo"@en ;
     schema:alternateName "Pedro Araujo"@es ;
@@ -2447,6 +2483,12 @@
     schema:familyName "Hoel"@en ;
     schema:givenName "Jessica"@en .
 
+<https://orcid.org/0000-0002-5352-9886> a bf:Person ;
+    rdfs:label "Jessy Randall"@en ;
+    schema:email "jrandall@coloradocollege.edu" ;
+    schema:familyName "Randall"@en ;
+    schema:givenName "Jessy"@en .
+
 <https://orcid.org/0000-0002-5976-3083> a bf:Person ;
     rdfs:label "Aaron Stoller"@en ;
     schema:email "astoller@coloradocollege.edu" ;
@@ -2459,11 +2501,23 @@
     schema:familyName "Heim"@de ;
     schema:givenName "Werner"@de .
 
+<https://orcid.org/0000-0002-8011-3202> a bf:Person ;
+    rdfs:label "Steve Lawson"@en ;
+    schema:email "slawson@coloradocollge.edu" ;
+    schema:familyName "Lawson"@en ;
+    schema:givenName "Steve"@en .
+
 <https://orcid.org/0000-0002-8845-2954> a bf:Person ;
     rdfs:label "Diane Westerfield"@en ;
     schema:email "dwesterfield@coloradocollege.edu" ;
     schema:familyName "Westerfield"@en ;
     schema:givenName "Diane"@en .
+
+<https://orcid.org/0000-0003-4477-6436> a bf:Person ;
+    rdfs:label "JoAnn Jacoby"@en ;
+    schema:email "jjacoby@coloradocollge.edu" ;
+    schema:familyName "Jacoby"@en ;
+    schema:givenName "JoAnn"@en .
 
 <http://orcid.org/0000-0002-7543-3893> a bf:Person ;
     rdfs:label "Jeremy Nelson"@en ;
