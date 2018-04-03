@@ -11,9 +11,13 @@
     rdfs:label "Tutt Library Academic Year 2017-2018"@en ;
     schema:organizer <https://www.coloradocollege.edu/library/> ;
     schema:superEvent <http://catalog.coloradocollege.edu.edu/583b1766-5835-11e7-820c-005056c00008> ;
+    cc_staff:director <https://orcid.org/0000-0003-4477-6436> ;
     cc_staff:librarian <http://orcid.org/0000-0002-7543-3893>,
         <https://orcid.org/0000-0002-5352-9886>,
-        <https://orcid.org/0000-0002-8845-2954> .
+        <https://orcid.org/0000-0002-8845-2954>,
+        <https://orcid.org/0000-0002-8011-3202> ;
+    cc_staff:staff <http://catalog.coloradocollege.edu/b35f74ac-369a-11e8-b0af-a41f7283f8d4>, 
+        <http://catalog.coloradocollege.edu/6af054c6-369a-11e8-b69d-a41f7283f8d4> .
 
 <http://catalog.coloradocollege.edu/08bb1880-bdb6-11e7-8b53-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Environmental Program Academic Year 2017-2018"@en ;

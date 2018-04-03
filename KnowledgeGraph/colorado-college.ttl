@@ -67,8 +67,14 @@ cc_fac:visiting-assistant-professor a rdf:Resource ;
     rdfs:label "Visiting Assistant Professor"@en ;
     rdf:range relators:tch .
 
+cc_staff:director a rdf:Resource ;
+    rdfs:label "Director"@en .
+
 cc_staff:librarian a rdf:Resource ;
     rdfs:label "Librarian"@en .
+
+cc_staff:staff a rdf:Resource ;
+    rdfs:label "Staff"@en .
 
 <https://www.coloradocollege.edu/offices/dean/> a bf:Organization ;
     rdfs:label "Office of the Dean"@en ;
