@@ -29,11 +29,11 @@
         <http://catalog.coloradocollege.edu/50dc096c-b0f1-11e6-a9b6-005056c00008> ;
     cc_fac:assistant-professor <http://catalog.coloradocollege.edu/25e8841c-b0e5-11e6-b535-005056c00008>,
         <http://catalog.coloradocollege.edu/2644fbfe-b0e5-11e6-bae0-005056c00008>,
+        <http://catalog.coloradocollege.edu/2735ebac-b0e5-11e6-8834-005056c00008>,
         <http://catalog.coloradocollege.edu/29646506-b0f2-11e6-9bc8-005056c00008> ;
     cc_fac:associate-professor <http://catalog.coloradocollege.edu/26f0f36c-b0e5-11e6-94e7-005056c00008>,
         <http://catalog.coloradocollege.edu/803abb06-b0f1-11e6-8bde-005056c00008> ;
-    cc_fac:professor <http://catalog.coloradocollege.edu/80a32d4c-b0f1-11e6-ade9-005056c00008>, 
-        <http://catalog.coloradocollege.edu/278aaee4-b0e5-11e6-9700-005056c00008> ;
+    cc_fac:professor <http://catalog.coloradocollege.edu/278aaee4-b0e5-11e6-9700-005056c00008> ;
     cc_fac:sabbatical [ schema:member <http://catalog.coloradocollege.edu/278aaee4-b0e5-11e6-9700-005056c00008> ;
             cc_fac:length "Year"@en ] .
 
