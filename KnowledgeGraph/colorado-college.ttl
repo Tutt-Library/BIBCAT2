@@ -278,7 +278,7 @@ cc_staff:staff a rdf:Resource ;
     schema:subOrganization <https://libraryweb.coloradocollege.edu/library/index.php/press>,
         <https://www.coloradocollege.edu/library/seay/> .
 
-<https://www.coloradocollege.edu/offices/colketcenter/> a schema:Organization, schema:CollegeDepartment ;
+<https://www.coloradocollege.edu/offices/colketcenter/> a bf:Organization, schema:CollegeDepartment ;
     rdfs:label "Colket Center for Academic Excellence"@en ;
     schema:parentOrganization <https://www.coloradocollege.edu/> ;
     prov:qualifiedGeneration [ a prov:Generation ;
