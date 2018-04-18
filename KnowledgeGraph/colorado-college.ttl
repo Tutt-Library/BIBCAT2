@@ -52,6 +52,7 @@ cc_fac:director-of-writing-center-lectuer  a rdf:Resource ;
     rdfs:label "Director of the Writing Program and Writing Center, Lecturer in English";
     rdf:range relators:tch .
 
+
 cc_fac:faculty a rdf:Resource ;
     rdfs:label "Faculty"@en ;
     rdf:range relators:tch .
@@ -69,6 +70,16 @@ cc_fac:visiting-assistant-professor a rdf:Resource ;
 
 cc_staff:director a rdf:Resource ;
     rdfs:label "Director"@en .
+
+cc_staff:director-first-year-experience a rdf:Resource ;
+    rdfs:label "Director First Year Experience"@en .
+
+cc_staff:associate-director-writing-center a rdf:Resource ;
+    rdfs:label "Associate Director Writing Center"@en .
+
+
+cc_staff:director-writing-center a rdf:Resource ;
+    rdfs:label "Director Writing Center"@en .
 
 cc_staff:librarian a rdf:Resource ;
     rdfs:label "Librarian"@en .
@@ -165,7 +176,7 @@ cc_staff:staff a rdf:Resource ;
 <https://www.coloradocollege.edu/academics/dept/german/> a bf:Organization,
         schema:CollegeDepartment ;
     rdfs:label "German"@en ;
-    schema:parentOrganization <https://www.coloradocollege.edu/> .
+    schema:parentOrganization <https://www.colordirector-first-year-experienceadocollege.edu/> .
 
 <https://www.coloradocollege.edu/academics/dept/greal/> a bf:Organization,
         schema:CollegeDepartment ;
@@ -267,7 +278,7 @@ cc_staff:staff a rdf:Resource ;
     schema:subOrganization <https://libraryweb.coloradocollege.edu/library/index.php/press>,
         <https://www.coloradocollege.edu/library/seay/> .
 
-<https://www.coloradocollege.edu/offices/colketcenter/> a schema:Organization ;
+<https://www.coloradocollege.edu/offices/colketcenter/> a schema:Organization, schema:CollegeDepartment ;
     rdfs:label "Colket Center for Academic Excellence"@en ;
     schema:parentOrganization <https://www.coloradocollege.edu/> ;
     prov:qualifiedGeneration [ a prov:Generation ;
