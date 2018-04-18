@@ -665,8 +665,8 @@
 
 <http://catalog.coloradocollege.edu/39135a12-bcd4-11e6-a418-005056c00008> a bf:Person ;
     rdfs:label "Kristina M.L. Acri, nee Lybecker" ;
-    schema:email "klybecker@coloradocollege.edu" ;
     schema:additionalName "Acri"@en ;
+    schema:email "klybecker@coloradocollege.edu" ;
     schema:familyName "Lybecker"@en ;
     schema:givenName "Kristina"@en .
 
@@ -999,8 +999,8 @@
 <http://catalog.coloradocollege.edu/5a97b458-35d3-11e8-84b2-001fc69cf6df> a bf:Person ;
     rdfs:label "Sandeep Sharma"@en ;
     schema:email "ssharma@coloradocollege.edu" ;
-    schema:givenName "Sandeep"@en;
-    schema:familyName "Sharma"@en .
+    schema:familyName "Sharma"@en ;
+    schema:givenName "Sandeep"@en .
 
 <http://catalog.coloradocollege.edu/5b34f30a-f2e6-11e6-a75d-005056c00008> a bf:Person ;
     rdfs:label "Lisa Ruth" ;
@@ -1779,6 +1779,13 @@
     schema:familyName "Cornelius"@en ;
     schema:givenName "Tyler"@en .
 
+<http://catalog.coloradocollege.edu/c9f873c8-429f-11e8-8153-001fc69cf6df> a bf:Person ;
+    rdfs:label "None None"@en ;
+    schema:email "None" ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:atTime "2018-04-18T00:31:09.054638"^^xsd:dateTime ;
+            prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] .
+
 <http://catalog.coloradocollege.edu/ca2a5946-c89e-11e7-ba17-005056c00008> a bf:Person ;
     rdfs:label "Michael Travers"@en ;
     schema:email "mtravers@coloradocollege.edu" ;
@@ -2540,3 +2547,4 @@
     schema:email "jernelson@coloradocollege.edu" ;
     schema:familyName "Nelson"@en ;
     schema:givenName "Jeremy"@en .
+
