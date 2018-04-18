@@ -259,9 +259,10 @@ cc_staff:staff a rdf:Resource ;
 
 <https://www.coloradocollege.edu/library/> a bf:Organization,
         schema:Library ;
-    rdfs:label "Tutt Library"@en ;
+    rdfs:label "Library"@en ;
     bf:identifiedBy [ a bf:Oclc ;
             rdf:value "COCA" ] ;
+    schema:name "Tutt Library"@en ;
     schema:parentOrganization <https://www.coloradocollege.edu/> ;
     schema:subOrganization <https://libraryweb.coloradocollege.edu/library/index.php/press>,
         <https://www.coloradocollege.edu/library/seay/> .
