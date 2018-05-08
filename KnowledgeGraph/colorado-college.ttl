@@ -68,6 +68,10 @@ cc_fac:visiting-assistant-professor a rdf:Resource ;
     rdfs:label "Visiting Assistant Professor"@en ;
     rdf:range relators:tch .
 
+cc_fac:visiting-professor a rdf:Resource ;
+    rdfs:label "Visiting Professor"@en ;
+    rdf:range relators:tch .
+
 cc_staff:director a rdf:Resource ;
     rdfs:label "Director"@en .
 
@@ -77,6 +81,8 @@ cc_staff:director-first-year-experience a rdf:Resource ;
 cc_staff:associate-director-writing-center a rdf:Resource ;
     rdfs:label "Associate Director Writing Center"@en .
 
+cc_fac:instructional-specialist-and-supervisor a rdf:Resource ;
+    rdfs:label "Instructional Specialist and Supervisor"@en .
 
 cc_staff:director-writing-center a rdf:Resource ;
     rdfs:label "Director Writing Center"@en .
@@ -128,11 +134,6 @@ cc_staff:staff a rdf:Resource ;
     rdfs:label "Comparative Literature"@en ;
     schema:parentOrganization <https://www.coloradocollege.edu/> .
 
-<https://www.coloradocollege.edu/academics/dept/eastasianlanguages/> a bf:Organization,
-        schema:CollegeDepartment ;
-    rdfs:label "East Asian Languages"@en ;
-    schema:parentOrganization <https://www.coloradocollege.edu/> .
-
 <https://www.coloradocollege.edu/academics/dept/economics/> a bf:Organization,
         schema:CollegeDepartment ;
     rdfs:label "Economics and Business"@en ;
@@ -173,10 +174,6 @@ cc_staff:staff a rdf:Resource ;
     rdfs:label "Geology"@en ;
     schema:parentOrganization <https://www.coloradocollege.edu/> .
 
-<https://www.coloradocollege.edu/academics/dept/german/> a bf:Organization,
-        schema:CollegeDepartment ;
-    rdfs:label "German"@en ;
-    schema:parentOrganization <https://www.colordirector-first-year-experienceadocollege.edu/> .
 
 <https://www.coloradocollege.edu/academics/dept/greal/> a bf:Organization,
         schema:CollegeDepartment ;

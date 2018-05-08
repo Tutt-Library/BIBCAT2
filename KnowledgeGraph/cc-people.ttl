@@ -358,7 +358,7 @@
     schema:givenName "Peter"@en .
 
 <http://catalog.coloradocollege.edu/1f549770-35d2-11e8-9d98-001fc69cf6df> a bf:Person ;
-    rdfs:label "Neal Rappaort"@en ;
+    rdfs:label "Neal Rappaport"@en ;
     schema:email "nrappaport@coloradocollege.edu" ;
     schema:familyName "Rappaport"@en ;
     schema:givenName "Neal"@en .
@@ -400,10 +400,10 @@
     schema:givenName "Rebecca"@en .
 
 <http://catalog.coloradocollege.edu/25f0606c-b0f2-11e6-abc7-005056c00008> a bf:Person ;
-    rdfs:label "Thomas Cronin" ;
+    rdfs:label "Tom Cronin" ;
     schema:email "tcronin@coloradocollege.edu" ;
     schema:familyName "Cronin"@en ;
-    schema:givenName "Thomas"@en .
+    schema:givenName "Tom"@en .
 
 <http://catalog.coloradocollege.edu/2644fbfe-b0e5-11e6-bae0-005056c00008> a bf:Person ;
     rdfs:label "Lynne Gratz" ;
@@ -665,9 +665,9 @@
 
 <http://catalog.coloradocollege.edu/39135a12-bcd4-11e6-a418-005056c00008> a bf:Person ;
     rdfs:label "Kristina M.L. Acri, nee Lybecker" ;
-    schema:additionalName "Acri"@en ;
+    schema:additionalName "Lybecker"@en ;
     schema:email "klybecker@coloradocollege.edu" ;
-    schema:familyName "Lybecker"@en ;
+    schema:familyName "Acri"@en ;
     schema:givenName "Kristina"@en .
 
 <http://catalog.coloradocollege.edu/39a44354-bcd4-11e6-8b8e-005056c00008> a bf:Person ;
@@ -1925,11 +1925,11 @@
     schema:givenName "Ruth"@en .
 
 <http://catalog.coloradocollege.edu/d187eb9a-b0de-11e6-a68d-005056c00008> a bf:Person ;
-    rdfs:label "Katharine Leonard" ;
+    rdfs:label "Kate Leonard" ;
     schema:additionalName "Kate"@en ;
     schema:email "kleonard@coloradocollege.edu" ;
     schema:familyName "Leonard"@en ;
-    schema:givenName "Katharine"@en .
+    schema:givenName "Kate"@en .
 
 <http://catalog.coloradocollege.edu/d1c691f6-b0de-11e6-982a-005056c00008> a bf:Person ;
     rdfs:label "Gale Murray" ;

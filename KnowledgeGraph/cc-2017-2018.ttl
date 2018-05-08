@@ -17,7 +17,6 @@
         <https://orcid.org/0000-0002-8011-3202>,
         <https://orcid.org/0000-0002-8845-2954> ;
     cc_staff:staff <http://catalog.coloradocollege.edu/6af054c6-369a-11e8-b69d-a41f7283f8d4>,
-        <http://catalog.coloradocollege.edu/4fe99dba-4319-11e8-83ca-001fc69cf6df>,
         <http://catalog.coloradocollege.edu/b35f74ac-369a-11e8-b0af-a41f7283f8d4> .
 
 <http://catalog.coloradocollege.edu/00c8f1b8-431b-11e8-ab50-001fc69cf6df> a schema:EducationalEvent ;
@@ -64,6 +63,7 @@
     cc_fac:faculty <http://catalog.coloradocollege.edu/b9eb923e-b0e1-11e6-99b4-005056c00008> ;
     cc_fac:professor <http://catalog.coloradocollege.edu/b5dbbd7a-b0e1-11e6-b247-005056c00008>,
         <http://catalog.coloradocollege.edu/b770c7ae-b0e1-11e6-9795-005056c00008>,
+        <http://catalog.coloradocollege.edu/b4fc51e6-b0e1-11e6-aadc-005056c00008>,
         <http://catalog.coloradocollege.edu/b7c54bfa-b0e1-11e6-b0c3-005056c00008> .
 
 <http://catalog.coloradocollege.edu/0d1794d0-bdb6-11e7-8508-005056c00008> a schema:EducationalEvent ;
@@ -90,12 +90,8 @@
     schema:superEvent <http://catalog.coloradocollege.edu.edu/583b1766-5835-11e7-820c-005056c00008> ;
     cc_fac:assistant-professor <http://catalog.coloradocollege.edu/6254cdec-b0f0-11e6-9a7d-005056c00008>,
         <http://catalog.coloradocollege.edu/e42d2c5c-b0f4-11e6-9c25-005056c00008>,
-        <http://catalog.coloradocollege.edu/e4a0608c-b0f4-11e6-874a-005056c00008> .
-
-<http://catalog.coloradocollege.edu/123194c0-bdb6-11e7-90ed-005056c00008> a schema:EducationalEvent ;
-    rdfs:label "German Academic Year 2017-2018"@en ;
-    schema:organizer <https://www.coloradocollege.edu/academics/dept/german/> ;
-    schema:superEvent <http://catalog.coloradocollege.edu.edu/583b1766-5835-11e7-820c-005056c00008> .
+        <http://catalog.coloradocollege.edu/e4a0608c-b0f4-11e6-874a-005056c00008> ;
+    cc_fac:professor <http://catalog.coloradocollege.edu/b4fc51e6-b0e1-11e6-aadc-005056c00008> .
 
 <http://catalog.coloradocollege.edu/130893d0-bdb6-11e7-addf-005056c00008> a schema:EducationalEvent ;
     rdfs:label "French and Italian Academic Year 2017-2018"@en ;
@@ -124,7 +120,6 @@
         <http://catalog.coloradocollege.edu/f32e5018-c8a0-11e7-9302-005056c00008> ;
     cc_fac:associate-professor <http://catalog.coloradocollege.edu/2ed5cbf4-72c0-11e6-a32d-005056c00008>,
         <http://catalog.coloradocollege.edu/716ae934-72bc-11e6-99f5-005056c00008>,
-        <http://catalog.coloradocollege.edu/8a413e7a-c8a0-11e7-a718-005056c00008>,
         <http://catalog.coloradocollege.edu/a3456aee-c8a0-11e7-a0c6-005056c00008>,
         <http://catalog.coloradocollege.edu/d49aee34-72c0-11e6-bfeb-005056c00008> ;
     cc_fac:chair <http://catalog.coloradocollege.edu/3583f264-72bf-11e6-b97c-005056c00008> ;
@@ -166,8 +161,7 @@
     cc_fac:assistant-professor <http://catalog.coloradocollege.edu/37bfeb12-c8a3-11e7-806e-005056c00008>,
         <http://catalog.coloradocollege.edu/42bb745e-c8a3-11e7-a2e9-005056c00008>,
         <http://catalog.coloradocollege.edu/81edfffa-b0f5-11e6-9d77-005056c00008> ;
-    cc_fac:associate-professor <http://catalog.coloradocollege.edu/37bfeb12-c8a3-11e7-806e-005056c00008>,
-        <http://catalog.coloradocollege.edu/9fced5c0-b0dd-11e6-9fc5-005056c00008> ;
+    cc_fac:associate-professor <http://catalog.coloradocollege.edu/9fced5c0-b0dd-11e6-9fc5-005056c00008> ;
     cc_fac:professor <http://catalog.coloradocollege.edu/278aaee4-b0e5-11e6-9700-005056c00008> ;
     cc_fac:sabbatical [ schema:member <http://catalog.coloradocollege.edu/278aaee4-b0e5-11e6-9700-005056c00008> ;
             cc_fac:length "Year"@en ] ;
@@ -216,7 +210,6 @@
     cc_fac:professor <http://catalog.coloradocollege.edu/5081ee9e-b0e0-11e6-b5bb-005056c00008>,
         <http://catalog.coloradocollege.edu/5105bb98-b0e0-11e6-8868-005056c00008>,
         <http://catalog.coloradocollege.edu/514d2746-b0e0-11e6-80f5-005056c00008>,
-        <http://catalog.coloradocollege.edu/7af8bf90-c89e-11e7-84f8-005056c00008>,
         <http://catalog.coloradocollege.edu/ca2a5946-c89e-11e7-ba17-005056c00008> ;
     cc_fac:visiting-assistant-professor <http://catalog.coloradocollege.edu/ca2a5946-c89e-11e7-ba17-005056c00008> .
 
@@ -234,7 +227,8 @@
     schema:organizer <https://www.coloradocollege.edu/academics/dept/filmandnewmedia/> ;
     schema:superEvent <http://catalog.coloradocollege.edu.edu/583b1766-5835-11e7-820c-005056c00008> ;
     cc_fac:assistant-professor <http://catalog.coloradocollege.edu/f770fd34-b0ef-11e6-a70c-005056c00008>,
-        <http://catalog.coloradocollege.edu/f7c92f54-b0ef-11e6-8116-005056c00008> ;
+        <http://catalog.coloradocollege.edu/f7c92f54-b0ef-11e6-8116-005056c00008>,
+        <http://catalog.coloradocollege.edu/f81edcee-b0ef-11e6-9b93-005056c00008> ;
     cc_fac:professor <http://catalog.coloradocollege.edu/b770c7ae-b0e1-11e6-9795-005056c00008> .
 
 <http://catalog.coloradocollege.edu/239de0ae-bdb6-11e7-9337-005056c00008> a schema:EducationalEvent ;
@@ -249,20 +243,22 @@
         <http://catalog.coloradocollege.edu/29646506-b0f2-11e6-9bc8-005056c00008>,
         <http://catalog.coloradocollege.edu/e71fe18a-c8a2-11e7-bfb8-005056c00008>,
         <http://catalog.coloradocollege.edu/ff34caf6-b0f0-11e6-ac0c-005056c00008> ;
-    cc_fac:associate-professor <http://catalog.coloradocollege.edu/f734618c-c8a2-11e7-b84e-005056c00008> ;
-    cc_fac:faculty <http://catalog.coloradocollege.edu/265c419c-b0f2-11e6-81b9-005056c00008> ;
+    cc_fac:associate-professor <http://catalog.coloradocollege.edu/f734618c-c8a2-11e7-b84e-005056c00008>,
+        <http://catalog.coloradocollege.edu/27a7864c-b0f2-11e6-a1db-005056c00008>  ;
+    cc_fac:faculty <http://catalog.coloradocollege.edu/265c419c-b0f2-11e6-81b9-005056c00008>, 
+        <http://catalog.coloradocollege.edu/ff34caf6-b0f0-11e6-ac0c-005056c00008> ;
     cc_fac:professor <http://catalog.coloradocollege.edu/273c8f7a-b0f2-11e6-8ae6-005056c00008>,
-        <http://catalog.coloradocollege.edu/28f6fd36-b0f2-11e6-940f-005056c00008>,
-        <http://catalog.coloradocollege.edu/80a32d4c-b0f1-11e6-ade9-005056c00008>,
-        <http://catalog.coloradocollege.edu/fbdd761c-b0f0-11e6-852e-005056c00008> .
+        <http://catalog.coloradocollege.edu/28f6fd36-b0f2-11e6-940f-005056c00008>, 
+        <http://catalog.coloradocollege.edu/25f0606c-b0f2-11e6-abc7-005056c00008>,
+        <http://catalog.coloradocollege.edu/2887e7b4-b0f2-11e6-8163-005056c00008> .
 
 <http://catalog.coloradocollege.edu/248f4590-bdb6-11e7-8a18-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Human Biology and Kinesiology Academic Year 2017-2018"@en ;
     schema:organizer <https://www.coloradocollege.edu/academics/dept/humanbiologykinesiology/> ;
     schema:superEvent <http://catalog.coloradocollege.edu.edu/583b1766-5835-11e7-820c-005056c00008> ;
     cc_fac:associate-professor <http://catalog.coloradocollege.edu/9a7774a4-b0f0-11e6-aa7e-005056c00008> ;
-    cc_fac:faculty <http://catalog.coloradocollege.edu/9a0726a4-b0f0-11e6-8e32-005056c00008>,
-        <http://catalog.coloradocollege.edu/9ae4c8ec-b0f0-11e6-8e2f-005056c00008> .
+    cc_fac:chair  <http://catalog.coloradocollege.edu/9a0726a4-b0f0-11e6-8e32-005056c00008> ;
+    cc_fac:faculty <http://catalog.coloradocollege.edu/9ae4c8ec-b0f0-11e6-8e2f-005056c00008> .
 
 <http://catalog.coloradocollege.edu/254b699e-bdb6-11e7-8a3c-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Art Department Academic Year 2017-2018"@en ;
@@ -313,6 +309,7 @@
     schema:superEvent <http://catalog.coloradocollege.edu.edu/583b1766-5835-11e7-820c-005056c00008> ;
     cc_fac:assistant-professor <http://catalog.coloradocollege.edu/07b23b54-b0e1-11e6-bb5b-005056c00008> ;
     cc_fac:director-of-education-and-senior-lecturer <http://catalog.coloradocollege.edu/07315f54-b0e1-11e6-a0d5-005056c00008> ;
+    cc_fac:instructional-specialist-and-supervisor <http://catalog.coloradocollege.edu/08a00cc0-b0e1-11e6-a43c-005056c00008> ;
     cc_fac:faculty <http://catalog.coloradocollege.edu/00dff66e-b0f1-11e6-badd-005056c00008>,
         <http://catalog.coloradocollege.edu/09895e82-b0e1-11e6-b8dc-005056c00008>,
         <http://catalog.coloradocollege.edu/0abd696c-b0e1-11e6-ab18-005056c00008>,
@@ -327,8 +324,7 @@
         <http://catalog.coloradocollege.edu/0a2106dc-b0e1-11e6-9383-005056c00008>,
         <http://catalog.coloradocollege.edu/0a6a742e-b0e1-11e6-922d-005056c00008>,
         <http://catalog.coloradocollege.edu/7bab7cdc-c89f-11e7-b806-005056c00008>,
-        <http://catalog.coloradocollege.edu/ba2c75a2-c89f-11e7-be47-005056c00008>,
-        <http://catalog.coloradocollege.edu/fe8eee06-b0f0-11e6-8cd0-005056c00008> .
+        <http://catalog.coloradocollege.edu/ba2c75a2-c89f-11e7-be47-005056c00008> .
 
 <http://catalog.coloradocollege.edu/2c56641e-bdb6-11e7-a885-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Sociology Academic Year 2017-2018"@en ;
@@ -352,8 +348,7 @@
     cc_fac:associate-professor <http://catalog.coloradocollege.edu/2d22b6dc-b0e3-11e6-8215-005056c00008> ;
     cc_fac:professor <http://catalog.coloradocollege.edu/2e08aa0c-b0e3-11e6-ba28-005056c00008>,
         <http://catalog.coloradocollege.edu/2e538234-b0e3-11e6-874d-005056c00008>,
-        <http://catalog.coloradocollege.edu/2eadfe42-b0e3-11e6-ba86-005056c00008>,
-        <http://catalog.coloradocollege.edu/d187eb9a-b0de-11e6-a68d-005056c00008> ;
+        <http://catalog.coloradocollege.edu/2eadfe42-b0e3-11e6-ba86-005056c00008> ;
     cc_fac:visiting-assistant-professor <http://catalog.coloradocollege.edu/6abb3d92-c8a0-11e7-aac4-005056c00008> .
 
 <http://catalog.coloradocollege.edu/30725500-bdb6-11e7-bc03-005056c00008> a schema:EducationalEvent ;
@@ -373,8 +368,7 @@
     cc_fac:associate-professor <http://catalog.coloradocollege.edu/4fc0d56c-b0f1-11e6-be92-005056c00008>,
         <http://catalog.coloradocollege.edu/501d4d4c-b0f1-11e6-8c7d-005056c00008>,
         <http://catalog.coloradocollege.edu/51431c24-b0f1-11e6-a374-005056c00008>,
-        <http://catalog.coloradocollege.edu/75e6cc70-c8a1-11e7-a0ce-005056c00008>,
-        <http://orcid.org/0000-0003-2109-7852> ;
+        <http://catalog.coloradocollege.edu/75e6cc70-c8a1-11e7-a0ce-005056c00008> ;
     cc_fac:professor <http://catalog.coloradocollege.edu/4f5507c6-b0f1-11e6-b84c-005056c00008>,
         <http://catalog.coloradocollege.edu/5077542c-b0f1-11e6-bb80-005056c00008>,
         <http://catalog.coloradocollege.edu/50dc096c-b0f1-11e6-a9b6-005056c00008> ;
@@ -418,8 +412,7 @@
     schema:organizer <https://www.coloradocollege.edu/academics/dept/theatredance/> ;
     schema:superEvent <http://catalog.coloradocollege.edu.edu/583b1766-5835-11e7-820c-005056c00008> ;
     cc_fac:assistant-professor <http://catalog.coloradocollege.edu/e65ebcec-b0f5-11e6-b095-005056c00008> ;
-    cc_fac:associate-professor <http://catalog.coloradocollege.edu/c4d6c0ee-b0f5-11e6-bf5a-005056c00008>,
-        <http://catalog.coloradocollege.edu/e5e3244c-b0f5-11e6-bc48-005056c00008>,
+    cc_fac:associate-professor <http://catalog.coloradocollege.edu/e5e3244c-b0f5-11e6-bc48-005056c00008>,
         <http://catalog.coloradocollege.edu/e83fec82-b0f5-11e6-a7d8-005056c00008>,
         <http://catalog.coloradocollege.edu/e8bdbb8c-b0f5-11e6-bab7-005056c00008>,
         <http://catalog.coloradocollege.edu/e934722c-b0f5-11e6-9094-005056c00008>,
@@ -444,18 +437,12 @@
     schema:superEvent <http://catalog.coloradocollege.edu.edu/583b1766-5835-11e7-820c-005056c00008> ;
     cc_fac:assistant-professor <http://catalog.coloradocollege.edu/5c240d18-c8a3-11e7-8bc4-005056c00008>,
         <http://catalog.coloradocollege.edu/c63ae4cc-b0f5-11e6-88a3-005056c00008> ;
-    cc_fac:associate-professor <http://catalog.coloradocollege.edu/5c240d18-c8a3-11e7-8bc4-005056c00008>,
-        <http://catalog.coloradocollege.edu/c3372e36-b0f5-11e6-bf02-005056c00008>,
+    cc_fac:associate-professor <http://catalog.coloradocollege.edu/c3372e36-b0f5-11e6-bf02-005056c00008>,
         <http://catalog.coloradocollege.edu/c4d6c0ee-b0f5-11e6-bf5a-005056c00008>,
         <http://catalog.coloradocollege.edu/c6b9639c-b0f5-11e6-8cbc-005056c00008> ;
     cc_fac:professor <http://catalog.coloradocollege.edu/c44ad49c-b0f5-11e6-b192-005056c00008> ;
     cc_fac:professor_emeritus <http://catalog.coloradocollege.edu/e7542aee-3458-11e8-a78a-a41f7283f8d4> ;
     cc_fac:visiting-assistant-professor <http://catalog.coloradocollege.edu/0bdfd752-b0e1-11e6-8ba1-005056c00008> .
-
-<http://catalog.coloradocollege.edu/3acec46e-bdb6-11e7-80f9-005056c00008> a schema:EducationalEvent ;
-    rdfs:label "East Asian Languages Academic Year 2017-2018"@en ;
-    schema:organizer <https://www.coloradocollege.edu/academics/dept/eastasianlanguages/> ;
-    schema:superEvent <http://catalog.coloradocollege.edu.edu/583b1766-5835-11e7-820c-005056c00008> .
 
 <http://catalog.coloradocollege.edu/3bad1680-bdb6-11e7-9b98-005056c00008> a schema:EducationalEvent ;
     rdfs:label "Asian Studies Academic Year 2017-2018"@en ;
@@ -496,7 +483,6 @@
     cc_fac:chair <http://catalog.coloradocollege.edu/9f02c8c0-b0dd-11e6-b1ed-005056c00008> ;
     cc_fac:faculty <http://catalog.coloradocollege.edu/a0101452-b0dd-11e6-bb6a-005056c00008>,
         <http://catalog.coloradocollege.edu/a095d974-b0dd-11e6-8742-005056c00008>,
-        <http://catalog.coloradocollege.edu/a0d1d414-b0dd-11e6-96f0-005056c00008>,
         <http://catalog.coloradocollege.edu/a10be658-b0dd-11e6-9a6b-005056c00008>,
         <http://catalog.coloradocollege.edu/cb7ad95a-c89d-11e7-95b5-005056c00008>,
         <http://catalog.coloradocollege.edu/d137b992-c89d-11e7-afdf-005056c00008>,
@@ -505,6 +491,7 @@
         <http://catalog.coloradocollege.edu/cb7ad95a-c89d-11e7-95b5-005056c00008>,
         <http://catalog.coloradocollege.edu/d137b992-c89d-11e7-afdf-005056c00008>,
         <http://catalog.coloradocollege.edu/d68f0880-c89d-11e7-b122-005056c00008> ;
+    cc_fac:visiting-professor <http://catalog.coloradocollege.edu/a0d1d414-b0dd-11e6-96f0-005056c00008> ;
     cc_info:lead-academic-administrative-assistant <http://catalog.coloradocollege.edu/d06d73f8-f2e5-11e6-bb18-005056c00008> .
 
 <http://catalog.coloradocollege.edu/3ee64880-bdb6-11e7-afe6-005056c00008> a schema:EducationalEvent ;
@@ -513,10 +500,10 @@
     schema:organizer <https://www.coloradocollege.edu/academics/dept/molecularbiology/> ;
     schema:superEvent <http://catalog.coloradocollege.edu.edu/583b1766-5835-11e7-820c-005056c00008> ;
     cc_fac:assistant-professor <http://catalog.coloradocollege.edu/cbdffffa-b0f0-11e6-b5fc-005056c00008>,
-        <http://catalog.coloradocollege.edu/cc42a5e4-b0f0-11e6-8579-005056c00008> ;
+        <http://catalog.coloradocollege.edu/cc42a5e4-b0f0-11e6-8579-005056c00008>,
+        <http://catalog.coloradocollege.edu/cb8758ae-b0f0-11e6-9d4d-005056c00008> ;
     cc_fac:associate-professor <http://catalog.coloradocollege.edu/cca70d06-b0f0-11e6-b828-005056c00008> ;
-    cc_fac:professor <http://catalog.coloradocollege.edu/cb2d6552-b0f0-11e6-96cb-005056c00008>,
-        <http://catalog.coloradocollege.edu/cb8758ae-b0f0-11e6-9d4d-005056c00008> .
+    cc_fac:professor <http://catalog.coloradocollege.edu/cb2d6552-b0f0-11e6-96cb-005056c00008> .
 
 <http://catalog.coloradocollege.edu/3ffb6200-bdb6-11e7-8852-005056c00008> a schema:EducationalEvent ;
     rdfs:label "German, Russian and East Asian Languages Department Academic Year 2017-2018"@en ;
@@ -527,8 +514,7 @@
     cc_fac:faculty <http://catalog.coloradocollege.edu/f1fb52ae-b0e3-11e6-99dc-005056c00008>,
         <http://catalog.coloradocollege.edu/f2a25494-b0e3-11e6-89c1-005056c00008>,
         <http://catalog.coloradocollege.edu/f33d0df6-b0e3-11e6-bea4-005056c00008> ;
-    cc_fac:professor <http://catalog.coloradocollege.edu/514d2746-b0e0-11e6-80f5-005056c00008>,
-        <http://catalog.coloradocollege.edu/f055f394-b0e3-11e6-819e-005056c00008>,
+    cc_fac:professor <http://catalog.coloradocollege.edu/f055f394-b0e3-11e6-819e-005056c00008>,
         <http://catalog.coloradocollege.edu/f0a8e20a-b0e3-11e6-bf82-005056c00008> ;
     cc_fac:visiting-assistant-professor <http://catalog.coloradocollege.edu/cbd47134-b0e4-11e6-8661-005056c00008>,
         <http://catalog.coloradocollege.edu/f0f41bdc-b0e3-11e6-9961-005056c00008> ;
@@ -548,7 +534,6 @@
     schema:organizer <https://www.coloradocollege.edu/academics/dept/music/> ;
     schema:superEvent <http://catalog.coloradocollege.edu.edu/583b1766-5835-11e7-820c-005056c00008> ;
     cc_fac:assistant-professor <http://catalog.coloradocollege.edu/fa6de08c-b0f0-11e6-85a6-005056c00008> ;
-    cc_fac:associate-professor <http://catalog.coloradocollege.edu/51431c24-b0f1-11e6-a374-005056c00008> ;
     cc_fac:faculty <http://catalog.coloradocollege.edu/00387f54-b0f1-11e6-91b6-005056c00008>,
         <http://catalog.coloradocollege.edu/008f51e4-b0f1-11e6-ad2b-005056c00008>,
         <http://catalog.coloradocollege.edu/01935464-b0f1-11e6-86a8-005056c00008>,
