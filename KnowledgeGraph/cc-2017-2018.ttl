@@ -159,7 +159,6 @@
     schema:organizer <https://www.coloradocollege.edu/academics/dept/southweststudies/> ;
     schema:superEvent <http://catalog.coloradocollege.edu.edu/583b1766-5835-11e7-820c-005056c00008> ;
     cc_fac:assistant-professor <http://catalog.coloradocollege.edu/37bfeb12-c8a3-11e7-806e-005056c00008>,
-        <http://catalog.coloradocollege.edu/42bb745e-c8a3-11e7-a2e9-005056c00008>,
         <http://catalog.coloradocollege.edu/81edfffa-b0f5-11e6-9d77-005056c00008> ;
     cc_fac:associate-professor <http://catalog.coloradocollege.edu/9fced5c0-b0dd-11e6-9fc5-005056c00008> ;
     cc_fac:professor <http://catalog.coloradocollege.edu/278aaee4-b0e5-11e6-9700-005056c00008> ;
