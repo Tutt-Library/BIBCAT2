@@ -2535,6 +2535,15 @@
     schema:familyName "Jacoby"@en ;
     schema:givenName "JoAnn"@en .
 
+<0000-0001-6911-0281> a bf:Person ;
+    rdfs:label "Lesley Mackie"@en ;
+    schema:email "lmackie@coloradocollege.edu" ;
+    schema:familyName "Mackie"@en ;
+    schema:givenName "Lesley"@en ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:atTime "2018-05-08T20:42:11.632513"^^xsd:dateTime ;
+            prov:wasGeneratedBy <0000-0001-6911-0281> ] .
+
 <http://catalog.coloradocollege.edu/4fe99dba-4319-11e8-83ca-001fc69cf6df> a bf:Person ;
     rdfs:label "Jonathan Driscoll"@en ;
     schema:email "jdriscoll@coloradocollege.edu" ;
