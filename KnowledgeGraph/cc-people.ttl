@@ -1762,10 +1762,10 @@
     schema:givenName "Beth"@en .
 
 <http://catalog.coloradocollege.edu/c8299ee6-c8a1-11e7-88b0-005056c00008> a bf:Person ;
-    rdfs:label "Philip Cervantes"@en ;
+    rdfs:label "Phillip Cervantes"@en ;
     schema:email "pcervantes@ColoradoCollege.edu" ;
     schema:familyName "Cervantes"@en ;
-    schema:givenName "Philip"@en .
+    schema:givenName "Phillip"@en .
 
 <http://catalog.coloradocollege.edu/c8ee193a-5836-11e7-9dee-005056c00008> a bf:Person ;
     rdfs:label "Tyler Cornelius"@en ;
