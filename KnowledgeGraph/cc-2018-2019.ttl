@@ -1,0 +1,94 @@
+@prefix cc_info: <https://www.coloradocollege.edu/ns/info/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://catalog.coloradocollege.edu/19751e5c-70ea-11e8-8eb3-001fc69cf6df> a schema:EducationalEvent ;
+    rdfs:label "Block Four"@en ;
+    schema:endDate "2018-12-19T18:00:00"^^xsd:dateTime ;
+    schema:partOf <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
+    schema:startDate "2018-11-26T15:00:00"^^xsd:dateTime ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:atTime "2018-06-17T19:05:15.043103"^^xsd:dateTime ;
+            prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] .
+
+<http://catalog.coloradocollege.edu/33771d1c-70ea-11e8-bc91-001fc69cf6df> a schema:EducationalEvent ;
+    rdfs:label "Block Five"@en ;
+    schema:endDate "2019-02-13T18:00:00"^^xsd:dateTime ;
+    schema:partOf <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
+    schema:startDate "2019-01-21T15:00:00"^^xsd:dateTime ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:atTime "2018-06-17T19:05:15.041173"^^xsd:dateTime ;
+            prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] .
+
+<http://catalog.coloradocollege.edu/49a382fa-70ea-11e8-88cc-001fc69cf6df> a schema:EducationalEvent ;
+    rdfs:label "Block Six"@en ;
+    schema:endDate "2019-03-13T18:00:00"^^xsd:dateTime ;
+    schema:partOf <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
+    schema:startDate "2019-02-18T15:00:00"^^xsd:dateTime ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:atTime "2018-06-17T19:05:15.042122"^^xsd:dateTime ;
+            prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] .
+
+<http://catalog.coloradocollege.edu/727d0ee6-70e9-11e8-bdb2-001fc69cf6df> a schema:EducationalEvent ;
+    rdfs:label "Block Two"@en ;
+    schema:endDate "2018-10-17T18:00:00"^^xsd:dateTime ;
+    schema:partOf <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
+    schema:startDate "2018-09-24T15:00:00"^^xsd:dateTime ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:atTime "2018-06-17T19:05:15.043103"^^xsd:dateTime ;
+            prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] .
+
+<http://catalog.coloradocollege.edu/9c2afc14-70ea-11e8-b17a-001fc69cf6df> a schema:EducationalEvent ;
+    rdfs:label "Block Seven"@en ;
+    schema:endDate "2019-04-17T18:00:00"^^xsd:dateTime ;
+    schema:partOf <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
+    schema:startDate "2019-03-25T15:00:00"^^xsd:dateTime ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:atTime "2018-06-17T19:05:15.043103"^^xsd:dateTime ;
+            prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] .
+
+<http://catalog.coloradocollege.edu/b5367f7e-70ea-11e8-a73c-001fc69cf6df> a schema:EducationalEvent ;
+    rdfs:label "Block Eight"@en ;
+    schema:endDate "2019-05-15T18:00:00"^^xsd:dateTime ;
+    schema:partOf <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
+    schema:startDate "2019-04-22T16:00:00"^^xsd:dateTime ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:atTime "2018-06-17T19:05:15.043103"^^xsd:dateTime ;
+            prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] .
+
+<http://catalog.coloradocollege.edu/f99951e6-70e7-11e8-a2b5-001fc69cf6df> a schema:EducationalEvent ;
+    rdfs:label "Block One"@en ;
+    schema:endDate "2018-09-19T18:00:00"^^xsd:dateTime ;
+    schema:partOf <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
+    schema:startDate "2018-08-27T15:00:00"^^xsd:dateTime ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:atTime "2018-06-17T19:05:15.042122"^^xsd:dateTime ;
+            prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] .
+
+<http://catalog.coloradocollege.edu/f9a59ca6-70e9-11e8-a97b-001fc69cf6df> a schema:EducationalEvent ;
+    rdfs:label "Block Three"@en ;
+    schema:endDate "2018-11-14T18:00:00"^^xsd:dateTime ;
+    schema:partOf <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
+    schema:startDate "2018-10-22T15:00:00"^^xsd:dateTime ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:atTime "2018-06-17T19:05:15.042122"^^xsd:dateTime ;
+            prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] .
+
+<http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> a schema:EducationalEvent ;
+    rdfs:label "Academic Year 2018-2019"@en ;
+    schema:endDate "2019-07-31T23:59:59"^^xsd:dateTime ;
+    schema:startDate "2018-08-01T00:00:00"^^xsd:dateTime ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:atTime "2018-06-17T19:05:15.042122"^^xsd:dateTime ;
+            prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] ;
+    cc_info:graduation [ rdfs:label "Fall 2018"@en ;
+            rdf:value "2018-12" ],
+        [ rdfs:label "Spring 2019"@en ;
+            rdf:value "2019-05" ],
+        [ rdfs:label "Summer 2019" ;
+            rdf:value "2019-07" ] .
+
