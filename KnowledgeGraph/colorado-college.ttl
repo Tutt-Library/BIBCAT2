@@ -26,55 +26,74 @@
     rdfs:label "Psychology"@en ;
     schema:parentOrganization <https://www.coloradocollege.edu/> .
 
-cc_fac:affiliated-faculty a rdf:Resource ;
+cc_fac:affiliated-faculty a rdfs:Resource ;
     rdfs:label "Affiliated Faculty"@en ;
     rdfs:range relators:tch .
 
-cc_fac:assistant-professor a rdf:Resource ;
+cc_fac:assistant-professor a rdfs:Resource ;
     rdfs:label "Assistant Professor"@en ;
     rdf:range relators:tch .
 
 cc_fac:associate-chair a schema:title ;
     rdfs:label "Associate Chair"@en .
 
-cc_fac:associate-professor a rdf:Resource ;
+cc_fac:associate-professor a rdfs:Resource ;
     rdfs:label "Associate Professor"@en ;
     rdf:range relators:tch .
 
 cc_fac:chair a schema:title ;
     rdfs:label "Chair"@en .
 
-cc_fac:director-of-education-and-senior-lecturer a rdf:Resource ;
+cc_fac:director-of-education-and-senior-lecturer a rdfs:Resource ;
     rdfs:label "Director of Museum Education and Senior Lecturer" ;
     rdf:range relators:tch .
 
-cc_fac:director-of-writing-center-lectuer a rdf:Resource ;
+cc_fac:director-of-writing-center-lectuer a rdfs:Resource ;
     rdfs:label "Director of the Writing Program and Writing Center, Lecturer in English" ;
     rdf:range relators:tch .
 
-cc_fac:faculty a rdf:Resource ;
+cc_fac:faculty a rdfs:Resource ;
     rdfs:label "Faculty"@en ;
     rdf:range relators:tch .
 
-cc_fac:instructional-specialist-and-supervisor a rdf:Resource ;
+cc_fac:instructional-specialist-and-supervisor a rdfs:Resource ;
     rdfs:label "Instructional Specialist and Supervisor"@en .
 
-cc_fac:professor a rdf:Resource ;
+cc_fac:professor a rdfs:Resource ;
     rdfs:label "Professor"@en ;
     rdf:range relators:tch .
+
+cc_fac:professor-emeritus a rdfs:Resource ;
+    rdfs:label "Professor Emeritus"@en ;
+    rdfs:range relators:tch ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:atTime "2018-06-28T21:02:04.536326"^^xsd:dateTime ;
+            prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] .
 
 cc_fac:sabbatical a schema:EducationalEvent ;
     rdfs:label "Sabbatical"@en .
 
-cc_fac:visiting-assistant-professor a rdf:Resource ;
+cc_fac:visiting-assistant-professor a rdfs:Resource ;
     rdfs:label "Visiting Assistant Professor"@en ;
     rdf:range relators:tch .
 
-cc_fac:visiting-professor a rdf:Resource ;
+cc_fac:visiting-professor a rdfs:Resource ;
     rdfs:label "Visiting Professor"@en ;
     rdf:range relators:tch .
 
-cc_staff:associate-director-writing-center a rdf:Resource ;
+<https://www.coloradocollege.edu/ns/info/curator-of-visual-resources> a rdfs:Resource ;
+    rdfs:label "Curator of Visual Resources"@en ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:atTime "2018-06-28T21:27:30.430590"^^xsd:dateTime ;
+            prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] .
+
+<https://www.coloradocollege.edu/ns/info/three-d-arts-shop-supervisor> a rdfs:Resource ;
+    rdfs:label "3D Arts Shop Supervisor"@en ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:atTime "2018-06-28T21:35:15.899156"^^xsd:dateTime ;
+            prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] .
+
+cc_staff:associate-director-writing-center a rdfs:Resource ;
     rdfs:label "Associate Director Writing Center"@en .
 
 cc_staff:curator-of-interdisciplinary-arts a rdfs:Resource ;
@@ -84,10 +103,10 @@ cc_staff:curator-of-interdisciplinary-arts a rdfs:Resource ;
             prov:atTime "2018-05-24T22:49:21.425409"^^xsd:dateTime ;
             prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] .
 
-cc_staff:director a rdf:Resource ;
+cc_staff:director a rdfs:Resource ;
     rdfs:label "Director"@en .
 
-cc_staff:director-first-year-experience a rdf:Resource ;
+cc_staff:director-first-year-experience a rdfs:Resource ;
     rdfs:label "Director First Year Experience"@en .
 
 cc_staff:director-of-academic-engagement a rdfs:Resource ;
@@ -96,13 +115,13 @@ cc_staff:director-of-academic-engagement a rdfs:Resource ;
             prov:atTime "2018-05-24T22:43:28.858811"^^xsd:dateTime ;
             prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] .
 
-cc_staff:director-writing-center a rdf:Resource ;
+cc_staff:director-writing-center a rdfs:Resource ;
     rdfs:label "Director Writing Center"@en .
 
-cc_staff:librarian a rdf:Resource ;
+cc_staff:librarian a rdfs:Resource ;
     rdfs:label "Librarian"@en .
 
-cc_staff:staff a rdf:Resource ;
+cc_staff:staff a rdfs:Resource ;
     rdfs:label "Staff"@en .
 
 cc_staff:statistical-and-technical-director a rdfs:Resource ;
