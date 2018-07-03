@@ -55,6 +55,7 @@
 
 <http://catalog.coloradocollege.edu/a221b668-7b1b-11e8-a1bc-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Anthropology Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/anthropology/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.925194"^^xsd:dateTime ;
@@ -79,6 +80,7 @@
 
 <http://catalog.coloradocollege.edu/a2220312-7b1b-11e8-b0cc-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Art Department Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/art/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.927157"^^xsd:dateTime ;
@@ -101,6 +103,7 @@
 
 <http://catalog.coloradocollege.edu/a222296c-7b1b-11e8-b5a6-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Asian Studies Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/asianstudies/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.928138"^^xsd:dateTime ;
@@ -118,6 +121,7 @@
 
 <http://catalog.coloradocollege.edu/a2224fc0-7b1b-11e8-9991-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Chemistry and Biochemistry Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/chemistry/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.929120"^^xsd:dateTime ;
@@ -137,6 +141,7 @@
 
 <http://catalog.coloradocollege.edu/a2224fc1-7b1b-11e8-b9eb-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Classics Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/classics/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.930100"^^xsd:dateTime ;
@@ -148,6 +153,7 @@
 
 <http://catalog.coloradocollege.edu/a2227612-7b1b-11e8-9509-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Colket Center for Academic Excellence Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/offices/colketcenter/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.930100"^^xsd:dateTime ;
@@ -158,6 +164,7 @@
 
 <http://catalog.coloradocollege.edu/a2229c68-7b1b-11e8-b90d-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Colorado Springs Fine Art Center at Colorado College Academic Year 2018-2019" ;
+    schema:organizer <https://www.csfineartscenter.org/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.931082"^^xsd:dateTime ;
@@ -167,6 +174,7 @@
 
 <http://catalog.coloradocollege.edu/a2229c69-7b1b-11e8-bf36-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Comparative Literature Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/comparativeliterature/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.931082"^^xsd:dateTime ;
@@ -177,6 +185,7 @@
 
 <http://catalog.coloradocollege.edu/a222c2c0-7b1b-11e8-802a-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Economics and Business Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/economics/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.932063"^^xsd:dateTime ;
@@ -206,6 +215,7 @@
 
 <http://catalog.coloradocollege.edu/a222e914-7b1b-11e8-b14d-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Education Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/education/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.933045"^^xsd:dateTime ;
@@ -231,6 +241,7 @@
 
 <http://catalog.coloradocollege.edu/a2230f64-7b1b-11e8-86d0-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "English Department Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/english/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.934026"^^xsd:dateTime ;
@@ -253,6 +264,7 @@
 
 <http://catalog.coloradocollege.edu/a22335ba-7b1b-11e8-9808-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Environmental Program Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/environmentalprogram/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.935007"^^xsd:dateTime ;
@@ -266,11 +278,11 @@
         <http://catalog.coloradocollege.edu/29646506-b0f2-11e6-9bc8-005056c00008> ;
     cc_fac:associate-professor <http://catalog.coloradocollege.edu/26f0f36c-b0e5-11e6-94e7-005056c00008>,
         <http://catalog.coloradocollege.edu/803abb06-b0f1-11e6-8bde-005056c00008> ;
-    cc_fac:professor <http://catalog.coloradocollege.edu/278aaee4-b0e5-11e6-9700-005056c00008> ;
-    cc_fac:sabbatical [ ] .
+    cc_fac:professor <http://catalog.coloradocollege.edu/278aaee4-b0e5-11e6-9700-005056c00008> .
 
 <http://catalog.coloradocollege.edu/a2235c10-7b1b-11e8-be47-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Feminist and Gender Studies Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/feministandgenderstudies/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.936970"^^xsd:dateTime ;
@@ -281,6 +293,7 @@
 
 <http://catalog.coloradocollege.edu/a2238268-7b1b-11e8-82a5-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Film and Media Studies Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/filmandnewmedia/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.936970"^^xsd:dateTime ;
@@ -292,6 +305,7 @@
 
 <http://catalog.coloradocollege.edu/a223a8c0-7b1b-11e8-b3eb-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "French and Italian Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/french-italian-arabic/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.937952"^^xsd:dateTime ;
@@ -308,6 +322,7 @@
 
 <http://catalog.coloradocollege.edu/a223cf12-7b1b-11e8-899e-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "General Studies Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/curriculum/catalog/20162017/nondepartmental/general-studies> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.938933"^^xsd:dateTime ;
@@ -319,6 +334,7 @@
 
 <http://catalog.coloradocollege.edu/a223cf13-7b1b-11e8-8752-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Geology Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/geology/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.939914"^^xsd:dateTime ;
@@ -331,6 +347,7 @@
 
 <http://catalog.coloradocollege.edu/a223f56c-7b1b-11e8-84e1-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "German, Russian, and East Asian Languages Department Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/greal/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.939914"^^xsd:dateTime ;
@@ -348,6 +365,7 @@
 
 <http://catalog.coloradocollege.edu/a2241bba-7b1b-11e8-a449-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "History Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/history/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.940895"^^xsd:dateTime ;
@@ -366,6 +384,7 @@
 
 <http://catalog.coloradocollege.edu/a2244212-7b1b-11e8-9f34-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Human Biology and Kinesiology Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/humanbiologykinesiology/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.941876"^^xsd:dateTime ;
@@ -376,6 +395,7 @@
 
 <http://catalog.coloradocollege.edu/a2244213-7b1b-11e8-948c-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Library Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/library/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.941876"^^xsd:dateTime ;
@@ -390,6 +410,7 @@
 
 <http://catalog.coloradocollege.edu/a2246862-7b1b-11e8-bf39-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Mathematics and Computer Science Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/mathematics/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.942857"^^xsd:dateTime ;
@@ -421,6 +442,7 @@
 
 <http://catalog.coloradocollege.edu/a224b510-7b1b-11e8-888c-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Molecular Biology Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/molecularbiology/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.944820"^^xsd:dateTime ;
@@ -433,6 +455,7 @@
 
 <http://catalog.coloradocollege.edu/a224b511-7b1b-11e8-b48c-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Music Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/music/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.945802"^^xsd:dateTime ;
@@ -471,6 +494,7 @@
 
 <http://catalog.coloradocollege.edu/a22501ba-7b1b-11e8-8ffe-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Neuroscience Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/neuroscience/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.946783"^^xsd:dateTime ;
@@ -485,6 +509,7 @@
 
 <http://catalog.coloradocollege.edu/a2252812-7b1b-11e8-9bac-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Organismal Biology and Ecology Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/obe/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.947765"^^xsd:dateTime ;
@@ -502,6 +527,7 @@
 
 <http://catalog.coloradocollege.edu/a2254e64-7b1b-11e8-b1a1-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Philosophy Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/philosophy/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.948746"^^xsd:dateTime ;
@@ -516,6 +542,7 @@
 
 <http://catalog.coloradocollege.edu/a2254e65-7b1b-11e8-b053-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Physics Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/physics/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.949727"^^xsd:dateTime ;
@@ -533,6 +560,7 @@
 
 <http://catalog.coloradocollege.edu/a22574b8-7b1b-11e8-8bec-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Political Science Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/politicalscience/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.949727"^^xsd:dateTime ;
@@ -552,6 +580,7 @@
 
 <http://catalog.coloradocollege.edu/a2259b0c-7b1b-11e8-9538-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Psychology Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/psychology/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.950708"^^xsd:dateTime ;
@@ -572,6 +601,7 @@
 
 <http://catalog.coloradocollege.edu/a225c162-7b1b-11e8-9c0c-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Race, Ethnicity, and Migration Studies Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/raceethnicitymigration/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.951689"^^xsd:dateTime ;
@@ -583,6 +613,7 @@
 
 <http://catalog.coloradocollege.edu/a225e7b6-7b1b-11e8-8954-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Religion Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/religion/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.952671"^^xsd:dateTime ;
@@ -596,6 +627,7 @@
 
 <http://catalog.coloradocollege.edu/a2260e0c-7b1b-11e8-8424-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Russian and Eurasian Studies Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/russianeurasianstudies/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.953652"^^xsd:dateTime ;
@@ -607,6 +639,7 @@
 
 <http://catalog.coloradocollege.edu/a2260e0d-7b1b-11e8-ba18-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Sociology Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/sociology/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.954633"^^xsd:dateTime ;
@@ -624,6 +657,7 @@
 
 <http://catalog.coloradocollege.edu/a2263462-7b1b-11e8-ac12-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Southwest Studies Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/southweststudies/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.954633"^^xsd:dateTime ;
@@ -632,11 +666,11 @@
         <http://catalog.coloradocollege.edu/81edfffa-b0f5-11e6-9d77-005056c00008> ;
     cc_fac:associate-professor <http://catalog.coloradocollege.edu/9fced5c0-b0dd-11e6-9fc5-005056c00008> ;
     cc_fac:professor <http://catalog.coloradocollege.edu/278aaee4-b0e5-11e6-9700-005056c00008> ;
-    cc_fac:sabbatical [ ] ;
     cc_fac:visiting-assistant-professor <http://catalog.coloradocollege.edu/42bb745e-c8a3-11e7-a2e9-005056c00008> .
 
 <http://catalog.coloradocollege.edu/a2265ab6-7b1b-11e8-a731-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Spanish and Portuguese Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/spanish/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.955615"^^xsd:dateTime ;
@@ -652,6 +686,7 @@
 
 <http://catalog.coloradocollege.edu/a226810a-7b1b-11e8-ac42-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Theatre and Dance Academic Year 2018-2019" ;
+    schema:organizer <https://www.coloradocollege.edu/academics/dept/theatredance/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.956596"^^xsd:dateTime ;
@@ -692,7 +727,7 @@
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-17T19:05:15.042122"^^xsd:dateTime ;
             prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] .
-
+                                    
 <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> a schema:EducationalEvent ;
     rdfs:label "Academic Year 2018-2019"@en ;
     schema:endDate "2019-07-31T23:59:59"^^xsd:dateTime ;

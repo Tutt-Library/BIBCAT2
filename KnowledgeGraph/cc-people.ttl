@@ -2529,7 +2529,7 @@
     schema:familyName "Jacoby"@en ;
     schema:givenName "JoAnn"@en .
 
-<0000-0001-6911-0281> a bf:Person ;
+<https://orcid.org/0000-0001-6911-0281> a bf:Person ;
     rdfs:label "Lesley Mackie"@en ;
     schema:email "lmackie@coloradocollege.edu" ;
     schema:familyName "Mackie"@en ;
