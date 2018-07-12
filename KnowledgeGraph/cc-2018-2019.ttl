@@ -8,7 +8,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://catalog.coloradocollege.edu/19751e5c-70ea-11e8-8eb3-001fc69cf6df> a schema:EducationalEvent ;
+<http://catalog.coloradocollege.edu/19751e5c-70ea-11e8-8eb3-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Block Four"@en ;
     schema:endDate "2018-12-19T18:00:00"^^xsd:dateTime ;
     schema:partOf <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
@@ -17,7 +17,7 @@
             prov:atTime "2018-06-17T19:05:15.043103"^^xsd:dateTime ;
             prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] .
 
-<http://catalog.coloradocollege.edu/33771d1c-70ea-11e8-bc91-001fc69cf6df> a schema:EducationalEvent ;
+<http://catalog.coloradocollege.edu/33771d1c-70ea-11e8-bc91-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Block Five"@en ;
     schema:endDate "2019-02-13T18:00:00"^^xsd:dateTime ;
     schema:partOf <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
@@ -26,7 +26,7 @@
             prov:atTime "2018-06-17T19:05:15.041173"^^xsd:dateTime ;
             prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] .
 
-<http://catalog.coloradocollege.edu/49a382fa-70ea-11e8-88cc-001fc69cf6df> a schema:EducationalEvent ;
+<http://catalog.coloradocollege.edu/49a382fa-70ea-11e8-88cc-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Block Six"@en ;
     schema:endDate "2019-03-13T18:00:00"^^xsd:dateTime ;
     schema:partOf <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
@@ -35,7 +35,7 @@
             prov:atTime "2018-06-17T19:05:15.042122"^^xsd:dateTime ;
             prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] .
 
-<http://catalog.coloradocollege.edu/727d0ee6-70e9-11e8-bdb2-001fc69cf6df> a schema:EducationalEvent ;
+<http://catalog.coloradocollege.edu/727d0ee6-70e9-11e8-bdb2-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Block Two"@en ;
     schema:endDate "2018-10-17T18:00:00"^^xsd:dateTime ;
     schema:partOf <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
@@ -44,7 +44,7 @@
             prov:atTime "2018-06-17T19:05:15.043103"^^xsd:dateTime ;
             prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] .
 
-<http://catalog.coloradocollege.edu/9c2afc14-70ea-11e8-b17a-001fc69cf6df> a schema:EducationalEvent ;
+<http://catalog.coloradocollege.edu/9c2afc14-70ea-11e8-b17a-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Block Seven"@en ;
     schema:endDate "2019-04-17T18:00:00"^^xsd:dateTime ;
     schema:partOf <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
@@ -701,7 +701,7 @@
         <http://catalog.coloradocollege.edu/ee44870a-b0f5-11e6-a4cc-005056c00008> ;
     cc_fac:professor <http://catalog.coloradocollege.edu/e7bf856c-b0f5-11e6-8231-005056c00008> .
 
-<http://catalog.coloradocollege.edu/b5367f7e-70ea-11e8-a73c-001fc69cf6df> a schema:EducationalEvent ;
+<http://catalog.coloradocollege.edu/b5367f7e-70ea-11e8-a73c-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Block Eight"@en ;
     schema:endDate "2019-05-15T18:00:00"^^xsd:dateTime ;
     schema:partOf <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
@@ -710,7 +710,19 @@
             prov:atTime "2018-06-17T19:05:15.043103"^^xsd:dateTime ;
             prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] .
 
-<http://catalog.coloradocollege.edu/f99951e6-70e7-11e8-a2b5-001fc69cf6df> a schema:EducationalEvent ;
+<http://catalog.coloradocollege.edu/d15619e0-85f5-11e8-b0a7-40a3cca2015c> a schema:EducationEvent ;
+    rdfs:label "Office of the Dean Academic Year 2018-2019"@en ;
+    schema:organizer <https://www.coloradocollege.edu/offices/dean/> ;
+    schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:atTime "2018-07-12T17:15:20.874407"^^xsd:dateTime ;
+            prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] ;
+    cc_fac:associate-dean <http://catalog.coloradocollege.edu/a10f6534-b0f4-11e6-8c2f-005056c00008>,
+        <http://orcid.org/0000-0002-8157-8837> ;
+    cc_fac:associate-professor <http://orcid.org/0000-0002-8157-8837> ;
+    cc_fac:dean-of-the-college <http://catalog.coloradocollege.edu/432575ac-b0f5-11e6-929c-005056c00008> .
+
+<http://catalog.coloradocollege.edu/f99951e6-70e7-11e8-a2b5-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Block One"@en ;
     schema:endDate "2018-09-19T18:00:00"^^xsd:dateTime ;
     schema:partOf <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
@@ -719,7 +731,7 @@
             prov:atTime "2018-06-17T19:05:15.042122"^^xsd:dateTime ;
             prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] .
 
-<http://catalog.coloradocollege.edu/f9a59ca6-70e9-11e8-a97b-001fc69cf6df> a schema:EducationalEvent ;
+<http://catalog.coloradocollege.edu/f9a59ca6-70e9-11e8-a97b-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Block Three"@en ;
     schema:endDate "2018-11-14T18:00:00"^^xsd:dateTime ;
     schema:partOf <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
@@ -727,8 +739,8 @@
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-17T19:05:15.042122"^^xsd:dateTime ;
             prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] .
-                                    
-<http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> a schema:EducationalEvent ;
+
+<http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Academic Year 2018-2019"@en ;
     schema:endDate "2019-07-31T23:59:59"^^xsd:dateTime ;
     schema:startDate "2018-08-01T00:00:00"^^xsd:dateTime ;
