@@ -220,7 +220,8 @@
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-06-28T21:38:44.933045"^^xsd:dateTime ;
             prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] ;
-    cc_fac:assistant-professor <http://catalog.coloradocollege.edu/07b23b54-b0e1-11e6-bb5b-005056c00008> ;
+    cc_fac:assistant-professor <http://catalog.coloradocollege.edu/07b23b54-b0e1-11e6-bb5b-005056c00008>,
+		<http://catalog.coloradocollege.edu/08067c6c-b0e1-11e6-8a0c-005056c00008> ;
     cc_fac:director-of-education-and-senior-lecturer <http://catalog.coloradocollege.edu/07315f54-b0e1-11e6-a0d5-005056c00008> ;
     cc_fac:faculty <http://catalog.coloradocollege.edu/00dff66e-b0f1-11e6-badd-005056c00008>,
         <http://catalog.coloradocollege.edu/09895e82-b0e1-11e6-b8dc-005056c00008>,
