@@ -210,7 +210,8 @@
         <http://catalog.coloradocollege.edu/3c2bf9be-bcd4-11e6-a9c4-005056c00008>,
         <http://orcid.org/0000-0002-0674-7995> ;
     cc_fac:visiting-assistant-professor <http://catalog.coloradocollege.edu/1f549770-35d2-11e8-9d98-001fc69cf6df>,
-        <http://catalog.coloradocollege.edu/5a97b458-35d3-11e8-84b2-001fc69cf6df> ;
+        <http://catalog.coloradocollege.edu/5a97b458-35d3-11e8-84b2-001fc69cf6df>,
+        <http://catalog.coloradocollege.edu/c05be14a-03d2-11e9-b066-a41f7283f8d4> ;
     cc_info:lead-academic-administrative-assistant <http://catalog.coloradocollege.edu/d06d73f8-f2e5-11e6-bb18-005056c00008> .
 
 <http://catalog.coloradocollege.edu/a222e914-7b1b-11e8-b14d-001fc69cf6df> a schema:EducationEvent ;
