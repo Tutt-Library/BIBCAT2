@@ -364,10 +364,10 @@
     schema:givenName "Peter"@en .
 
 <http://catalog.coloradocollege.edu/1f549770-35d2-11e8-9d98-001fc69cf6df> a bf:Person ;
-    rdfs:label "Nea Rappaport"@en ;
+    rdfs:label "Neal Rappaport"@en ;
     schema:email "nrappaport@coloradocollege.edu" ;
     schema:familyName "Rappaport"@en ;
-    schema:givenName "Nea"@en .
+    schema:givenName "Neal"@en .
 
 <http://catalog.coloradocollege.edu/218c8b64-c89f-11e7-adfd-005056c00008> a bf:Person ;
     rdfs:label "Richard Buxton"@en ;
