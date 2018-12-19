@@ -22,6 +22,12 @@
     schema:familyName "Ekberg"@en ;
     schema:givenName "Nancy"@en .
 
+<http://catalog.coloradocollege.edu/c05be14a-03d2-11e9-b066-a41f7283f8d4> a bf:Person ;
+    rdfs:label "Richard Peterson" ;
+    schema:email "rpeterson@coloradocollege.edu" ;
+    schema:familyName "Peterson"@en ;
+    schema:givenName "Richard"@en .
+
 <http://catalog.coloradocollege.edu/008f51e4-b0f1-11e6-ad2b-005056c00008> a bf:Person ;
     rdfs:label "Dan Fosha" ;
     schema:email "sfosha@coloradocollege.edu" ;
