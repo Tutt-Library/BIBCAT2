@@ -579,7 +579,16 @@
         <http://catalog.coloradocollege.edu/273c8f7a-b0f2-11e6-8ae6-005056c00008>,
         <http://catalog.coloradocollege.edu/2887e7b4-b0f2-11e6-8163-005056c00008>,
         <http://catalog.coloradocollege.edu/28f6fd36-b0f2-11e6-940f-005056c00008> .
-
+		
+<http://catalog.coloradocollege.edu/7f87e30c-136d-11e9-a98a-a41f7283f8d4> a schema:EducationEvent ;
+    rdfs:label "President's Office Academic Year 2018-2019" ;
+	schema:organizer <https://www.coloradocollege.edu/presidentsoffice/> ;
+	schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
+	prov:qualifiedGeneration [ a prov:Generation ;
+            prov:atTime "2019-01-08T21:38:44.950708"^^xsd:dateTime ;
+            prov:wasGeneratedBy <https://orcid.org/0000-0002-8845-2954> ] ;
+	cc_fac:associate-professor <http://orcid.org/0000-0002-3020-5205> .
+	
 <http://catalog.coloradocollege.edu/a2259b0c-7b1b-11e8-9538-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Psychology Academic Year 2018-2019" ;
     schema:organizer <https://www.coloradocollege.edu/academics/dept/psychology/> ;
@@ -610,8 +619,7 @@
             prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] ;
     cc_fac:assistant-professor <http://catalog.coloradocollege.edu/6254cdec-b0f0-11e6-9a7d-005056c00008>,
         <http://catalog.coloradocollege.edu/e42d2c5c-b0f4-11e6-9c25-005056c00008>,
-        <http://catalog.coloradocollege.edu/e4a0608c-b0f4-11e6-874a-005056c00008> ;
-    cc_fac:professor <http://catalog.coloradocollege.edu/b4fc51e6-b0e1-11e6-aadc-005056c00008> .
+        <http://catalog.coloradocollege.edu/e4a0608c-b0f4-11e6-874a-005056c00008> .
 
 <http://catalog.coloradocollege.edu/a225e7b6-7b1b-11e8-8954-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Religion Academic Year 2018-2019" ;

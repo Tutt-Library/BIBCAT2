@@ -1546,9 +1546,9 @@
     schema:givenName "Andrew"@en .
 
 <http://catalog.coloradocollege.edu/b4fc51e6-b0e1-11e6-aadc-005056c00008> a bf:Person ;
-    rdfs:label "Claire Garcia" ;
+    rdfs:label "Claire Oberon Garcia" ;
     schema:email "cgarcia@coloradocollege.edu" ;
-    schema:familyName "Garcia"@en ;
+    schema:familyName "Oberon Garcia"@en ;
     schema:givenName "Claire"@en .
 
 <http://catalog.coloradocollege.edu/b5411f90-b0e1-11e6-9bf1-005056c00008> a bf:Person ;
