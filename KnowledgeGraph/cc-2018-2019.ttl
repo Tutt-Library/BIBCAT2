@@ -378,7 +378,7 @@
     cc_fac:associate-professor <http://catalog.coloradocollege.edu/61539e14-b0f0-11e6-a66d-005056c00008> ;
     cc_fac:chair <http://catalog.coloradocollege.edu/61aeb664-b0f0-11e6-b454-005056c00008> ;
     cc_fac:professor <http://catalog.coloradocollege.edu/5f93d92e-b0f0-11e6-aeec-005056c00008>,
-	<http://catalog.coloradocollege.edu/a18dd07a-b0f4-11e6-8553-005056c00008>        
+	<http://catalog.coloradocollege.edu/a18dd07a-b0f4-11e6-8553-005056c00008>,        
 	<http://catalog.coloradocollege.edu/5fe54106-b0f0-11e6-a8db-005056c00008>,
         <http://catalog.coloradocollege.edu/60f09682-b0f0-11e6-bee4-005056c00008>,
         <http://catalog.coloradocollege.edu/61ff6e74-b0f0-11e6-a459-005056c00008>,
