@@ -452,7 +452,8 @@
     cc_fac:assistant-professor <http://catalog.coloradocollege.edu/cb8758ae-b0f0-11e6-9d4d-005056c00008>,
         <http://catalog.coloradocollege.edu/cbdffffa-b0f0-11e6-b5fc-005056c00008>,
         <http://catalog.coloradocollege.edu/cc42a5e4-b0f0-11e6-8579-005056c00008> ;
-    cc_fac:associate-professor <http://catalog.coloradocollege.edu/cca70d06-b0f0-11e6-b828-005056c00008> ;
+    cc_fac:associate-professor <http://catalog.coloradocollege.edu/cca70d06-b0f0-11e6-b828-005056c00008>,
+	<http://catalog.coloradocollege.edu/ccffc7dc-b0f0-11e6-9273-005056c00008> ;
     cc_fac:professor <http://catalog.coloradocollege.edu/cb2d6552-b0f0-11e6-96cb-005056c00008> .
 
 <http://catalog.coloradocollege.edu/a224b511-7b1b-11e8-b48c-001fc69cf6df> a schema:EducationEvent ;
