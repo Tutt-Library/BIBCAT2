@@ -131,7 +131,7 @@ cc_staff:statistical-and-technical-director a rdfs:Resource ;
             prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] .
 
 <https://www.coloradocollege.edu/offices/dean/> a bf:Organization ;
-    rdfs:label "Office of the Dean"@en ;
+    rdfs:label "iOffice of the Dean"@en ;
     schema:parentOrganization <https://www.coloradocollege.edu/> .
 
 <https://www.coloradocollege.edu/other/fye/> a schema:Organization ;
