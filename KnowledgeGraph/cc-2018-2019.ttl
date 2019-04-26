@@ -729,9 +729,7 @@
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-07-12T17:15:20.874407"^^xsd:dateTime ;
             prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] ;
-    cc_fac:associate-dean <http://catalog.coloradocollege.edu/a10f6534-b0f4-11e6-8c2f-005056c00008>,
-        <http://orcid.org/0000-0002-8157-8837> ;
-    cc_fac:associate-professor <http://orcid.org/0000-0002-8157-8837> ;
+    cc_fac:associate-professor <https://orcid.org/0000-0002-5976-3083> ;
     cc_fac:dean-of-the-college <http://catalog.coloradocollege.edu/432575ac-b0f5-11e6-929c-005056c00008> .
 
 <http://catalog.coloradocollege.edu/f99951e6-70e7-11e8-a2b5-001fc69cf6df> a schema:EducationEvent ;
