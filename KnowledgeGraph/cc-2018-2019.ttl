@@ -723,14 +723,13 @@
             prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] .
 
 <http://catalog.coloradocollege.edu/d15619e0-85f5-11e8-b0a7-40a3cca2015c> a schema:EducationEvent ;
-    rdfs:label "Office of the Dean Academic Year 2018-2019"@en ;
-    schema:organizer <https://www.coloradocollege.edu/offices/dean/> ;
+    rdfs:label "Independently Designed Major"@en ;
+    schema:organizer <https://www.coloradocollege.edu/offices/colketcenter/> ;
     schema:superEvent <http://catalog.coloradocollege.edu/6c4cca98-70e7-11e8-8185-001fc69cf6df> ;
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-07-12T17:15:20.874407"^^xsd:dateTime ;
             prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] ;
-    cc_fac:associate-professor <https://orcid.org/0000-0002-5976-3083> ;
-    cc_fac:dean-of-the-college <http://catalog.coloradocollege.edu/432575ac-b0f5-11e6-929c-005056c00008> .
+    cc_fac:associate-professor <https://orcid.org/0000-0002-5976-3083> .
 
 <http://catalog.coloradocollege.edu/f99951e6-70e7-11e8-a2b5-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Block One"@en ;
