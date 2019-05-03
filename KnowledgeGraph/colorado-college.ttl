@@ -134,6 +134,10 @@ cc_staff:statistical-and-technical-director a rdfs:Resource ;
     rdfs:label "Office of the Dean"@en ;
     schema:parentOrganization <https://www.coloradocollege.edu/> .
 
+<https://www.coloradocollege.edu/offices/dean/students/IDM/> a bf:Organization ;
+    rdfs:label "Independently Designed Major"@en ;
+    schema:parentOrganization <https://www.coloradocollege.edu/> .
+
 <https://www.coloradocollege.edu/other/fye/> a schema:Organization ;
     rdfs:label "First Year Experience"@en ;
     schema:parentOrganization <https://www.coloradocollege.edu/offices/colketcenter/> ;
