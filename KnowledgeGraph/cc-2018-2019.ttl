@@ -729,7 +729,7 @@
     prov:qualifiedGeneration [ a prov:Generation ;
             prov:atTime "2018-07-12T17:15:20.874407"^^xsd:dateTime ;
             prov:wasGeneratedBy <http://orcid.org/0000-0002-7543-3893> ] ;
-    cc_fac:associate-professor <https://orcid.org/0000-0002-5976-3083> .
+    cc_staff:director <https://orcid.org/0000-0002-5976-3083> .
 
 <http://catalog.coloradocollege.edu/f99951e6-70e7-11e8-a2b5-001fc69cf6df> a schema:EducationEvent ;
     rdfs:label "Block One"@en ;
